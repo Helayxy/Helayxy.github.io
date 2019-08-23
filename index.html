@@ -152,6 +152,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/23/我的第一篇博客/">tomcat位数问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/23/我的第一篇博客/" class="archive-article-date">
+  	<time datetime="2019-08-23T14:56:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>今天在IDEA中新建一个web项目，启动tomcat报了如下的错误</p>
+<p><img src="C:%5CUsers%5C%E9%82%A2%E8%B6%8A%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566572827925.png" alt="1566572827925"></p>
+<h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><p>tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动tomcat会报这样的错误</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>1.来到这个<a href="http://archive.apache.org/dist/tomcat/tomcat-connectors/native/" target="_blank" rel="noopener">网站</a></p>
+<p>2.下载相应版本的文件，如下图所示：</p>
+<p><img src="C:%5CUsers%5C%E9%82%A2%E8%B6%8A%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566574800172.png" alt="1566574800172"></p>
+<p>3.解压：</p>
+<p>在bin目录下有一个x64文件夹，该文件夹下就是64位的tcnative-1.dll文件</p>
+<p>4.替换：</p>
+<p>删除原tomcat的bin目录下的32位的tcnative-1.dll文件，将64位的tcnative-1.dll添加进去</p>
+<p>5.重启tomcat即可，此时将不再报错</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/23/我的第一篇博客/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
