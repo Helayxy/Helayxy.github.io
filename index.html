@@ -152,37 +152,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-tomcat位数问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-关于web-xml文件-web-app-标签报错问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/23/tomcat位数问题/">tomcat位数问题</a>
+      <a class="article-title" href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/">关于web.xml文件&lt;web app&gt;标签报错问题</a>
     </h1>
   
 
         
-        <a href="/2019/08/23/tomcat位数问题/" class="archive-article-date">
-  	<time datetime="2019-08-23T14:56:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-23</time>
+        <a href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/" class="archive-article-date">
+  	<time datetime="2019-08-25T15:02:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>今天在IDEA中新建一个web项目，启动tomcat报了如下的错误</p>
-<p><img src="C:%5CUsers%5C%E9%82%A2%E8%B6%8A%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566572827925.png" alt="1566572827925"></p>
-<h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><p>tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动tomcat会报这样的错误</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>1.来到这个<a href="http://archive.apache.org/dist/tomcat/tomcat-connectors/native/" target="_blank" rel="noopener">网站</a></p>
-<p>2.下载相应版本的文件，如下图所示：</p>
-<p><img src="C:%5CUsers%5C%E9%82%A2%E8%B6%8A%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1566574800172.png" alt="1566574800172"></p>
-<p>3.解压：</p>
-<p>在bin目录下有一个x64文件夹，该文件夹下就是64位的tcnative-1.dll文件</p>
-<p>4.替换：</p>
-<p>删除原tomcat的bin目录下的32位的tcnative-1.dll文件，将64位的tcnative-1.dll添加进去</p>
-<p>5.重启tomcat即可，此时将不再报错</p>
+        <h2 id="关于web项目中报错问题"><a href="#关于web项目中报错问题" class="headerlink" title="关于web项目中报错问题"></a>关于web项目<web-app>中报错问题</web-app></h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当使用IDEA新建一个web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是<web-app>会显示报错</web-app></p>
+<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>这是因为在<web-app>上有这样一段代码：</web-app></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE web-app PUBLIC</span><br><span class="line">        <span class="string">"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"</span></span><br><span class="line">        <span class="string">"http://java.sun.com/dtd/web-app_2_3.dtd"</span> &gt;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码要求我们在web.xml中编写的相关配置信息必须按照一定的规范和顺序来配置</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>使用如下代码替换<web-app>标签即可：</web-app></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">"http://java.sun.com/xml/ns/javaee"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://java.sun.com/xml/ns/javaee</span></span></span><br><span class="line"><span class="tag"><span class="string">        ttp://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">version</span>=<span class="string">"3.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -195,7 +192,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/23/tomcat位数问题/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/">展开全文 >></a>
         </p>
       
 
@@ -225,39 +222,37 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-关于tomcat位数问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/13/hello-world/">Hello World</a>
+      <a class="article-title" href="/2019/08/25/关于tomcat位数问题/">关于tomcat位数问题</a>
     </h1>
   
 
         
-        <a href="/2019/08/13/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-12T17:53:10.819Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
+        <a href="/2019/08/25/关于tomcat位数问题/" class="archive-article-date">
+  	<time datetime="2019-08-25T14:57:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>今天在IDEA中新建一个web项目，启动tomcat报了如下的错误：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[C:\Deveploment tools\apache-tomcat-<span class="number">8.0</span>.52\bin\tcnative-<span class="number">1</span>.dll:Can<span class="string">'t load 32-bit. dll on a AMD 64-bit platform]</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><p>tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动tomcat会报这样的错误</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>1.来到这个<a href="http://archive.apache.org/dist/tomcat/tomcat-connectors/native/" target="_blank" rel="noopener">网站</a></p>
+<p>2.下载相应版本的文件</p>
+<p>3.解压：</p>
+<p>在bin目录下有一个x64文件夹，该文件夹下就是64位的tcnative-1.dll文件</p>
+<p>4.替换：</p>
+<p>删除原tomcat的bin目录下的32位的tcnative-1.dll文件，将64位的tcnative-1.dll添加进去</p>
+<p>5.重启tomcat即可，此时将不再报错</p>
 
       
 
@@ -270,7 +265,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/13/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/08/25/关于tomcat位数问题/">展开全文 >></a>
         </p>
       
 
