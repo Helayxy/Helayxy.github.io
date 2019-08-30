@@ -152,6 +152,78 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-web项目缺少maven依赖问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/30/web项目缺少maven依赖问题/">web项目缺少maven依赖问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/30/web项目缺少maven依赖问题/" class="archive-article-date">
+  	<time datetime="2019-08-30T14:29:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="启动Tomcat报错-maven原因"><a href="#启动Tomcat报错-maven原因" class="headerlink" title="启动Tomcat报错-maven原因"></a>启动Tomcat报错-maven原因</h3><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>启动服务器运行项目时报了如下错误：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener</span><br></pre></td></tr></table></figure>
+
+<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>没有添加maven依赖</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>1.右击项目，选择properties</p>
+<p>2.选择Deployment Assembly</p>
+<p>3.选择Add -&gt; Java Build Path Entries -&gt; Next</p>
+<p>4.选择Maven Dependencies -&gt; Finish -&gt; Apply -&gt; ok</p>
+<p>5.移除项目，重新添加至Tomcat</p>
+<p>6.重启server即可正常运行项目</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/30/web项目缺少maven依赖问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-关于web-xml文件-web-app-标签报错问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
