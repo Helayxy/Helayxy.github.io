@@ -152,6 +152,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-xshell连接virtualbox中的centos7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/16/xshell连接virtualbox中的centos7/">xshell连接virtualbox中的centos7</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/16/xshell连接virtualbox中的centos7/" class="archive-article-date">
+  	<time datetime="2019-09-16T14:07:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="xshell连接virtualbox中的centos7"><a href="#xshell连接virtualbox中的centos7" class="headerlink" title="xshell连接virtualbox中的centos7"></a>xshell连接virtualbox中的centos7</h3><h4 id="一、下载centos7："><a href="#一、下载centos7：" class="headerlink" title="一、下载centos7："></a>一、下载centos7：</h4><p>1.来到这个<a href="http://isoredirect.centos.org/" target="_blank" rel="noopener">网址</a>选择适合自己电脑操作系统的centos7的镜像（一般选择第一个，即for CentOS 7 x86_64 iso images这个版本的）</p>
+<p>2.进入该版本的<a href="http://isoredirect.centos.org/centos/7/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，The following mirrors in your region should have the ISO images available:表示当前所在国家或地区的镜像；Other mirrors further away:表示周边国家或地区的镜像。这里我们一般选择当前所在国家或地区的镜像，因为这样下载速度较快</p>
+<p>3.选择阿里云的镜像，这个<a href="http://mirrors.aliyun.com/centos/7.6.1810/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，下载CentOS-7-x86_64-DVD-1810.iso  这个版本的镜像，centos7的大小约为4个多G，下载可能需要四五分钟</p>
+<h4 id="二、下载virtualbox："><a href="#二、下载virtualbox：" class="headerlink" title="二、下载virtualbox："></a>二、下载virtualbox：</h4><p>1.进入<a href="https://pc.qq.com/" target="_blank" rel="noopener">腾讯软件中心官网</a>，搜索virtualbox，选择下载</p>
+<p>2.默认安装即可，第二步<strong>注意需要点击VirtualBox Networking，选择将整个功能安装到本机硬盘，</strong>接下来一路“下一步”即可</p>
+<p>3.注意安装过程会提示网络界面的警告，全部选择“是”即可，不然可能出在最后虚拟机不能上网</p>
+<h4 id="三、使用virtualbox打开centos7"><a href="#三、使用virtualbox打开centos7" class="headerlink" title="三、使用virtualbox打开centos7"></a>三、使用virtualbox打开centos7</h4><p>1.打开virtualbox，选择新建，填写虚拟电脑的名称，版本这里选择Red Hat 64-bit，点击下一步</p>
+<p>2.下面的步骤全部选择默认即可</p>
+<p>3.打开虚拟机，根据向导设置语言，选择中文</p>
+<p>4.中间过程会出现警告框让设置密码，自行设置即可</p>
+<p>5.安装过程中还会出现让你分配内存的警告框，点击进去，点击左上角的“完成”即可</p>
+<h4 id="四、网络设置"><a href="#四、网络设置" class="headerlink" title="四、网络设置"></a>四、网络设置</h4><p>1.在virtualbox中选择设置，找到网络，在接有网线的前提下，选择桥接网卡，点击“OK”</p>
+<p>2.输入用户名和密码登录成功后，执行cd  /etc/sysconfig/nerwork-scripts进入该目录</p>
+<p>3.ls列出nerwork-scripts这个目录下的所有文件，选择ifcfg-en*开头的文件，每个人的这个文件名不一样</p>
+<p>4.vi  ifcfg-en*这个文件，进入编辑模式，将文件的最后一行的ONBOOT的值由no置位yes，按Esc键退出编辑模式，按下：wq进行保存退出（：q！表示不保存强制退出  ）</p>
+<p>5.退出后执行service  network   restart命令中心启动网络配置</p>
+<p>6.使用ip  addr查看网络情况，注意：centos7已经不支持ipconfig命令，所以这个命令在centos7中无效</p>
+<h4 id="五、xshell连接centos7"><a href="#五、xshell连接centos7" class="headerlink" title="五、xshell连接centos7"></a>五、xshell连接centos7</h4><p>1.打开xshell连接工具，选择新建，在主机一栏填写ip  addr命令查看到的网络地址</p>
+<p>2.选择用户身份验证，填写centos中的用户名和密码</p>
+<p>3.没有其他情况应该可以连接成功</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/16/xshell连接virtualbox中的centos7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Advanced-Rest-Client的安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
