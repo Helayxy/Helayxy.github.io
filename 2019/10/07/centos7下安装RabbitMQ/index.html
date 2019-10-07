@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Dream</title>
+  <title>centos7下安装RabbitMQ | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dream">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="centos7下安装RabbitMQ由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境一、安装Erlang 1.在线安装（需要Linux虚拟机能连接外网） 123yum install esl-erlang_17.3-1~centos~6_amd64.rpmyum install esl-erlang-compat-R14B-1.el6.noarch.rpm  2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7下安装RabbitMQ">
+<meta property="og:url" content="http://yoursite.com/2019/10/07/centos7下安装RabbitMQ/index.html">
 <meta property="og:site_name" content="Dream">
+<meta property="og:description" content="centos7下安装RabbitMQ由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境一、安装Erlang 1.在线安装（需要Linux虚拟机能连接外网） 123yum install esl-erlang_17.3-1~centos~6_amd64.rpmyum install esl-erlang-compat-R14B-1.el6.noarch.rpm  2">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-07T14:55:17.798Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dream">
+<meta name="twitter:title" content="centos7下安装RabbitMQ">
+<meta name="twitter:description" content="centos7下安装RabbitMQ由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境一、安装Erlang 1.在线安装（需要Linux虚拟机能连接外网） 123yum install esl-erlang_17.3-1~centos~6_amd64.rpmyum install esl-erlang-compat-R14B-1.el6.noarch.rpm  2">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -150,265 +154,199 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-centos7下安装RabbitMQ" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      centos7下安装RabbitMQ
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/07/centos7下安装RabbitMQ/" class="archive-article-date">
+
+        
+        <a href="/2019/10/07/centos7下安装RabbitMQ/" class="archive-article-date">
   	<time datetime="2019-10-07T14:54:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/07/centos7下安装RabbitMQ/">centos7下安装RabbitMQ</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="centos7下安装RabbitMQ"><a href="#centos7下安装RabbitMQ" class="headerlink" title="centos7下安装RabbitMQ"></a>centos7下安装RabbitMQ</h3><h4 id="由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境"><a href="#由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境" class="headerlink" title="由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境"></a>由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境</h4><p><strong>一、安装Erlang</strong></p>
+<p><strong>1.在线安装（需要Linux虚拟机能连接外网）</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install esl-erlang_17.3-1~centos~6_amd64.rpm</span><br><span class="line"></span><br><span class="line">yum install esl-erlang-compat-R14B-1.el6.noarch.rpm</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p><strong>2.离线安装</strong></p>
+<p><strong>（1）环境准备（需要以下四个安装包）</strong></p>
+<p><strong>1.使用下面所示命令进行安装</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh rabbitmq-server-3.4.1-1.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
 
+<p><strong>2.设置配置文件</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/share/doc/rabbitmq-server-3.4.1/rabbitmq.config.example /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.修改配置文件，开启用户远程访问</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%% Uncomment the following line if you want to allow access to the</span><br><span class="line">   %% guest user from anywhere on the network.</span><br><span class="line">   &#123;loopback_users, []&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>将 {loopback_users, []}前面的%%和末尾的，去掉，保存退出</strong></p>
+<p><strong>4.启动、停止RabbitMQ</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">service rabbitmq-server start	#启动</span><br><span class="line"></span><br><span class="line">service rabbitmq-server stop	#关闭</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.开启web界面管理工具</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management	#开启web界面管理工具</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+
+<p><strong>6.设置开机启动</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig rabbitmq-server on</span><br></pre></td></tr></table></figure>
+
+<p><strong>7.防火墙开放15672端口</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -I INPUT -p tcp --dport 15672 -j ACCEPT</span><br><span class="line"></span><br><span class="line">/etc/rc.d/init.d/iptables save</span><br></pre></td></tr></table></figure>
+
+<p><strong>8.或者关闭防火墙</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：第7步和第8步选择一个即可，关闭防火墙就不需要开放端口了</strong></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/07/centos7下安装RabbitMQ/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/23/centos7下安装部署FastDFS的一些问题/" class="archive-article-date">
-  	<time datetime="2019-09-23T13:50:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/23/centos7下安装部署FastDFS的一些问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">centos7下安装部署FastDFS的一些问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/23/centos7下安装部署FastDFS的一些问题/">centos7下安装部署FastDFS的一些问题</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/20/linux系统下安装jdk/" class="archive-article-date">
-  	<time datetime="2019-09-20T14:08:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/20/linux系统下安装jdk/">linux系统下安装jdk</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/16/xshell连接virtualbox中的centos7/" class="archive-article-date">
-  	<time datetime="2019-09-16T14:07:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/xshell连接virtualbox中的centos7/">xshell连接virtualbox中的centos7</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/14/Advanced-Rest-Client的安装/" class="archive-article-date">
-  	<time datetime="2019-09-14T02:23:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/Advanced-Rest-Client的安装/">Advanced Rest Client的安装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/10/谷歌浏览器中添加vue-js插件/" class="archive-article-date">
-  	<time datetime="2019-09-10T14:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/10/谷歌浏览器中添加vue-js插件/">谷歌浏览器中添加vue.js插件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/30/web项目缺少maven依赖问题/" class="archive-article-date">
-  	<time datetime="2019-08-30T14:29:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/30/web项目缺少maven依赖问题/">web项目缺少maven依赖问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/" class="archive-article-date">
-  	<time datetime="2019-08-25T15:02:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/">关于web.xml文件&lt;web app&gt;标签报错问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/关于tomcat位数问题/" class="archive-article-date">
-  	<time datetime="2019-08-25T14:57:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/关于tomcat位数问题/">关于tomcat位数问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -431,8 +369,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
