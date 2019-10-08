@@ -316,29 +316,13 @@
 <h5 id="一、安装Erlang"><a href="#一、安装Erlang" class="headerlink" title="一、安装Erlang"></a>一、安装Erlang</h5><h6 id="1-在线安装（需要Linux虚拟机能连接外网）"><a href="#1-在线安装（需要Linux虚拟机能连接外网）" class="headerlink" title="1.在线安装（需要Linux虚拟机能连接外网）"></a>1.在线安装（需要Linux虚拟机能连接外网）</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install esl-erlang_17.3-1~centos~6_amd64.rpm</span><br><span class="line"></span><br><span class="line">yum install esl-erlang-compat-R14B-1.el6.noarch.rpm</span><br></pre></td></tr></table></figure>
 
 <h6 id="2-离线安装"><a href="#2-离线安装" class="headerlink" title="2.离线安装"></a>2.离线安装</h6><p>（1）环境准备（需要以下四个安装包）</p>
-<table>
-<thead>
-<tr>
-<th>esl-erlang_17.3-1<del>centos</del>6_amd64.rpm</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>esl-erlang-17.3-1.x86_64.rpm</strong></td>
-</tr>
-<tr>
-<td><strong>esl-erlang-compat-R14B-1.el6.noarch.rpm</strong></td>
-</tr>
-<tr>
-<td><strong>rabbitmq-server-3.4.1-1.noarch.rpm</strong></td>
-</tr>
-</tbody></table>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">esl-erlang_17.3-1~centos~6_amd64.rpm</span><br><span class="line"></span><br><span class="line">esl-erlang-17.3-1.x86_64.rpm</span><br><span class="line"></span><br><span class="line">esl-erlang-compat-R14B-1.el6.noarch.rpm</span><br><span class="line"></span><br><span class="line">rabbitmq-server-3.4.1-1.noarch.rpm</span><br></pre></td></tr></table></figure>
+
 <p>（2）开始安装</p>
 <p>依次执行以下命令开始安装：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh esl-erlang-17.3-1.x86_64.rpm --force --nodeps</span><br><span class="line"></span><br><span class="line">rpm -ivh esl-erlang_17.3-1~centos~6_amd64.rpm --force --nodeps</span><br><span class="line"></span><br><span class="line">rpm -ivh esl-erlang-compat-R14B-1.el6.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
 
 <p>说明：</p>
-<p>以上三个命令分别表示安装esl-erlang-17.3-1.x86_64.rpm、esl-erlang_17.3-1<del>centos</del>6_amd64.rpm和</p>
-<p>esl-erlang-compat-R14B-1.el6.noarch.rpm，其中第一个命令需要首先执行，后两个执行的先后顺序无关；</p>
 <p>i表示安装，v表示显示安装过程，h表示显示进度；</p>
 <p>–force：表示强制安装；</p>
 <p>–nodeps：表示忽略依赖冲突；</p>
