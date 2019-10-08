@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>centos7下安装RabbitMQ | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="centos7下安装RabbitMQ由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境一、安装Erlang 1.在线安装（需要Linux虚拟机能连接外网） 123yum install esl-erlang_17.3-1~centos~6_amd64.rpmyum install esl-erlang-compat-R14B-1.el6.noarch.rpm  2">
+  <meta name="description" content="centos7下安装RabbitMQ由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境 一、安装Erlang1.在线安装（需要Linux虚拟机能连接外网）123yum install esl-erlang_17.3-1~centos~6_amd64.rpmyum install esl-erlang-compat-R14B-1.el6.noarch.rpm  2.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="centos7下安装RabbitMQ">
-<meta property="og:url" content="http://yoursite.com/2019/10/07/centos7下安装RabbitMQ/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/centos7下安装RabbitMQ/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="centos7下安装RabbitMQ由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境一、安装Erlang 1.在线安装（需要Linux虚拟机能连接外网） 123yum install esl-erlang_17.3-1~centos~6_amd64.rpmyum install esl-erlang-compat-R14B-1.el6.noarch.rpm  2">
+<meta property="og:description" content="centos7下安装RabbitMQ由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境 一、安装Erlang1.在线安装（需要Linux虚拟机能连接外网）123yum install esl-erlang_17.3-1~centos~6_amd64.rpmyum install esl-erlang-compat-R14B-1.el6.noarch.rpm  2.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-07T14:55:17.798Z">
+<meta property="og:updated_time" content="2019-10-08T14:29:50.693Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos7下安装RabbitMQ">
-<meta name="twitter:description" content="centos7下安装RabbitMQ由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境一、安装Erlang 1.在线安装（需要Linux虚拟机能连接外网） 123yum install esl-erlang_17.3-1~centos~6_amd64.rpmyum install esl-erlang-compat-R14B-1.el6.noarch.rpm  2">
+<meta name="twitter:description" content="centos7下安装RabbitMQ由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境 一、安装Erlang1.在线安装（需要Linux虚拟机能连接外网）123yum install esl-erlang_17.3-1~centos~6_amd64.rpmyum install esl-erlang-compat-R14B-1.el6.noarch.rpm  2.">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -166,48 +166,64 @@
   
 
         
-        <a href="/2019/10/07/centos7下安装RabbitMQ/" class="archive-article-date">
-  	<time datetime="2019-10-07T14:54:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
+        <a href="/2019/10/08/centos7下安装RabbitMQ/" class="archive-article-date">
+  	<time datetime="2019-10-08T14:29:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="centos7下安装RabbitMQ"><a href="#centos7下安装RabbitMQ" class="headerlink" title="centos7下安装RabbitMQ"></a>centos7下安装RabbitMQ</h3><h4 id="由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境"><a href="#由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境" class="headerlink" title="由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境"></a>由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境</h4><p><strong>一、安装Erlang</strong></p>
-<p><strong>1.在线安装（需要Linux虚拟机能连接外网）</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install esl-erlang_17.3-1~centos~6_amd64.rpm</span><br><span class="line"></span><br><span class="line">yum install esl-erlang-compat-R14B-1.el6.noarch.rpm</span><br></pre></td></tr></table></figure>
+        <h3 id="centos7下安装RabbitMQ"><a href="#centos7下安装RabbitMQ" class="headerlink" title="centos7下安装RabbitMQ"></a>centos7下安装RabbitMQ</h3><p><strong>由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境</strong></p>
+<h5 id="一、安装Erlang"><a href="#一、安装Erlang" class="headerlink" title="一、安装Erlang"></a>一、安装Erlang</h5><h6 id="1-在线安装（需要Linux虚拟机能连接外网）"><a href="#1-在线安装（需要Linux虚拟机能连接外网）" class="headerlink" title="1.在线安装（需要Linux虚拟机能连接外网）"></a>1.在线安装（需要Linux虚拟机能连接外网）</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install esl-erlang_17.3-1~centos~6_amd64.rpm</span><br><span class="line"></span><br><span class="line">yum install esl-erlang-compat-R14B-1.el6.noarch.rpm</span><br></pre></td></tr></table></figure>
 
-<p><strong>2.离线安装</strong></p>
-<p><strong>（1）环境准备（需要以下四个安装包）</strong></p>
-<p><strong>1.使用下面所示命令进行安装</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh rabbitmq-server-3.4.1-1.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
+<h6 id="2-离线安装"><a href="#2-离线安装" class="headerlink" title="2.离线安装"></a>2.离线安装</h6><p>（1）环境准备（需要以下四个安装包）</p>
+<table>
+<thead>
+<tr>
+<th>esl-erlang_17.3-1<del>centos</del>6_amd64.rpm</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>esl-erlang-17.3-1.x86_64.rpm</strong></td>
+</tr>
+<tr>
+<td><strong>esl-erlang-compat-R14B-1.el6.noarch.rpm</strong></td>
+</tr>
+<tr>
+<td><strong>rabbitmq-server-3.4.1-1.noarch.rpm</strong></td>
+</tr>
+</tbody></table>
+<p>（2）开始安装</p>
+<p>依次执行以下命令开始安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh esl-erlang-17.3-1.x86_64.rpm --force --nodeps</span><br><span class="line"></span><br><span class="line">rpm -ivh esl-erlang_17.3-1~centos~6_amd64.rpm --force --nodeps</span><br><span class="line"></span><br><span class="line">rpm -ivh esl-erlang-compat-R14B-1.el6.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
 
-<p><strong>2.设置配置文件</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/share/doc/rabbitmq-server-3.4.1/rabbitmq.config.example /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+<p>说明：</p>
+<p>以上三个命令分别表示安装esl-erlang-17.3-1.x86_64.rpm、esl-erlang_17.3-1<del>centos</del>6_amd64.rpm和</p>
+<p>esl-erlang-compat-R14B-1.el6.noarch.rpm，其中第一个命令需要首先执行，后两个执行的先后顺序无关；</p>
+<p>i表示安装，v表示显示安装过程，h表示显示进度；</p>
+<p>–force：表示强制安装；</p>
+<p>–nodeps：表示忽略依赖冲突；</p>
+<h5 id="二、安装安装RabbitMQ"><a href="#二、安装安装RabbitMQ" class="headerlink" title="二、安装安装RabbitMQ"></a>二、安装安装RabbitMQ</h5><h6 id="1-使用下面所示命令进行安装"><a href="#1-使用下面所示命令进行安装" class="headerlink" title="1.使用下面所示命令进行安装"></a>1.使用下面所示命令进行安装</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh rabbitmq-server-3.4.1-1.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
 
-<p><strong>3.修改配置文件，开启用户远程访问</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+<h6 id="2-设置配置文件"><a href="#2-设置配置文件" class="headerlink" title="2.设置配置文件"></a>2.设置配置文件</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/share/doc/rabbitmq-server-3.4.1/rabbitmq.config.example /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-修改配置文件，开启用户远程访问"><a href="#3-修改配置文件，开启用户远程访问" class="headerlink" title="3.修改配置文件，开启用户远程访问"></a>3.修改配置文件，开启用户远程访问</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%% Uncomment the following line if you want to allow access to the</span><br><span class="line">   %% guest user from anywhere on the network.</span><br><span class="line">   &#123;loopback_users, []&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>将 {loopback_users, []}前面的%%和末尾的，去掉，保存退出</strong></p>
-<p><strong>4.启动、停止RabbitMQ</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">service rabbitmq-server start	#启动</span><br><span class="line"></span><br><span class="line">service rabbitmq-server stop	#关闭</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+<p>将 {loopback_users, []}前面的%%和末尾的，去掉，保存退出</p>
+<h6 id="4-启动、停止RabbitMQ"><a href="#4-启动、停止RabbitMQ" class="headerlink" title="4.启动、停止RabbitMQ"></a>4.启动、停止RabbitMQ</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">service rabbitmq-server start	#启动</span><br><span class="line"></span><br><span class="line">service rabbitmq-server stop	#关闭</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
 
-<p><strong>5.开启web界面管理工具</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management	#开启web界面管理工具</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+<h6 id="5-开启web界面管理工具"><a href="#5-开启web界面管理工具" class="headerlink" title="5.开启web界面管理工具"></a>5.开启web界面管理工具</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management	#开启web界面管理工具</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
 
-<p><strong>6.设置开机启动</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig rabbitmq-server on</span><br></pre></td></tr></table></figure>
+<h6 id="6-设置开机启动"><a href="#6-设置开机启动" class="headerlink" title="6.设置开机启动"></a>6.设置开机启动</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig rabbitmq-server on</span><br></pre></td></tr></table></figure>
 
-<p><strong>7.防火墙开放15672端口</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -I INPUT -p tcp --dport 15672 -j ACCEPT</span><br><span class="line"></span><br><span class="line">/etc/rc.d/init.d/iptables save</span><br></pre></td></tr></table></figure>
+<h6 id="7-防火墙开放15672端口"><a href="#7-防火墙开放15672端口" class="headerlink" title="7.防火墙开放15672端口"></a>7.防火墙开放15672端口</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -I INPUT -p tcp --dport 15672 -j ACCEPT</span><br><span class="line"></span><br><span class="line">/etc/rc.d/init.d/iptables save</span><br></pre></td></tr></table></figure>
 
-<p><strong>8.或者关闭防火墙</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
+<h6 id="8-或者关闭防火墙"><a href="#8-或者关闭防火墙" class="headerlink" title="8.或者关闭防火墙"></a>8.或者关闭防火墙</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
 
-<p><strong>注意：第7步和第8步选择一个即可，关闭防火墙就不需要开放端口了</strong></p>
+<p>注意：第7步和第8步选择一个即可，关闭防火墙就不需要开放端口了</p>
 
       
 
@@ -297,7 +313,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/07/centos7下安装RabbitMQ/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/08/centos7下安装RabbitMQ/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,6 +326,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/10/08/centos7下安装配置Redis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          centos7下安装配置Redis
+        
+      </div>
+    </a>
   
   
     <a href="/2019/09/23/centos7下安装部署FastDFS的一些问题/" id="article-nav-older" class="article-nav-link-wrap">

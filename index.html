@@ -152,60 +152,104 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-centos7下安装RabbitMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-centos7下安装配置Redis" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/07/centos7下安装RabbitMQ/">centos7下安装RabbitMQ</a>
+      <a class="article-title" href="/2019/10/08/centos7下安装配置Redis/">centos7下安装配置Redis</a>
     </h1>
   
 
         
-        <a href="/2019/10/07/centos7下安装RabbitMQ/" class="archive-article-date">
-  	<time datetime="2019-10-07T14:54:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-07</time>
+        <a href="/2019/10/08/centos7下安装配置Redis/" class="archive-article-date">
+  	<time datetime="2019-10-08T14:32:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="centos7下安装RabbitMQ"><a href="#centos7下安装RabbitMQ" class="headerlink" title="centos7下安装RabbitMQ"></a>centos7下安装RabbitMQ</h3><h4 id="由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境"><a href="#由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境" class="headerlink" title="由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境"></a>由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境</h4><p><strong>一、安装Erlang</strong></p>
-<p><strong>1.在线安装（需要Linux虚拟机能连接外网）</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install esl-erlang_17.3-1~centos~6_amd64.rpm</span><br><span class="line"></span><br><span class="line">yum install esl-erlang-compat-R14B-1.el6.noarch.rpm</span><br></pre></td></tr></table></figure>
+        <h3 id="centos7安装配置Redis"><a href="#centos7安装配置Redis" class="headerlink" title="centos7安装配置Redis"></a>centos7安装配置Redis</h3><h4 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h4><ul>
+<li><a href="https://redis.io/download" target="_blank" rel="noopener">官网</a>下载安装包：redis-4.0.9.tar.gz</li>
+<li>上传至安装目录下：/usr/local/leyou</li>
+<li>修改权限：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 redis-4.0.9.tar.gz</span><br></pre></td></tr></table></figure>
 
-<p><strong>2.离线安装</strong></p>
-<p><strong>（1）环境准备（需要以下四个安装包）</strong></p>
-<p><strong>1.使用下面所示命令进行安装</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh rabbitmq-server-3.4.1-1.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
+<ul>
+<li>重命名：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv redis-4.0.9.tar.gz redis</span><br></pre></td></tr></table></figure>
 
-<p><strong>2.设置配置文件</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/share/doc/rabbitmq-server-3.4.1/rabbitmq.config.example /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+<ul>
+<li>解压：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf redis-4.0.9.tar.gz</span><br></pre></td></tr></table></figure>
 
-<p><strong>3.修改配置文件，开启用户远程访问</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+<ul>
+<li>编译安装：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd redis # 进入redis目录</span><br><span class="line">make &amp;&amp; make install # redis是用C语言编写的，所以需要编译、安装</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%% Uncomment the following line if you want to allow access to the</span><br><span class="line">   %% guest user from anywhere on the network.</span><br><span class="line">   &#123;loopback_users, []&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h4><ul>
+<li>修改安装目录下的redis.conf文件：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi redis.conf</span><br></pre></td></tr></table></figure>
 
-<p><strong>将 {loopback_users, []}前面的%%和末尾的，去掉，保存退出</strong></p>
-<p><strong>4.启动、停止RabbitMQ</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">service rabbitmq-server start	#启动</span><br><span class="line"></span><br><span class="line">service rabbitmq-server stop	#关闭</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改以下配置：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>bind 127.0.0.1 # 将这行代码注释，监听所有的ip地址，外网可以访问</span><br><span class="line">protected-mode no # 把yes改成no，允许外网访问</span><br><span class="line">daemonize yes # 把no改成yes，后台运行</span><br></pre></td></tr></table></figure>
 
-<p><strong>5.开启web界面管理工具</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management	#开启web界面管理工具</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+<h4 id="三、启动或停止"><a href="#三、启动或停止" class="headerlink" title="三、启动或停止"></a>三、启动或停止</h4><p><strong>redis提供了服务端命令和客户端命令：</strong></p>
+<ul>
+<li>redis-server 服务端命令，可以包含以下参数：<br>start 启动<br>stop 停止</li>
+<li>redis-cli 客户端控制台，包含参数：<br>-h xxx 指定服务端地址，默认值是127.0.0.1<br>-p xxx 指定服务端端口，默认值是6379</li>
+</ul>
+<h4 id="四、设置开机自启"><a href="#四、设置开机自启" class="headerlink" title="四、设置开机自启"></a>四、设置开机自启</h4><ul>
+<li>输入命令，新建文件：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/redis</span><br></pre></td></tr></table></figure>
 
-<p><strong>6.设置开机启动</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig rabbitmq-server on</span><br></pre></td></tr></table></figure>
+<ul>
+<li>输入下面内容：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line"><span class="meta">#</span> chkconfig:   2345 90 10</span><br><span class="line"><span class="meta">#</span> description:  Redis is a persistent key-value database</span><br><span class="line">PATH=/usr/local/bin:/sbin:/usr/bin:/bin</span><br><span class="line"></span><br><span class="line">REDISPORT=6379</span><br><span class="line">EXEC=/usr/local/bin/redis-server</span><br><span class="line">REDIS_CLI=/usr/local/bin/redis-cli</span><br><span class="line"></span><br><span class="line">PIDFILE=/var/run/redis.pid</span><br><span class="line"></span><br><span class="line">CONF="/usr/local/leyou/redis/redis.conf"</span><br><span class="line"></span><br><span class="line">case "$1" in  </span><br><span class="line">    start)  </span><br><span class="line">        if [ -f $PIDFILE ]  </span><br><span class="line">        then  </span><br><span class="line">                echo "$PIDFILE exists, process is already running or crashed"  </span><br><span class="line">        else  </span><br><span class="line">                echo "Starting Redis server..."  </span><br><span class="line">                $EXEC $CONF  </span><br><span class="line">        fi  </span><br><span class="line">        if [ "$?"="0" ]   </span><br><span class="line">        then  </span><br><span class="line">              echo "Redis is running..."  </span><br><span class="line">        fi  </span><br><span class="line">        ;;  </span><br><span class="line">    stop)  </span><br><span class="line">        if [ ! -f $PIDFILE ]  </span><br><span class="line">        then  </span><br><span class="line">                echo "$PIDFILE does not exist, process is not running"  </span><br><span class="line">        else  </span><br><span class="line">                PID=$(cat $PIDFILE)  </span><br><span class="line">                echo "Stopping ..."  </span><br><span class="line">                $REDIS_CLI -p $REDISPORT SHUTDOWN  </span><br><span class="line">                while [ -x $&#123;PIDFILE&#125; ]  </span><br><span class="line">               do  </span><br><span class="line">                    echo "Waiting for Redis to shutdown ..."  </span><br><span class="line">                    sleep 1  </span><br><span class="line">                done  </span><br><span class="line">                echo "Redis stopped"  </span><br><span class="line">        fi  </span><br><span class="line">        ;;  </span><br><span class="line">   restart|force-reload)  </span><br><span class="line">        $&#123;0&#125; stop  </span><br><span class="line">        $&#123;0&#125; start  </span><br><span class="line">        ;;  </span><br><span class="line">  *)  </span><br><span class="line">    echo "Usage: /etc/init.d/redis &#123;start|stop|restart|force-reload&#125;" &gt;&amp;2  </span><br><span class="line">        exit 1  </span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
 
-<p><strong>7.防火墙开放15672端口</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -I INPUT -p tcp --dport 15672 -j ACCEPT</span><br><span class="line"></span><br><span class="line">/etc/rc.d/init.d/iptables save</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后：wq保存退出</li>
+</ul>
+<p><em>注意：以下信息需要根据安装目录进行调整：</em></p>
+<blockquote>
+<p>EXEC=/usr/local/bin/redis-server # 执行脚本的地址</p>
+<p>REDIS_CLI=/usr/local/bin/redis-cli # 客户端执行脚本的地址</p>
+<p>PIDFILE=/var/run/redis.pid # 进程id文件地址</p>
+<p>CONF=”/usr/local/src/redis-3.0.2/redis.conf” #配置文件地址</p>
+</blockquote>
+<p><em>若是和上面的路径一致，则不需要修改任何路径</em></p>
+<ul>
+<li>设置权限：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /etc/init.d/redis</span><br></pre></td></tr></table></figure>
 
-<p><strong>8.或者关闭防火墙</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
+<ul>
+<li>启动测试：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/redis start</span><br></pre></td></tr></table></figure>
 
-<p><strong>注意：第7步和第8步选择一个即可，关闭防火墙就不需要开放端口了</strong></p>
+<ul>
+<li>启动成功会提示如下信息：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Starting Redis server...</span><br><span class="line">Redis is running...</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置开机自启动</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chkconfig --add /etc/init.d/redis</span><br><span class="line">chkconfig redis on</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -218,7 +262,119 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/07/centos7下安装RabbitMQ/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/08/centos7下安装配置Redis/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-centos7下安装RabbitMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/08/centos7下安装RabbitMQ/">centos7下安装RabbitMQ</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/08/centos7下安装RabbitMQ/" class="archive-article-date">
+  	<time datetime="2019-10-08T14:29:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="centos7下安装RabbitMQ"><a href="#centos7下安装RabbitMQ" class="headerlink" title="centos7下安装RabbitMQ"></a>centos7下安装RabbitMQ</h3><p><strong>由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境</strong></p>
+<h5 id="一、安装Erlang"><a href="#一、安装Erlang" class="headerlink" title="一、安装Erlang"></a>一、安装Erlang</h5><h6 id="1-在线安装（需要Linux虚拟机能连接外网）"><a href="#1-在线安装（需要Linux虚拟机能连接外网）" class="headerlink" title="1.在线安装（需要Linux虚拟机能连接外网）"></a>1.在线安装（需要Linux虚拟机能连接外网）</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install esl-erlang_17.3-1~centos~6_amd64.rpm</span><br><span class="line"></span><br><span class="line">yum install esl-erlang-compat-R14B-1.el6.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-离线安装"><a href="#2-离线安装" class="headerlink" title="2.离线安装"></a>2.离线安装</h6><p>（1）环境准备（需要以下四个安装包）</p>
+<table>
+<thead>
+<tr>
+<th>esl-erlang_17.3-1<del>centos</del>6_amd64.rpm</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>esl-erlang-17.3-1.x86_64.rpm</strong></td>
+</tr>
+<tr>
+<td><strong>esl-erlang-compat-R14B-1.el6.noarch.rpm</strong></td>
+</tr>
+<tr>
+<td><strong>rabbitmq-server-3.4.1-1.noarch.rpm</strong></td>
+</tr>
+</tbody></table>
+<p>（2）开始安装</p>
+<p>依次执行以下命令开始安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh esl-erlang-17.3-1.x86_64.rpm --force --nodeps</span><br><span class="line"></span><br><span class="line">rpm -ivh esl-erlang_17.3-1~centos~6_amd64.rpm --force --nodeps</span><br><span class="line"></span><br><span class="line">rpm -ivh esl-erlang-compat-R14B-1.el6.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<p>以上三个命令分别表示安装esl-erlang-17.3-1.x86_64.rpm、esl-erlang_17.3-1<del>centos</del>6_amd64.rpm和</p>
+<p>esl-erlang-compat-R14B-1.el6.noarch.rpm，其中第一个命令需要首先执行，后两个执行的先后顺序无关；</p>
+<p>i表示安装，v表示显示安装过程，h表示显示进度；</p>
+<p>–force：表示强制安装；</p>
+<p>–nodeps：表示忽略依赖冲突；</p>
+<h5 id="二、安装安装RabbitMQ"><a href="#二、安装安装RabbitMQ" class="headerlink" title="二、安装安装RabbitMQ"></a>二、安装安装RabbitMQ</h5><h6 id="1-使用下面所示命令进行安装"><a href="#1-使用下面所示命令进行安装" class="headerlink" title="1.使用下面所示命令进行安装"></a>1.使用下面所示命令进行安装</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh rabbitmq-server-3.4.1-1.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-设置配置文件"><a href="#2-设置配置文件" class="headerlink" title="2.设置配置文件"></a>2.设置配置文件</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/share/doc/rabbitmq-server-3.4.1/rabbitmq.config.example /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+
+<h6 id="3-修改配置文件，开启用户远程访问"><a href="#3-修改配置文件，开启用户远程访问" class="headerlink" title="3.修改配置文件，开启用户远程访问"></a>3.修改配置文件，开启用户远程访问</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%% Uncomment the following line if you want to allow access to the</span><br><span class="line">   %% guest user from anywhere on the network.</span><br><span class="line">   &#123;loopback_users, []&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将 {loopback_users, []}前面的%%和末尾的，去掉，保存退出</p>
+<h6 id="4-启动、停止RabbitMQ"><a href="#4-启动、停止RabbitMQ" class="headerlink" title="4.启动、停止RabbitMQ"></a>4.启动、停止RabbitMQ</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">service rabbitmq-server start	#启动</span><br><span class="line"></span><br><span class="line">service rabbitmq-server stop	#关闭</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+
+<h6 id="5-开启web界面管理工具"><a href="#5-开启web界面管理工具" class="headerlink" title="5.开启web界面管理工具"></a>5.开启web界面管理工具</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management	#开启web界面管理工具</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+
+<h6 id="6-设置开机启动"><a href="#6-设置开机启动" class="headerlink" title="6.设置开机启动"></a>6.设置开机启动</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig rabbitmq-server on</span><br></pre></td></tr></table></figure>
+
+<h6 id="7-防火墙开放15672端口"><a href="#7-防火墙开放15672端口" class="headerlink" title="7.防火墙开放15672端口"></a>7.防火墙开放15672端口</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -I INPUT -p tcp --dport 15672 -j ACCEPT</span><br><span class="line"></span><br><span class="line">/etc/rc.d/init.d/iptables save</span><br></pre></td></tr></table></figure>
+
+<h6 id="8-或者关闭防火墙"><a href="#8-或者关闭防火墙" class="headerlink" title="8.或者关闭防火墙"></a>8.或者关闭防火墙</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p>注意：第7步和第8步选择一个即可，关闭防火墙就不需要开放端口了</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/08/centos7下安装RabbitMQ/">展开全文 >></a>
         </p>
       
 

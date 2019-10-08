@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Dream</title>
+  <title>centos7下安装配置Redis | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dream">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="centos7安装配置Redis一、安装 官网下载安装包：redis-4.0.9.tar.gz 上传至安装目录下：/usr/local/leyou 修改权限：  1chmod 755 redis-4.0.9.tar.gz   重命名：  1mv redis-4.0.9.tar.gz redis   解压：  1tar -xvf redis-4.0.9.tar.gz   编译安装：  12cd re">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7下安装配置Redis">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/centos7下安装配置Redis/index.html">
 <meta property="og:site_name" content="Dream">
+<meta property="og:description" content="centos7安装配置Redis一、安装 官网下载安装包：redis-4.0.9.tar.gz 上传至安装目录下：/usr/local/leyou 修改权限：  1chmod 755 redis-4.0.9.tar.gz   重命名：  1mv redis-4.0.9.tar.gz redis   解压：  1tar -xvf redis-4.0.9.tar.gz   编译安装：  12cd re">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-08T14:33:19.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dream">
+<meta name="twitter:title" content="centos7下安装配置Redis">
+<meta name="twitter:description" content="centos7安装配置Redis一、安装 官网下载安装包：redis-4.0.9.tar.gz 上传至安装目录下：/usr/local/leyou 修改权限：  1chmod 755 redis-4.0.9.tar.gz   重命名：  1mv redis-4.0.9.tar.gz redis   解压：  1tar -xvf redis-4.0.9.tar.gz   编译安装：  12cd re">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -150,292 +154,243 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-centos7下安装配置Redis" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      centos7下安装配置Redis
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/08/centos7下安装配置Redis/" class="archive-article-date">
+
+        
+        <a href="/2019/10/08/centos7下安装配置Redis/" class="archive-article-date">
   	<time datetime="2019-10-08T14:32:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/08/centos7下安装配置Redis/">centos7下安装配置Redis</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="centos7安装配置Redis"><a href="#centos7安装配置Redis" class="headerlink" title="centos7安装配置Redis"></a>centos7安装配置Redis</h3><h4 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h4><ul>
+<li><a href="https://redis.io/download" target="_blank" rel="noopener">官网</a>下载安装包：redis-4.0.9.tar.gz</li>
+<li>上传至安装目录下：/usr/local/leyou</li>
+<li>修改权限：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 redis-4.0.9.tar.gz</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<ul>
+<li>重命名：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv redis-4.0.9.tar.gz redis</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>解压：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf redis-4.0.9.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>编译安装：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd redis # 进入redis目录</span><br><span class="line">make &amp;&amp; make install # redis是用C语言编写的，所以需要编译、安装</span><br></pre></td></tr></table></figure>
+
+<h4 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h4><ul>
+<li>修改安装目录下的redis.conf文件：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi redis.conf</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改以下配置：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>bind 127.0.0.1 # 将这行代码注释，监听所有的ip地址，外网可以访问</span><br><span class="line">protected-mode no # 把yes改成no，允许外网访问</span><br><span class="line">daemonize yes # 把no改成yes，后台运行</span><br></pre></td></tr></table></figure>
+
+<h4 id="三、启动或停止"><a href="#三、启动或停止" class="headerlink" title="三、启动或停止"></a>三、启动或停止</h4><p><strong>redis提供了服务端命令和客户端命令：</strong></p>
+<ul>
+<li>redis-server 服务端命令，可以包含以下参数：<br>start 启动<br>stop 停止</li>
+<li>redis-cli 客户端控制台，包含参数：<br>-h xxx 指定服务端地址，默认值是127.0.0.1<br>-p xxx 指定服务端端口，默认值是6379</li>
+</ul>
+<h4 id="四、设置开机自启"><a href="#四、设置开机自启" class="headerlink" title="四、设置开机自启"></a>四、设置开机自启</h4><ul>
+<li>输入命令，新建文件：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/init.d/redis</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>输入下面内容：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line"><span class="meta">#</span> chkconfig:   2345 90 10</span><br><span class="line"><span class="meta">#</span> description:  Redis is a persistent key-value database</span><br><span class="line">PATH=/usr/local/bin:/sbin:/usr/bin:/bin</span><br><span class="line"></span><br><span class="line">REDISPORT=6379</span><br><span class="line">EXEC=/usr/local/bin/redis-server</span><br><span class="line">REDIS_CLI=/usr/local/bin/redis-cli</span><br><span class="line"></span><br><span class="line">PIDFILE=/var/run/redis.pid</span><br><span class="line"></span><br><span class="line">CONF="/usr/local/leyou/redis/redis.conf"</span><br><span class="line"></span><br><span class="line">case "$1" in  </span><br><span class="line">    start)  </span><br><span class="line">        if [ -f $PIDFILE ]  </span><br><span class="line">        then  </span><br><span class="line">                echo "$PIDFILE exists, process is already running or crashed"  </span><br><span class="line">        else  </span><br><span class="line">                echo "Starting Redis server..."  </span><br><span class="line">                $EXEC $CONF  </span><br><span class="line">        fi  </span><br><span class="line">        if [ "$?"="0" ]   </span><br><span class="line">        then  </span><br><span class="line">              echo "Redis is running..."  </span><br><span class="line">        fi  </span><br><span class="line">        ;;  </span><br><span class="line">    stop)  </span><br><span class="line">        if [ ! -f $PIDFILE ]  </span><br><span class="line">        then  </span><br><span class="line">                echo "$PIDFILE does not exist, process is not running"  </span><br><span class="line">        else  </span><br><span class="line">                PID=$(cat $PIDFILE)  </span><br><span class="line">                echo "Stopping ..."  </span><br><span class="line">                $REDIS_CLI -p $REDISPORT SHUTDOWN  </span><br><span class="line">                while [ -x $&#123;PIDFILE&#125; ]  </span><br><span class="line">               do  </span><br><span class="line">                    echo "Waiting for Redis to shutdown ..."  </span><br><span class="line">                    sleep 1  </span><br><span class="line">                done  </span><br><span class="line">                echo "Redis stopped"  </span><br><span class="line">        fi  </span><br><span class="line">        ;;  </span><br><span class="line">   restart|force-reload)  </span><br><span class="line">        $&#123;0&#125; stop  </span><br><span class="line">        $&#123;0&#125; start  </span><br><span class="line">        ;;  </span><br><span class="line">  *)  </span><br><span class="line">    echo "Usage: /etc/init.d/redis &#123;start|stop|restart|force-reload&#125;" &gt;&amp;2  </span><br><span class="line">        exit 1  </span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>然后：wq保存退出</li>
+</ul>
+<p><em>注意：以下信息需要根据安装目录进行调整：</em></p>
+<blockquote>
+<p>EXEC=/usr/local/bin/redis-server # 执行脚本的地址</p>
+<p>REDIS_CLI=/usr/local/bin/redis-cli # 客户端执行脚本的地址</p>
+<p>PIDFILE=/var/run/redis.pid # 进程id文件地址</p>
+<p>CONF=”/usr/local/src/redis-3.0.2/redis.conf” #配置文件地址</p>
+</blockquote>
+<p><em>若是和上面的路径一致，则不需要修改任何路径</em></p>
+<ul>
+<li>设置权限：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /etc/init.d/redis</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动测试：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/redis start</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动成功会提示如下信息：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Starting Redis server...</span><br><span class="line">Redis is running...</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置开机自启动</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chkconfig --add /etc/init.d/redis</span><br><span class="line">chkconfig redis on</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/08/centos7下安装配置Redis/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/08/centos7下安装RabbitMQ/" class="archive-article-date">
-  	<time datetime="2019-10-08T14:29:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/08/centos7下安装RabbitMQ/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">centos7下安装RabbitMQ</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/08/centos7下安装RabbitMQ/">centos7下安装RabbitMQ</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/23/centos7下安装部署FastDFS的一些问题/" class="archive-article-date">
-  	<time datetime="2019-09-23T13:50:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/23/centos7下安装部署FastDFS的一些问题/">centos7下安装部署FastDFS的一些问题</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/20/linux系统下安装jdk/" class="archive-article-date">
-  	<time datetime="2019-09-20T14:08:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/20/linux系统下安装jdk/">linux系统下安装jdk</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/16/xshell连接virtualbox中的centos7/" class="archive-article-date">
-  	<time datetime="2019-09-16T14:07:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/xshell连接virtualbox中的centos7/">xshell连接virtualbox中的centos7</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/14/Advanced-Rest-Client的安装/" class="archive-article-date">
-  	<time datetime="2019-09-14T02:23:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/Advanced-Rest-Client的安装/">Advanced Rest Client的安装</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/10/谷歌浏览器中添加vue-js插件/" class="archive-article-date">
-  	<time datetime="2019-09-10T14:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/10/谷歌浏览器中添加vue-js插件/">谷歌浏览器中添加vue.js插件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/30/web项目缺少maven依赖问题/" class="archive-article-date">
-  	<time datetime="2019-08-30T14:29:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/30/web项目缺少maven依赖问题/">web项目缺少maven依赖问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/" class="archive-article-date">
-  	<time datetime="2019-08-25T15:02:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/">关于web.xml文件&lt;web app&gt;标签报错问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/关于tomcat位数问题/" class="archive-article-date">
-  	<time datetime="2019-08-25T14:57:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/关于tomcat位数问题/">关于tomcat位数问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -458,8 +413,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
