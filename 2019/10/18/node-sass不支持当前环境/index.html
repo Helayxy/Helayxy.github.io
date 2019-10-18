@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Dream</title>
+  <title>node sass不支持当前环境 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dream">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="Node Sass does not yet support your current environment1.问题描述： Node Sass does not yet support your current environment: Windows 64-bit 翻译过来就是说：node sass不支持当前环境 2.解决方案： 卸载原来不适合当前本机环境的node sass，重新安装适合本机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node sass不支持当前环境">
+<meta property="og:url" content="http://yoursite.com/2019/10/18/node-sass不支持当前环境/index.html">
 <meta property="og:site_name" content="Dream">
+<meta property="og:description" content="Node Sass does not yet support your current environment1.问题描述： Node Sass does not yet support your current environment: Windows 64-bit 翻译过来就是说：node sass不支持当前环境 2.解决方案： 卸载原来不适合当前本机环境的node sass，重新安装适合本机">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-18T15:06:22.844Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dream">
+<meta name="twitter:title" content="node sass不支持当前环境">
+<meta name="twitter:description" content="Node Sass does not yet support your current environment1.问题描述： Node Sass does not yet support your current environment: Windows 64-bit 翻译过来就是说：node sass不支持当前环境 2.解决方案： 卸载原来不适合当前本机环境的node sass，重新安装适合本机">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -150,39 +154,78 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-关于web-xml文件-web-app-标签报错问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-node-sass不支持当前环境" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/">关于web.xml文件&lt;web app&gt;标签报错问题</a>
+    <h1 class="article-title" itemprop="name">
+      node sass不支持当前环境
     </h1>
   
 
         
-        <a href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/" class="archive-article-date">
-  	<time datetime="2019-08-25T15:02:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
+        <a href="/2019/10/18/node-sass不支持当前环境/" class="archive-article-date">
+  	<time datetime="2019-10-18T15:05:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="关于web项目中报错问题"><a href="#关于web项目中报错问题" class="headerlink" title="关于web项目中报错问题"></a>关于web项目<web-app>中报错问题</web-app></h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当使用IDEA新建一个web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是<web-app>会显示报错</web-app></p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>这是因为在<web-app>上有这样一段代码：</web-app></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE web-app PUBLIC</span><br><span class="line">        <span class="string">"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"</span></span><br><span class="line">        <span class="string">"http://java.sun.com/dtd/web-app_2_3.dtd"</span> &gt;</span><br></pre></td></tr></table></figure>
+        <h4 id="Node-Sass-does-not-yet-support-your-current-environment"><a href="#Node-Sass-does-not-yet-support-your-current-environment" class="headerlink" title="Node Sass does not yet support your current environment"></a>Node Sass does not yet support your current environment</h4><p>1.问题描述：</p>
+<p>Node Sass does not yet support your current environment: Windows 64-bit</p>
+<p>翻译过来就是说：node sass不支持当前环境</p>
+<p>2.解决方案：</p>
+<p>卸载原来不适合当前本机环境的node sass，重新安装适合本机的node sass</p>
+<p>3.卸载：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm uninstall --save node-sass</span><br></pre></td></tr></table></figure>
 
-<p>这段代码要求我们在web.xml中编写的相关配置信息必须按照一定的规范和顺序来配置</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>使用如下代码替换<web-app>标签即可：</web-app></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">"http://java.sun.com/xml/ns/javaee"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://java.sun.com/xml/ns/javaee</span></span></span><br><span class="line"><span class="tag"><span class="string">        ttp://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">version</span>=<span class="string">"3.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>4.重新安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save node-sass</span><br></pre></td></tr></table></figure>
 
+<p>注意：使用cnpm的前提是已经配置好了cnpm的镜像</p>
+<p>5.若没有配置cnpm，则使用npm进行卸载和安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">卸载：npm uninstall --save node-sass</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">安装：npm install --save node-sass</span><br></pre></td></tr></table></figure>
+
+<p>注意：使用npm安装可能会出现安装较慢的问题，这是因为npm使用的是国外的镜像</p>
 
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -191,16 +234,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/25/关于web-xml文件-web-app-标签报错问题/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/18/node-sass不支持当前环境/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/09/解决git本地仓库上传不到github远程仓库问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">解决git本地仓库上传不到github远程仓库问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -220,85 +322,14 @@
 
 
 
-
-  
-    <article id="post-关于tomcat位数问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/25/关于tomcat位数问题/">关于tomcat位数问题</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/25/关于tomcat位数问题/" class="archive-article-date">
-  	<time datetime="2019-08-25T14:57:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>今天在IDEA中新建一个web项目，启动tomcat报了如下的错误：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[C:\Deveploment tools\apache-tomcat-<span class="number">8.0</span>.52\bin\tcnative-<span class="number">1</span>.dll:Can<span class="string">'t load 32-bit. dll on a AMD 64-bit platform]</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><p>tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动tomcat会报这样的错误</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>1.来到这个<a href="http://archive.apache.org/dist/tomcat/tomcat-connectors/native/" target="_blank" rel="noopener">网站</a></p>
-<p>2.下载相应版本的文件</p>
-<p>3.解压：</p>
-<p>在bin目录下有一个x64文件夹，该文件夹下就是64位的tcnative-1.dll文件</p>
-<p>4.替换：</p>
-<p>删除原tomcat的bin目录下的32位的tcnative-1.dll文件，将64位的tcnative-1.dll添加进去</p>
-<p>5.重启tomcat即可，此时将不再报错</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/25/关于tomcat位数问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -321,8 +352,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
