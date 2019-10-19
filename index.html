@@ -152,6 +152,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git-push-origin-master报错问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/19/git-push-origin-master报错问题/">git push origin master报错问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/19/git-push-origin-master报错问题/" class="archive-article-date">
+  	<time datetime="2019-10-19T14:28:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="记录git-push-origin-master报错问题"><a href="#记录git-push-origin-master报错问题" class="headerlink" title="记录git push origin master报错问题"></a>记录git push origin master报错问题</h4><h5 id="1-问题描述："><a href="#1-问题描述：" class="headerlink" title="1.问题描述："></a>1.问题描述：</h5><p>执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>命令时，出现以下错误信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">To https://github.com/Helayxy/leyou.git</span><br><span class="line"> ! [rejected]        master -&gt; master (fetch first)</span><br><span class="line">error: failed to push some refs to 'https://github.com/Helayxy/leyou.git'</span><br><span class="line">hint: Updates were rejected because the remote contains work that you do</span><br><span class="line">hint: not have locally. This is usually caused by another repository pushing</span><br><span class="line">hint: to the same ref. You may want to first integrate the remote changes</span><br><span class="line">hint: (e.g., 'git pull ...') before pushing again.</span><br><span class="line">hint: See the 'Note about fast-forwards' in 'git push --help' for details.</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-原因所在："><a href="#2-原因所在：" class="headerlink" title="2.原因所在："></a>2.原因所在：</h5><p>出现这个问题是因为github中的文件与本地仓库中的文件不同造成的，当修改了github元按成仓库中的文件后，在本地仓库进行git  push时，便会出现此问题，可以通过如下命令进行代码合并：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-提交："><a href="#3-提交：" class="headerlink" title="3.提交："></a>3.提交：</h5><p>最后使用如下命令进行提交：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/19/git-push-origin-master报错问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-node-sass不支持当前环境" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -913,78 +987,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/09/10/谷歌浏览器中添加vue-js插件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-web项目缺少maven依赖问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/30/web项目缺少maven依赖问题/">web项目缺少maven依赖问题</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/30/web项目缺少maven依赖问题/" class="archive-article-date">
-  	<time datetime="2019-08-30T14:29:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="启动Tomcat报错-maven原因"><a href="#启动Tomcat报错-maven原因" class="headerlink" title="启动Tomcat报错-maven原因"></a>启动Tomcat报错-maven原因</h3><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>启动服务器运行项目时报了如下错误：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener</span><br></pre></td></tr></table></figure>
-
-<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>没有添加maven依赖</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>1.右击项目，选择properties</p>
-<p>2.选择Deployment Assembly</p>
-<p>3.选择Add -&gt; Java Build Path Entries -&gt; Next</p>
-<p>4.选择Maven Dependencies -&gt; Finish -&gt; Apply -&gt; ok</p>
-<p>5.移除项目，重新添加至Tomcat</p>
-<p>6.重启server即可正常运行项目</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/30/web项目缺少maven依赖问题/">展开全文 >></a>
         </p>
       
 
