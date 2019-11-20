@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>关于Tomcat位数问题 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题描述今天在IDEA中新建一个web项目，启动tomcat报了如下的错误： 1[C:\Deveploment tools\apache-tomcat-8.0.52\bin\tcnative-1.dll:Can&apos;t load 32-bit. dll on a AMD 64-bit platform]  报错原因tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这">
+  <meta name="description" content="问题描述今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误： 1[C:\Deveploment tools\apache-tomcat-8.0.52\bin\tcnative-1.dll:Can&apos;t load 32-bit. dll on a AMD 64-bit platform]  报错原因Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Tomcat位数问题">
 <meta property="og:url" content="http://yoursite.com/2019/11/20/关于Tomcat位数问题/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="问题描述今天在IDEA中新建一个web项目，启动tomcat报了如下的错误： 1[C:\Deveploment tools\apache-tomcat-8.0.52\bin\tcnative-1.dll:Can&apos;t load 32-bit. dll on a AMD 64-bit platform]  报错原因tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这">
+<meta property="og:description" content="问题描述今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误： 1[C:\Deveploment tools\apache-tomcat-8.0.52\bin\tcnative-1.dll:Can&apos;t load 32-bit. dll on a AMD 64-bit platform]  报错原因Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-20T15:20:45.680Z">
+<meta property="og:updated_time" content="2019-11-20T15:40:16.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Tomcat位数问题">
-<meta name="twitter:description" content="问题描述今天在IDEA中新建一个web项目，启动tomcat报了如下的错误： 1[C:\Deveploment tools\apache-tomcat-8.0.52\bin\tcnative-1.dll:Can&apos;t load 32-bit. dll on a AMD 64-bit platform]  报错原因tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这">
+<meta name="twitter:description" content="问题描述今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误： 1[C:\Deveploment tools\apache-tomcat-8.0.52\bin\tcnative-1.dll:Can&apos;t load 32-bit. dll on a AMD 64-bit platform]  报错原因Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -174,17 +174,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>今天在IDEA中新建一个web项目，启动tomcat报了如下的错误：</p>
+        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[C:\Deveploment tools\apache-tomcat-<span class="number">8.0</span>.52\bin\tcnative-<span class="number">1</span>.dll:Can<span class="string">'t load 32-bit. dll on a AMD 64-bit platform]</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><p>tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动tomcat会报这样的错误</p>
+<h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><p>Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动Tomcat会报这样的错误</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>1.来到这个<a href="http://archive.apache.org/dist/tomcat/tomcat-connectors/native/" target="_blank" rel="noopener">网站</a></p>
 <p>2.下载相应版本的文件</p>
 <p>3.解压：</p>
 <p>在bin目录下有一个x64文件夹，该文件夹下就是64位的tcnative-1.dll文件</p>
 <p>4.替换：</p>
 <p>删除原tomcat的bin目录下的32位的tcnative-1.dll文件，将64位的tcnative-1.dll添加进去</p>
-<p>5.重启tomcat即可，此时将不再报错</p>
+<p>5.重启Tomcat即可，此时将不再报错</p>
 
       
 

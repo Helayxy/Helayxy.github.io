@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>CentOS7下安装配置Redis | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="centos7安装配置Redis一、安装 官网下载安装包：redis-4.0.9.tar.gz 上传至安装目录下：/usr/local/leyou 修改权限：  1chmod 755 redis-4.0.9.tar.gz   重命名：  1mv redis-4.0.9.tar.gz redis   解压：  1tar -xvf redis-4.0.9.tar.gz   编译安装：  12cd re">
+  <meta name="description" content="CentOS7安装配置Redis一、安装 官网下载安装包：redis-4.0.9.tar.gz 上传至安装目录下：/usr/local/leyou 修改权限：  1chmod 755 redis-4.0.9.tar.gz   重命名：  1mv redis-4.0.9.tar.gz redis   解压：  1tar -xvf redis-4.0.9.tar.gz   编译安装：  12cd re">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS7下安装配置Redis">
 <meta property="og:url" content="http://yoursite.com/2019/11/20/CentOS7下安装配置Redis/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="centos7安装配置Redis一、安装 官网下载安装包：redis-4.0.9.tar.gz 上传至安装目录下：/usr/local/leyou 修改权限：  1chmod 755 redis-4.0.9.tar.gz   重命名：  1mv redis-4.0.9.tar.gz redis   解压：  1tar -xvf redis-4.0.9.tar.gz   编译安装：  12cd re">
+<meta property="og:description" content="CentOS7安装配置Redis一、安装 官网下载安装包：redis-4.0.9.tar.gz 上传至安装目录下：/usr/local/leyou 修改权限：  1chmod 755 redis-4.0.9.tar.gz   重命名：  1mv redis-4.0.9.tar.gz redis   解压：  1tar -xvf redis-4.0.9.tar.gz   编译安装：  12cd re">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-20T14:39:21.485Z">
+<meta property="og:updated_time" content="2019-11-20T15:34:21.037Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS7下安装配置Redis">
-<meta name="twitter:description" content="centos7安装配置Redis一、安装 官网下载安装包：redis-4.0.9.tar.gz 上传至安装目录下：/usr/local/leyou 修改权限：  1chmod 755 redis-4.0.9.tar.gz   重命名：  1mv redis-4.0.9.tar.gz redis   解压：  1tar -xvf redis-4.0.9.tar.gz   编译安装：  12cd re">
+<meta name="twitter:description" content="CentOS7安装配置Redis一、安装 官网下载安装包：redis-4.0.9.tar.gz 上传至安装目录下：/usr/local/leyou 修改权限：  1chmod 755 redis-4.0.9.tar.gz   重命名：  1mv redis-4.0.9.tar.gz redis   解压：  1tar -xvf redis-4.0.9.tar.gz   编译安装：  12cd re">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -174,7 +174,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="centos7安装配置Redis"><a href="#centos7安装配置Redis" class="headerlink" title="centos7安装配置Redis"></a>centos7安装配置Redis</h3><h4 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h4><ul>
+        <h3 id="CentOS7安装配置Redis"><a href="#CentOS7安装配置Redis" class="headerlink" title="CentOS7安装配置Redis"></a>CentOS7安装配置Redis</h3><h4 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h4><ul>
 <li><a href="https://redis.io/download" target="_blank" rel="noopener">官网</a>下载安装包：redis-4.0.9.tar.gz</li>
 <li>上传至安装目录下：/usr/local/leyou</li>
 <li>修改权限：</li>
@@ -206,7 +206,7 @@
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>bind 127.0.0.1 # 将这行代码注释，监听所有的ip地址，外网可以访问</span><br><span class="line">protected-mode no # 把yes改成no，允许外网访问</span><br><span class="line">daemonize yes # 把no改成yes，后台运行</span><br></pre></td></tr></table></figure>
 
-<h4 id="三、启动或停止"><a href="#三、启动或停止" class="headerlink" title="三、启动或停止"></a>三、启动或停止</h4><p><strong>redis提供了服务端命令和客户端命令：</strong></p>
+<h4 id="三、启动或停止"><a href="#三、启动或停止" class="headerlink" title="三、启动或停止"></a>三、启动或停止</h4><p><strong>Redis提供了服务端命令和客户端命令：</strong></p>
 <ul>
 <li>redis-server 服务端命令，可以包含以下参数：<br>start 启动<br>stop 停止</li>
 <li>redis-cli 客户端控制台，包含参数：<br>-h xxx 指定服务端地址，默认值是127.0.0.1<br>-p xxx 指定服务端端口，默认值是6379</li>
