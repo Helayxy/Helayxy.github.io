@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java中关于对象引用的一点思考 | Dream</title>
+  <title>使用Xshell连接VirtualBox中的CentOS7 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java中关于对象引用的一点思考今天在读《Java编程思想》看到了下面一段代码： 1234567891011121314151617181920/** * @author Helay * @date 2019/11/15 21:58 */public class Tank &amp;#123;    private int leave;    public static void main(String[">
+  <meta name="description" content="一、下载CentOS7： 1.来到这个网址选择适合自己电脑操作系统的CentOS7的镜像（一般选择第一个，即for CentOS 7 x86_64 iso images这个版本的） 2.进入该版本的链接地址，The following mirrors in your region should have the ISO images available:表示当前所在国家或地区的镜像；Other m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java中关于对象引用的一点思考">
-<meta property="og:url" content="http://yoursite.com/2019/11/20/Java中关于对象引用的一点思考/index.html">
+<meta property="og:title" content="使用Xshell连接VirtualBox中的CentOS7">
+<meta property="og:url" content="http://yoursite.com/2019/11/21/使用Xshell连接VirtualBox中的CentOS7/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="Java中关于对象引用的一点思考今天在读《Java编程思想》看到了下面一段代码： 1234567891011121314151617181920/** * @author Helay * @date 2019/11/15 21:58 */public class Tank &amp;#123;    private int leave;    public static void main(String[">
+<meta property="og:description" content="一、下载CentOS7： 1.来到这个网址选择适合自己电脑操作系统的CentOS7的镜像（一般选择第一个，即for CentOS 7 x86_64 iso images这个版本的） 2.进入该版本的链接地址，The following mirrors in your region should have the ISO images available:表示当前所在国家或地区的镜像；Other m">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-20T15:05:04.521Z">
+<meta property="og:updated_time" content="2019-11-21T12:22:51.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java中关于对象引用的一点思考">
-<meta name="twitter:description" content="Java中关于对象引用的一点思考今天在读《Java编程思想》看到了下面一段代码： 1234567891011121314151617181920/** * @author Helay * @date 2019/11/15 21:58 */public class Tank &amp;#123;    private int leave;    public static void main(String[">
+<meta name="twitter:title" content="使用Xshell连接VirtualBox中的CentOS7">
+<meta name="twitter:description" content="一、下载CentOS7： 1.来到这个网址选择适合自己电脑操作系统的CentOS7的镜像（一般选择第一个，即for CentOS 7 x86_64 iso images这个版本的） 2.进入该版本的链接地址，The following mirrors in your region should have the ISO images available:表示当前所在国家或地区的镜像；Other m">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -154,45 +154,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java中关于对象引用的一点思考" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-使用Xshell连接VirtualBox中的CentOS7" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java中关于对象引用的一点思考
+      使用Xshell连接VirtualBox中的CentOS7
     </h1>
   
 
         
-        <a href="/2019/11/20/Java中关于对象引用的一点思考/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:04:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/使用Xshell连接VirtualBox中的CentOS7/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:57:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Java中关于对象引用的一点思考"><a href="#Java中关于对象引用的一点思考" class="headerlink" title="Java中关于对象引用的一点思考"></a>Java中关于对象引用的一点思考</h4><p>今天在读《Java编程思想》看到了下面一段代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Helay</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/15 21:58</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tank</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> leave;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Tank tank1 = <span class="keyword">new</span> Tank();</span><br><span class="line">        Tank tank2 = <span class="keyword">new</span> Tank();</span><br><span class="line">        tank1.leave = <span class="number">7</span>;</span><br><span class="line">        tank2.leave = <span class="number">49</span>;</span><br><span class="line">        System.out.println(<span class="string">"1:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank1 = tank2;</span><br><span class="line">        System.out.println(<span class="string">"2:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank2.leave = <span class="number">24</span>;</span><br><span class="line">        System.out.println(<span class="string">"3:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输出结果是什么呢？我想有些同学可能会给出这样的答案：</p>
-<p>1:tank1=7,tank2=49<br>2:tank1=49,tank2=49<br>3:tank1=49,tank2=24</p>
-<p>但正确的答案是这样的</p>
-<p>1:tank1=7,tank2=49<br>2:tank1=49,tank2=49<br>3:tank1=49,tank2=24</p>
-<p>这就引起我们的一点思考了，为什么第3行的输出是这样的结果呢？</p>
-<p>由于赋值操作的是对象的引用，并且tank1 = tank2;表示tank1 和tank2为同一个对象，所以第3行的输出结果是一样的</p>
-<p>如果我们想让这两个对象那个实例相互独立，应该怎么办呢？请看下面的代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Helay</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/15 21:58</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tank</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> leave;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Tank tank1 = <span class="keyword">new</span> Tank();</span><br><span class="line">        Tank tank2 = <span class="keyword">new</span> Tank();</span><br><span class="line">        tank1.leave = <span class="number">7</span>;</span><br><span class="line">        tank2.leave = <span class="number">49</span>;</span><br><span class="line">        System.out.println(<span class="string">"1:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank1.leave = tank2.leave;</span><br><span class="line">        System.out.println(<span class="string">"2:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank2.leave = <span class="number">24</span>;</span><br><span class="line">        System.out.println(<span class="string">"3:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这时候输出的结果就发生了变化：</p>
-<p>1:tank1=7,tank2=49<br>2:tank1=49,tank2=49<br>3:tank1=49,tank2=24</p>
-<p>对，就是这样的结果！tank1.leave = tank2.leave;这行代码操作的对象的属性，由于代码是由上而下地执行，所以即使tank2.leave = 24;这行代码修改了leave的值，但是修改的tank2对象的属性值，所以并不会应影响tank1.leave的值，你看明白了吗？</p>
-<p>最后还要说一句，一定要记得只有new出来的才叫对象那个啊！</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"adsf"</span>;</span><br></pre></td></tr></table></figure>
-
-<p>这样的s不是对象，一定要记清楚啊！</p>
+        <p>一、下载CentOS7：</p>
+<p>1.来到这个<a href="http://isoredirect.centos.org/" target="_blank" rel="noopener">网址</a>选择适合自己电脑操作系统的CentOS7的镜像（一般选择第一个，即for CentOS 7 x86_64 iso images这个版本的）</p>
+<p>2.进入该版本的<a href="http://isoredirect.centos.org/centos/7/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，The following mirrors in your region should have the ISO images available:表示当前所在国家或地区的镜像；Other mirrors further away:表示周边国家或地区的镜像。这里我们一般选择当前所在国家或地区的镜像，因为这样下载速度较快</p>
+<p>3.选择阿里云的镜像，这个<a href="http://mirrors.aliyun.com/centos/7.6.1810/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，下载CentOS-7-x86_64-DVD-1810.iso  这个版本的镜像，centos7的大小约为4个多G，下载可能需要四五分钟</p>
+<p>二、下载VirtualBox：</p>
+<p>1.进入<a href="https://pc.qq.com/" target="_blank" rel="noopener">腾讯软件中心官网</a>，搜索VirtualBox，选择下载</p>
+<p>2.默认安装即可，第二步<strong>注意需要点击VirtualBox Networking，选择将整个功能安装到本机硬盘，</strong>接下来一路“下一步”即可</p>
+<p>3.注意安装过程会提示网络界面的警告，全部选择“是”即可，不然可能出在最后虚拟机不能上网</p>
+<p>三、使用VirtualBox打开CentOS7</p>
+<p>1.打开VirtualBox，选择新建，填写虚拟电脑的名称，版本这里选择Red Hat 64-bit，点击下一步</p>
+<p>2.下面的步骤全部选择默认即可</p>
+<p>3.打开虚拟机，根据向导设置语言，选择中文</p>
+<p>4.中间过程会出现警告框让设置密码，自行设置即可</p>
+<p>5.安装过程中还会出现让你分配内存的警告框，点击进去，点击左上角的“完成”即可</p>
+<p>四、网络设置</p>
+<p>1.在VirtualBox中选择设置，找到网络，在接有网线的前提下，选择桥接网卡，点击“OK”</p>
+<p>2.输入用户名和密码登录成功后，执行cd  /etc/sysconfig/nerwork-scripts进入该目录</p>
+<p>3.ls列出nerwork-scripts这个目录下的所有文件，选择ifcfg-en*开头的文件，每个人的这个文件名不一样</p>
+<p>4.vi  ifcfg-en*这个文件，进入编辑模式，将文件的最后一行的ONBOOT的值由no置位yes，按Esc键退出编辑模式，按下：wq进行保存退出（：q！表示不保存强制退出  ）</p>
+<p>5.退出后执行service  network   restart命令中心启动网络配置</p>
+<p>6.使用ip  addr查看网络情况，注意：CentOS7已经不支持ipconfig命令，所以这个命令在CentOS7中无效</p>
+<p>五、Xshell连接CentOS7</p>
+<p>1.打开Xshell连接工具，选择新建，在主机一栏填写ip  addr命令查看到的网络地址</p>
+<p>2.选择用户身份验证，填写CentOS7中的用户名和密码</p>
+<p>3.没有其他情况应该可以连接成功</p>
 
       
 
@@ -282,7 +288,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/20/Java中关于对象引用的一点思考/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/21/使用Xshell连接VirtualBox中的CentOS7/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -296,18 +302,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/20/Linux系统下安装JDK/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Linux系统下安装JDK
+          解决Git本地仓库上传不到GitHub远程仓库问题
         
       </div>
     </a>
   
   
-    <a href="/2019/11/20/IDEA去掉SQL语句背景色/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">IDEA去掉SQL语句背景色</div>
+    <a href="/2019/11/21/关于web-xml文件-web-app-标签报错问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于web.xml文件&lt;web app&gt;标签报错问题</div>
       <i class="icon-circle-right"></i>
     </a>
   

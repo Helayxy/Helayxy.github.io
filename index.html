@@ -159,37 +159,37 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/解决Git本地仓库上传不到GitHub远程仓库问题/">解决Git本地仓库上传不到GitHub远程仓库问题</a>
+      <a class="article-title" href="/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/">解决Git本地仓库上传不到GitHub远程仓库问题</a>
     </h1>
   
 
         
-        <a href="/2019/11/20/解决Git本地仓库上传不到GitHub远程仓库问题/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:23:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/" class="archive-article-date">
+  	<time datetime="2019-11-21T12:00:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="解决Git本地仓库上传不到GitHub远程仓库"><a href="#解决Git本地仓库上传不到GitHub远程仓库" class="headerlink" title="解决Git本地仓库上传不到GitHub远程仓库"></a>解决Git本地仓库上传不到GitHub远程仓库</h4><h5 id="1-查看本地仓库和远程仓库的连接方式："><a href="#1-查看本地仓库和远程仓库的连接方式：" class="headerlink" title="1.查看本地仓库和远程仓库的连接方式："></a>1.查看本地仓库和远程仓库的连接方式：</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+        <p>1.查看本地仓库和远程仓库的连接方式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  https://github.com/Helayxy/study-notes.git (fetch)</span><br><span class="line">origin  https://github.com/Helayxy/study-notes.git (push)</span><br></pre></td></tr></table></figure>
 
 <p>结果若是https开头则是https连接方式，这种方式一般不会出现问题，若是git开头，说明ssh方式</p>
-<h5 id="2-删除连接方式："><a href="#2-删除连接方式：" class="headerlink" title="2.删除连接方式："></a>2.删除连接方式：</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
+<p>2.删除连接方式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
 
-<h5 id="3-切换为https连接方式："><a href="#3-切换为https连接方式：" class="headerlink" title="3.切换为https连接方式："></a>3.切换为https连接方式：</h5><ul>
-<li>查看GitHub上的仓库地址，选择https方式，如下图所示；</li>
-</ul>
+<p>3.切换为https连接方式：</p>
+<p>查看GitHub上的仓库地址，选择https方式，如下图所示；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Helayxy/learning-materials.git</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>使用https方式添加远程仓库：</li>
-</ul>
+<p>使用https方式添加远程仓库：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/Helayxy/learning-materials.git</span><br></pre></td></tr></table></figure>
 
-<h5 id="4-使用https连接方式一般情况下上传、拉取代码都没有问题"><a href="#4-使用https连接方式一般情况下上传、拉取代码都没有问题" class="headerlink" title="4.使用https连接方式一般情况下上传、拉取代码都没有问题"></a>4.使用https连接方式一般情况下上传、拉取代码都没有问题</h5>
+<p>4.使用https连接方式一般情况下上传、拉取代码都没有问题</p>
+
       
 
       
@@ -201,7 +201,94 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/解决Git本地仓库上传不到GitHub远程仓库问题/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-使用Xshell连接VirtualBox中的CentOS7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/21/使用Xshell连接VirtualBox中的CentOS7/">使用Xshell连接VirtualBox中的CentOS7</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/21/使用Xshell连接VirtualBox中的CentOS7/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:57:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一、下载CentOS7：</p>
+<p>1.来到这个<a href="http://isoredirect.centos.org/" target="_blank" rel="noopener">网址</a>选择适合自己电脑操作系统的CentOS7的镜像（一般选择第一个，即for CentOS 7 x86_64 iso images这个版本的）</p>
+<p>2.进入该版本的<a href="http://isoredirect.centos.org/centos/7/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，The following mirrors in your region should have the ISO images available:表示当前所在国家或地区的镜像；Other mirrors further away:表示周边国家或地区的镜像。这里我们一般选择当前所在国家或地区的镜像，因为这样下载速度较快</p>
+<p>3.选择阿里云的镜像，这个<a href="http://mirrors.aliyun.com/centos/7.6.1810/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，下载CentOS-7-x86_64-DVD-1810.iso  这个版本的镜像，centos7的大小约为4个多G，下载可能需要四五分钟</p>
+<p>二、下载VirtualBox：</p>
+<p>1.进入<a href="https://pc.qq.com/" target="_blank" rel="noopener">腾讯软件中心官网</a>，搜索VirtualBox，选择下载</p>
+<p>2.默认安装即可，第二步<strong>注意需要点击VirtualBox Networking，选择将整个功能安装到本机硬盘，</strong>接下来一路“下一步”即可</p>
+<p>3.注意安装过程会提示网络界面的警告，全部选择“是”即可，不然可能出在最后虚拟机不能上网</p>
+<p>三、使用VirtualBox打开CentOS7</p>
+<p>1.打开VirtualBox，选择新建，填写虚拟电脑的名称，版本这里选择Red Hat 64-bit，点击下一步</p>
+<p>2.下面的步骤全部选择默认即可</p>
+<p>3.打开虚拟机，根据向导设置语言，选择中文</p>
+<p>4.中间过程会出现警告框让设置密码，自行设置即可</p>
+<p>5.安装过程中还会出现让你分配内存的警告框，点击进去，点击左上角的“完成”即可</p>
+<p>四、网络设置</p>
+<p>1.在VirtualBox中选择设置，找到网络，在接有网线的前提下，选择桥接网卡，点击“OK”</p>
+<p>2.输入用户名和密码登录成功后，执行cd  /etc/sysconfig/nerwork-scripts进入该目录</p>
+<p>3.ls列出nerwork-scripts这个目录下的所有文件，选择ifcfg-en*开头的文件，每个人的这个文件名不一样</p>
+<p>4.vi  ifcfg-en*这个文件，进入编辑模式，将文件的最后一行的ONBOOT的值由no置位yes，按Esc键退出编辑模式，按下：wq进行保存退出（：q！表示不保存强制退出  ）</p>
+<p>5.退出后执行service  network   restart命令中心启动网络配置</p>
+<p>6.使用ip  addr查看网络情况，注意：CentOS7已经不支持ipconfig命令，所以这个命令在CentOS7中无效</p>
+<p>五、Xshell连接CentOS7</p>
+<p>1.打开Xshell连接工具，选择新建，在主机一栏填写ip  addr命令查看到的网络地址</p>
+<p>2.选择用户身份验证，填写CentOS7中的用户名和密码</p>
+<p>3.没有其他情况应该可以连接成功</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/21/使用Xshell连接VirtualBox中的CentOS7/">展开全文 >></a>
         </p>
       
 
@@ -238,25 +325,28 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/关于web-xml文件-web-app-标签报错问题/">关于web.xml文件&lt;web app&gt;标签报错问题</a>
+      <a class="article-title" href="/2019/11/21/关于web-xml文件-web-app-标签报错问题/">关于web.xml文件&lt;web app&gt;标签报错问题</a>
     </h1>
   
 
         
-        <a href="/2019/11/20/关于web-xml文件-web-app-标签报错问题/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:21:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/关于web-xml文件-web-app-标签报错问题/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:55:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="关于web项目中报错问题"><a href="#关于web项目中报错问题" class="headerlink" title="关于web项目中报错问题"></a>关于web项目<web-app>中报错问题</web-app></h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是<web-app>会显示报错</web-app></p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>这是因为在<web-app>上有这样一段代码：</web-app></p>
+        <p>一、问题描述：</p>
+<p>当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是<web-app>会显示报错</web-app></p>
+<p>二、问题原因：</p>
+<p>这是因为在<web-app>上有这样一段代码：</web-app></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE web-app PUBLIC</span><br><span class="line">        <span class="string">"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"</span></span><br><span class="line">        <span class="string">"http://java.sun.com/dtd/web-app_2_3.dtd"</span> &gt;</span><br></pre></td></tr></table></figure>
 
 <p>这段代码要求我们在web.xml中编写的相关配置信息必须按照一定的规范和顺序来配置</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>使用如下代码替换<web-app>标签即可：</web-app></p>
+<p>三、解决方案：</p>
+<p>使用如下代码替换<web-app>标签即可：</web-app></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">"http://java.sun.com/xml/ns/javaee"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://java.sun.com/xml/ns/javaee</span></span></span><br><span class="line"><span class="tag"><span class="string">        ttp://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">version</span>=<span class="string">"3.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 
@@ -271,7 +361,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/关于web-xml文件-web-app-标签报错问题/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/21/关于web-xml文件-web-app-标签报错问题/">展开全文 >></a>
         </p>
       
 
@@ -308,29 +398,30 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/关于Tomcat位数问题/">关于Tomcat位数问题</a>
+      <a class="article-title" href="/2019/11/21/关于Tomcat位数问题/">关于Tomcat位数问题</a>
     </h1>
   
 
         
-        <a href="/2019/11/20/关于Tomcat位数问题/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/关于Tomcat位数问题/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:54:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误：</p>
+        <p>问题描述</p>
+<p>今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[C:\Deveploment tools\apache-tomcat-<span class="number">8.0</span>.52\bin\tcnative-<span class="number">1</span>.dll:Can<span class="string">'t load 32-bit. dll on a AMD 64-bit platform]</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><p>Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动Tomcat会报这样的错误</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>1.来到这个<a href="http://archive.apache.org/dist/tomcat/tomcat-connectors/native/" target="_blank" rel="noopener">网站</a></p>
+<p>报错原因</p>
+<p>Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动Tomcat会报这样的错误</p>
+<p>解决方案</p>
+<p>1.来到这个<a href="http://archive.apache.org/dist/tomcat/tomcat-connectors/native/" target="_blank" rel="noopener">网站</a></p>
 <p>2.下载相应版本的文件</p>
-<p>3.解压：</p>
-<p>在bin目录下有一个x64文件夹，该文件夹下就是64位的tcnative-1.dll文件</p>
-<p>4.替换：</p>
-<p>删除原tomcat的bin目录下的32位的tcnative-1.dll文件，将64位的tcnative-1.dll添加进去</p>
+<p>3.解压：在bin目录下有一个x64文件夹，该文件夹下就是64位的tcnative-1.dll文件</p>
+<p>4.替换：删除原tomcat的bin目录下的32位的tcnative-1.dll文件，将64位的tcnative-1.dll添加进去</p>
 <p>5.重启Tomcat即可，此时将不再报错</p>
 
       
@@ -344,7 +435,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/关于Tomcat位数问题/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/21/关于Tomcat位数问题/">展开全文 >></a>
         </p>
       
 
@@ -374,33 +465,36 @@
 
 
   
-    <article id="post-谷歌浏览器添加Vue-js插件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Chrome浏览器添加Vue-js插件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/谷歌浏览器添加Vue-js插件/">谷歌浏览器添加Vue.js插件</a>
+      <a class="article-title" href="/2019/11/21/Chrome浏览器添加Vue-js插件/">Chrome浏览器添加Vue.js插件</a>
     </h1>
   
 
         
-        <a href="/2019/11/20/谷歌浏览器添加Vue-js插件/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:18:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/Chrome浏览器添加Vue-js插件/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:53:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="谷歌浏览器中添加vue-js插件"><a href="#谷歌浏览器中添加vue-js插件" class="headerlink" title="谷歌浏览器中添加vue.js插件"></a>谷歌浏览器中添加vue.js插件</h4><h4 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h4><p>在<a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="noopener">这里</a>下载压缩包并解压到本地；</p>
-<h4 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h4><p>1.下载完成后打开命令行cmd进入vue-devtools-master文件夹；</p>
+        <p>第一步：</p>
+<p>在<a href="https://github.com/vuejs/vue-devtools" target="_blank" rel="noopener">这里</a>下载压缩包并解压到本地；</p>
+<p>第二步：</p>
+<p>1.下载完成后打开命令行cmd进入vue-devtools-master文件夹；</p>
 <p>2.在vue-devtools-master文件夹下运行cnpm install；</p>
 <p>3.运行过上面的命令后，运行cnpm run build命令；</p>
-<p><strong>说明：npm run build 执行完，会在shells&gt;chrome下的src文件夹里生成几个js文件；</strong></p>
-<p><strong>注意：若不运行npm run build命令，则在加载扩展程序时会报错；</strong></p>
-<h4 id="第三步："><a href="#第三步：" class="headerlink" title="第三步："></a>第三步：</h4><p>1.打开shells&gt;chrome&gt;manifest.json，并把json文件的”persistent”:false改成true；</p>
+<p>说明：npm run build 执行完，会在shells&gt;chrome下的src文件夹里生成几个js文件；</p>
+<p>注意：若不运行npm run build命令，则在加载扩展程序时会报错；</p>
+<p>第三步：</p>
+<p>1.打开shells&gt;chrome&gt;manifest.json，并把json文件的”persistent”:false改成true；</p>
 <p>2.打开chrome浏览器，打开更多工具&gt;扩展程序；</p>
 <p>3.再点击加载已解压的扩展程序，然后把shells&gt;chrome文件夹放入；</p>
 <p>4.完成上述步骤vue.js的插件就算安装成功了；</p>
@@ -416,7 +510,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/谷歌浏览器添加Vue-js插件/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/21/Chrome浏览器添加Vue-js插件/">展开全文 >></a>
         </p>
       
 
@@ -446,113 +540,34 @@
 
 
   
-    <article id="post-关于Xshell连接VirtualBox中的CentOS7问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-解决Web项目缺少Maven依赖问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/关于Xshell连接VirtualBox中的CentOS7问题/">关于Xshell连接VirtualBox中的CentOS7问题</a>
+      <a class="article-title" href="/2019/11/21/解决Web项目缺少Maven依赖问题/">解决Web项目缺少Maven依赖问题</a>
     </h1>
   
 
         
-        <a href="/2019/11/20/关于Xshell连接VirtualBox中的CentOS7问题/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:15:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/解决Web项目缺少Maven依赖问题/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:48:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Xshell连接VirtualBox中的CentOS7"><a href="#Xshell连接VirtualBox中的CentOS7" class="headerlink" title="Xshell连接VirtualBox中的CentOS7"></a>Xshell连接VirtualBox中的CentOS7</h3><h4 id="一、下载CentOS7："><a href="#一、下载CentOS7：" class="headerlink" title="一、下载CentOS7："></a>一、下载CentOS7：</h4><p>1.来到这个<a href="http://isoredirect.centos.org/" target="_blank" rel="noopener">网址</a>选择适合自己电脑操作系统的CentOS7的镜像（一般选择第一个，即for CentOS 7 x86_64 iso images这个版本的）</p>
-<p>2.进入该版本的<a href="http://isoredirect.centos.org/centos/7/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，The following mirrors in your region should have the ISO images available:表示当前所在国家或地区的镜像；Other mirrors further away:表示周边国家或地区的镜像。这里我们一般选择当前所在国家或地区的镜像，因为这样下载速度较快</p>
-<p>3.选择阿里云的镜像，这个<a href="http://mirrors.aliyun.com/centos/7.6.1810/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，下载CentOS-7-x86_64-DVD-1810.iso  这个版本的镜像，centos7的大小约为4个多G，下载可能需要四五分钟</p>
-<h4 id="二、下载VirtualBox："><a href="#二、下载VirtualBox：" class="headerlink" title="二、下载VirtualBox："></a>二、下载VirtualBox：</h4><p>1.进入<a href="https://pc.qq.com/" target="_blank" rel="noopener">腾讯软件中心官网</a>，搜索VirtualBox，选择下载</p>
-<p>2.默认安装即可，第二步<strong>注意需要点击VirtualBox Networking，选择将整个功能安装到本机硬盘，</strong>接下来一路“下一步”即可</p>
-<p>3.注意安装过程会提示网络界面的警告，全部选择“是”即可，不然可能出在最后虚拟机不能上网</p>
-<h4 id="三、使用VirtualBox打开CentOS7"><a href="#三、使用VirtualBox打开CentOS7" class="headerlink" title="三、使用VirtualBox打开CentOS7"></a>三、使用VirtualBox打开CentOS7</h4><p>1.打开VirtualBox，选择新建，填写虚拟电脑的名称，版本这里选择Red Hat 64-bit，点击下一步</p>
-<p>2.下面的步骤全部选择默认即可</p>
-<p>3.打开虚拟机，根据向导设置语言，选择中文</p>
-<p>4.中间过程会出现警告框让设置密码，自行设置即可</p>
-<p>5.安装过程中还会出现让你分配内存的警告框，点击进去，点击左上角的“完成”即可</p>
-<h4 id="四、网络设置"><a href="#四、网络设置" class="headerlink" title="四、网络设置"></a>四、网络设置</h4><p>1.在VirtualBox中选择设置，找到网络，在接有网线的前提下，选择桥接网卡，点击“OK”</p>
-<p>2.输入用户名和密码登录成功后，执行cd  /etc/sysconfig/nerwork-scripts进入该目录</p>
-<p>3.ls列出nerwork-scripts这个目录下的所有文件，选择ifcfg-en*开头的文件，每个人的这个文件名不一样</p>
-<p>4.vi  ifcfg-en*这个文件，进入编辑模式，将文件的最后一行的ONBOOT的值由no置位yes，按Esc键退出编辑模式，按下：wq进行保存退出（：q！表示不保存强制退出  ）</p>
-<p>5.退出后执行service  network   restart命令中心启动网络配置</p>
-<p>6.使用ip  addr查看网络情况，注意：CentOS7已经不支持ipconfig命令，所以这个命令在CentOS7中无效</p>
-<h4 id="五、Xshell连接CentOS7"><a href="#五、Xshell连接CentOS7" class="headerlink" title="五、Xshell连接CentOS7"></a>五、Xshell连接CentOS7</h4><p>1.打开Xshell连接工具，选择新建，在主机一栏填写ip  addr命令查看到的网络地址</p>
-<p>2.选择用户身份验证，填写CentOS7中的用户名和密码</p>
-<p>3.没有其他情况应该可以连接成功</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/关于Xshell连接VirtualBox中的CentOS7问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Web项目缺少Maven依赖问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/Web项目缺少Maven依赖问题/">Web项目缺少Maven依赖问题</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/20/Web项目缺少Maven依赖问题/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:11:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="启动Tomcat报错-maven原因"><a href="#启动Tomcat报错-maven原因" class="headerlink" title="启动Tomcat报错-maven原因"></a>启动Tomcat报错-maven原因</h3><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>启动服务器运行项目时报了如下错误：</p>
+        <p>一、问题描述</p>
+<p>启动服务器运行项目时报了如下错误：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener</span><br></pre></td></tr></table></figure>
 
-<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>没有添加Maven依赖</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>1.右击项目，选择properties</p>
+<p>二、报错原因：</p>
+<p>没有添加Maven依赖</p>
+<p>三、解决方法：</p>
+<p>1.右击项目，选择properties</p>
 <p>2.选择Deployment Assembly</p>
 <p>3.选择Add -&gt; Java Build Path Entries -&gt; Next</p>
 <p>4.选择Maven Dependencies -&gt; Finish -&gt; Apply -&gt; ok</p>
@@ -570,7 +585,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/Web项目缺少Maven依赖问题/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/21/解决Web项目缺少Maven依赖问题/">展开全文 >></a>
         </p>
       
 
@@ -607,20 +622,20 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/node-sass不支持当前系统环境/">node-sass不支持当前系统环境</a>
+      <a class="article-title" href="/2019/11/21/node-sass不支持当前系统环境/">node-sass不支持当前系统环境</a>
     </h1>
   
 
         
-        <a href="/2019/11/20/node-sass不支持当前系统环境/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:10:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/node-sass不支持当前系统环境/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:47:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Node-Sass-does-not-yet-support-your-current-environment"><a href="#Node-Sass-does-not-yet-support-your-current-environment" class="headerlink" title="Node Sass does not yet support your current environment"></a>Node Sass does not yet support your current environment</h4><p>1.问题描述：</p>
+        <p>1.问题描述：</p>
 <p>Node Sass does not yet support your current environment: Windows 64-bit</p>
 <p>翻译过来就是说：node sass不支持当前系统环境</p>
 <p>2.解决方案：</p>
@@ -650,7 +665,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/node-sass不支持当前系统环境/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/21/node-sass不支持当前系统环境/">展开全文 >></a>
         </p>
       
 
@@ -687,43 +702,52 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/Linux系统下安装JDK/">Linux系统下安装JDK</a>
+      <a class="article-title" href="/2019/11/21/Linux系统下安装JDK/">Linux系统下安装JDK</a>
     </h1>
   
 
         
-        <a href="/2019/11/20/Linux系统下安装JDK/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:08:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/Linux系统下安装JDK/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:44:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="CentOS7系统下安装jdk1-8"><a href="#CentOS7系统下安装jdk1-8" class="headerlink" title="CentOS7系统下安装jdk1.8"></a>CentOS7系统下安装jdk1.8</h4><h5 id="1-将linux版本jdk1-8的tar压缩包上传至虚拟机任意位置"><a href="#1-将linux版本jdk1-8的tar压缩包上传至虚拟机任意位置" class="headerlink" title="1.将linux版本jdk1.8的tar压缩包上传至虚拟机任意位置"></a>1.将linux版本jdk1.8的tar压缩包上传至虚拟机任意位置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls</span><br><span class="line">bin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usr</span><br><span class="line">boot  etc  lib64  mnt    proc  run   srv   tmp  var</span><br></pre></td></tr></table></figure>
+        <p>1.将linux版本jdk1.8的tar压缩包上传至虚拟机任意位置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls</span><br><span class="line">bin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usr</span><br><span class="line">boot  etc  lib64  mnt    proc  run   srv   tmp  var</span><br></pre></td></tr></table></figure>
 
-<h5 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar  -zxvf  jdk-8u131-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<p>2.解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar  -zxvf  jdk-8u131-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
 
-<h5 id="3-查看解压是否成功"><a href="#3-查看解压是否成功" class="headerlink" title="3.查看解压是否成功"></a>3.查看解压是否成功</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls</span><br><span class="line">bin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usr</span><br><span class="line">boot  etc  jdk1.8.0_211  leyou   lib64  mnt    proc  run   srv   tmp  var</span><br></pre></td></tr></table></figure>
+<p>3.查看解压是否成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls</span><br><span class="line">bin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usr</span><br><span class="line">boot  etc  jdk1.8.0_211  leyou   lib64  mnt    proc  run   srv   tmp  var</span><br></pre></td></tr></table></figure>
 
-<p><strong>可以看到有jdk1.8.0_211文件夹，表示解压成功！</strong></p>
-<h5 id="4-删除没有用的压缩包"><a href="#4-删除没有用的压缩包" class="headerlink" title="4.删除没有用的压缩包"></a>4.删除没有用的压缩包</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# rm  jdk-8u211-linux-x64.tar.gz</span><br><span class="line">rm：是否删除普通文件 "jdk-8u211-linux-x64.tar.gz"？y</span><br></pre></td></tr></table></figure>
+<p>可以看到有jdk1.8.0_211文件夹，表示解压成功！</p>
+<p>4.删除没有用的压缩包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# rm  jdk-8u211-linux-x64.tar.gz</span><br><span class="line">rm：是否删除普通文件 "jdk-8u211-linux-x64.tar.gz"？y</span><br></pre></td></tr></table></figure>
 
-<h5 id="5-创建jdk的安装位置"><a href="#5-创建jdk的安装位置" class="headerlink" title="5.创建jdk的安装位置"></a>5.创建jdk的安装位置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# mkdir /usr/java</span><br></pre></td></tr></table></figure>
+<p>5.创建jdk的安装位置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# mkdir /usr/java</span><br></pre></td></tr></table></figure>
 
-<p><strong>说明：我这里安装到usr目录下的java文件夹中</strong></p>
-<h5 id="6-移动解压后的jdk至指定的安装位置"><a href="#6-移动解压后的jdk至指定的安装位置" class="headerlink" title="6.移动解压后的jdk至指定的安装位置"></a>6.移动解压后的jdk至指定的安装位置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost java]# mv /jdk1.8.0_211 /usr/java</span><br></pre></td></tr></table></figure>
+<p>说明：我这里安装到usr目录下的java文件夹中</p>
+<p>6.移动解压后的jdk至指定的安装位置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost java]# mv /jdk1.8.0_211 /usr/java</span><br></pre></td></tr></table></figure>
 
-<h5 id="7-修改环境变量"><a href="#7-修改环境变量" class="headerlink" title="7.修改环境变量"></a>7.修改环境变量</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# vi /etc/profile</span><br></pre></td></tr></table></figure>
+<p>7.修改环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# vi /etc/profile</span><br></pre></td></tr></table></figure>
 
-<p><strong>说明：/etc/profile为系统的配置文件，在改文件末尾添加如下配置信息：</strong></p>
+<p>说明：/etc/profile为系统的配置文件，在改文件末尾添加如下配置信息：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_211</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib:$CLASSPATH</span><br><span class="line">export JAVA_PATH=$&#123;JAVA_HOME&#125;/bin:$&#123;JRE_HOME&#125;/bin</span><br><span class="line">export PATH=$PATH:$&#123;JAVA_PATH&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>使用：wq保存退出</strong></p>
-<h5 id="8-让这个环境变量配置信息里面生效"><a href="#8-让这个环境变量配置信息里面生效" class="headerlink" title="8.让这个环境变量配置信息里面生效"></a>8.让这个环境变量配置信息里面生效</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# source /etc/profile</span><br></pre></td></tr></table></figure>
+<p>使用：wq保存退出</p>
+<p>8.让这个环境变量配置信息立即生效</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# source /etc/profile</span><br></pre></td></tr></table></figure>
 
-<p><strong>说明：此命令可以是配置信息立马生效，不适用此命令需要重启虚拟机</strong></p>
-<h5 id="9-验证jdk是否安装成功"><a href="#9-验证jdk是否安装成功" class="headerlink" title="9.验证jdk是否安装成功"></a>9.验证jdk是否安装成功</h5><p>输入javac命令查看：</p>
+<p>说明：此命令可以使配置信息立马生效，不使用此命令需要重启虚拟机</p>
+<p>9.验证jdk是否安装成功</p>
+<p>输入javac命令查看：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# javac</span><br><span class="line">用法: javac &lt;options&gt; &lt;source files&gt;</span><br><span class="line">其中, 可能的选项包括:</span><br><span class="line">  -g                         生成所有调试信息</span><br><span class="line">  -g:none                    不生成任何调试信息</span><br><span class="line">  -g:&#123;lines,vars,source&#125;     只生成某些调试信息</span><br><span class="line">  -nowarn                    不生成任何警告</span><br><span class="line">  -verbose                   输出有关编译器正在执行的操作的消息</span><br><span class="line">  -deprecation               输出使用已过时的 API 的源位置</span><br><span class="line">  -classpath &lt;路径&gt;            指定查找用户类文件和注释处理程序的位置</span><br><span class="line">  -cp &lt;路径&gt;                   指定查找用户类文件和注释处理程序的位置</span><br><span class="line">  -sourcepath &lt;路径&gt;           指定查找输入源文件的位置</span><br><span class="line">  -bootclasspath &lt;路径&gt;        覆盖引导类文件的位置</span><br><span class="line">  -extdirs &lt;目录&gt;              覆盖所安装扩展的位置</span><br><span class="line">  -endorseddirs &lt;目录&gt;         覆盖签名的标准路径的位置</span><br><span class="line">  -proc:&#123;none,only&#125;          控制是否执行注释处理和/或编译。</span><br><span class="line">  -processor &lt;class1&gt;[,&lt;class2&gt;,&lt;class3&gt;...] 要运行的注释处理程序的名称; 绕过默认的搜索进程</span><br><span class="line">  -processorpath &lt;路径&gt;        指定查找注释处理程序的位置</span><br><span class="line">  -parameters                生成元数据以用于方法参数的反射</span><br><span class="line">  -d &lt;目录&gt;                    指定放置生成的类文件的位置</span><br><span class="line">  -s &lt;目录&gt;                    指定放置生成的源文件的位置</span><br><span class="line">  -h &lt;目录&gt;                    指定放置生成的本机标头文件的位置</span><br><span class="line">  -implicit:&#123;none,class&#125;     指定是否为隐式引用文件生成类文件</span><br><span class="line">  -encoding &lt;编码&gt;             指定源文件使用的字符编码</span><br><span class="line">  -source &lt;发行版&gt;              提供与指定发行版的源兼容性</span><br><span class="line">  -target &lt;发行版&gt;              生成特定 VM 版本的类文件</span><br><span class="line">  -profile &lt;配置文件&gt;            请确保使用的 API 在指定的配置文件中可用</span><br><span class="line">  -version                   版本信息</span><br><span class="line">  -help                      输出标准选项的提要</span><br><span class="line">  -A关键字[=值]                  传递给注释处理程序的选项</span><br><span class="line">  -X                         输出非标准选项的提要</span><br><span class="line">  -J&lt;标记&gt;                     直接将 &lt;标记&gt; 传递给运行时系统</span><br><span class="line">  -Werror                    出现警告时终止编译</span><br><span class="line">  @&lt;文件名&gt;                     从文件读取选项和文件名</span><br></pre></td></tr></table></figure>
 
 <p>输入java -version查看java版本信息：</p>
@@ -732,7 +756,8 @@
 <p>输入echo $PATH查看路径：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# echo $PATH</span><br><span class="line">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/usr/java/jdk1.8.0_211/bin:/usr/java/jdk1.8.0_211/jre/bin</span><br></pre></td></tr></table></figure>
 
-<h5 id="10-以上都正确则表示jdk安装成功！"><a href="#10-以上都正确则表示jdk安装成功！" class="headerlink" title="10.以上都正确则表示jdk安装成功！"></a>10.以上都正确则表示jdk安装成功！</h5>
+<p>10.以上都正确则表示jdk安装成功！</p>
+
       
 
       
@@ -744,7 +769,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/Linux系统下安装JDK/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/21/Linux系统下安装JDK/">展开全文 >></a>
         </p>
       
 
@@ -781,20 +806,20 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/Java中关于对象引用的一点思考/">Java中关于对象引用的一点思考</a>
+      <a class="article-title" href="/2019/11/21/Java中关于对象引用的一点思考/">Java中关于对象引用的一点思考</a>
     </h1>
   
 
         
-        <a href="/2019/11/20/Java中关于对象引用的一点思考/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:04:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/Java中关于对象引用的一点思考/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:42:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Java中关于对象引用的一点思考"><a href="#Java中关于对象引用的一点思考" class="headerlink" title="Java中关于对象引用的一点思考"></a>Java中关于对象引用的一点思考</h4><p>今天在读《Java编程思想》看到了下面一段代码：</p>
+        <p>今天在读《Java编程思想》看到了下面一段代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Helay</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/15 21:58</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tank</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> leave;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Tank tank1 = <span class="keyword">new</span> Tank();</span><br><span class="line">        Tank tank2 = <span class="keyword">new</span> Tank();</span><br><span class="line">        tank1.leave = <span class="number">7</span>;</span><br><span class="line">        tank2.leave = <span class="number">49</span>;</span><br><span class="line">        System.out.println(<span class="string">"1:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank1 = tank2;</span><br><span class="line">        System.out.println(<span class="string">"2:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank2.leave = <span class="number">24</span>;</span><br><span class="line">        System.out.println(<span class="string">"3:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>输出结果是什么呢？我想有些同学可能会给出这样的答案：</p>
@@ -825,7 +850,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/Java中关于对象引用的一点思考/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/21/Java中关于对象引用的一点思考/">展开全文 >></a>
         </p>
       
 
@@ -862,20 +887,20 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/20/IDEA去掉SQL语句背景色/">IDEA去掉SQL语句背景色</a>
+      <a class="article-title" href="/2019/11/21/IDEA去掉SQL语句背景色/">IDEA去掉SQL语句背景色</a>
     </h1>
   
 
         
-        <a href="/2019/11/20/IDEA去掉SQL语句背景色/" class="archive-article-date">
-  	<time datetime="2019-11-20T14:46:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/IDEA去掉SQL语句背景色/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:41:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="IDEA去掉SQL语句背景色"><a href="#IDEA去掉SQL语句背景色" class="headerlink" title="IDEA去掉SQL语句背景色"></a>IDEA去掉SQL语句背景色</h5><p>1.进入file-&gt;settings-&gt;Editor-&gt;Inspections-&gt;SQL</p>
+        <p>1.进入file-&gt;settings-&gt;Editor-&gt;Inspections-&gt;SQL</p>
 <p>找到No data sources configured和SQL dialect detection两项，去掉后面的对号</p>
 <p>2.进入file-&gt;settings-&gt;Editor-&gt;Color Scheme-&gt;General-&gt;Code</p>
 <p>选中Injected language fragment，去掉后面Background的对号</p>
@@ -893,7 +918,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/20/IDEA去掉SQL语句背景色/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/21/IDEA去掉SQL语句背景色/">展开全文 >></a>
         </p>
       
 

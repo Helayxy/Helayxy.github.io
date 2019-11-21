@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>关于web.xml文件&lt;web app&gt;标签报错问题 | Dream</title>
+  <title>解决Web项目缺少Maven依赖问题 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于web项目中报错问题问题描述当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是会显示报错 问题原因这是因为在上有这样一段代码： 123&amp;lt;!DOCTYPE web-app PUBLIC        &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.">
+  <meta name="description" content="一、问题描述 启动服务器运行项目时报了如下错误： 1java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener  二、报错原因： 没有添加Maven依赖 三、解决方法： 1.右击项目，选择properties 2.选择Deployment Assembly 3.选择Add -&amp;gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于web.xml文件&lt;web app&gt;标签报错问题">
-<meta property="og:url" content="http://yoursite.com/2019/11/20/关于web-xml文件-web-app-标签报错问题/index.html">
+<meta property="og:title" content="解决Web项目缺少Maven依赖问题">
+<meta property="og:url" content="http://yoursite.com/2019/11/21/解决Web项目缺少Maven依赖问题/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="关于web项目中报错问题问题描述当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是会显示报错 问题原因这是因为在上有这样一段代码： 123&amp;lt;!DOCTYPE web-app PUBLIC        &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.">
+<meta property="og:description" content="一、问题描述 启动服务器运行项目时报了如下错误： 1java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener  二、报错原因： 没有添加Maven依赖 三、解决方法： 1.右击项目，选择properties 2.选择Deployment Assembly 3.选择Add -&amp;gt;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-20T15:40:33.293Z">
+<meta property="og:updated_time" content="2019-11-21T12:22:26.240Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于web.xml文件&lt;web app&gt;标签报错问题">
-<meta name="twitter:description" content="关于web项目中报错问题问题描述当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是会显示报错 问题原因这是因为在上有这样一段代码： 123&amp;lt;!DOCTYPE web-app PUBLIC        &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.">
+<meta name="twitter:title" content="解决Web项目缺少Maven依赖问题">
+<meta name="twitter:description" content="一、问题描述 启动服务器运行项目时报了如下错误： 1java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener  二、报错原因： 没有添加Maven依赖 三、解决方法： 1.右击项目，选择properties 2.选择Deployment Assembly 3.选择Add -&amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -154,34 +154,39 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-关于web-xml文件-web-app-标签报错问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-解决Web项目缺少Maven依赖问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      关于web.xml文件&lt;web app&gt;标签报错问题
+      解决Web项目缺少Maven依赖问题
     </h1>
   
 
         
-        <a href="/2019/11/20/关于web-xml文件-web-app-标签报错问题/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:21:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/解决Web项目缺少Maven依赖问题/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:48:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="关于web项目中报错问题"><a href="#关于web项目中报错问题" class="headerlink" title="关于web项目中报错问题"></a>关于web项目<web-app>中报错问题</web-app></h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是<web-app>会显示报错</web-app></p>
-<h3 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h3><p>这是因为在<web-app>上有这样一段代码：</web-app></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE web-app PUBLIC</span><br><span class="line">        <span class="string">"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"</span></span><br><span class="line">        <span class="string">"http://java.sun.com/dtd/web-app_2_3.dtd"</span> &gt;</span><br></pre></td></tr></table></figure>
+        <p>一、问题描述</p>
+<p>启动服务器运行项目时报了如下错误：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener</span><br></pre></td></tr></table></figure>
 
-<p>这段代码要求我们在web.xml中编写的相关配置信息必须按照一定的规范和顺序来配置</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>使用如下代码替换<web-app>标签即可：</web-app></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">"http://java.sun.com/xml/ns/javaee"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://java.sun.com/xml/ns/javaee</span></span></span><br><span class="line"><span class="tag"><span class="string">        ttp://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">version</span>=<span class="string">"3.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<p>二、报错原因：</p>
+<p>没有添加Maven依赖</p>
+<p>三、解决方法：</p>
+<p>1.右击项目，选择properties</p>
+<p>2.选择Deployment Assembly</p>
+<p>3.选择Add -&gt; Java Build Path Entries -&gt; Next</p>
+<p>4.选择Maven Dependencies -&gt; Finish -&gt; Apply -&gt; ok</p>
+<p>5.移除项目，重新添加至Tomcat</p>
+<p>6.重启server即可正常运行项目</p>
 
       
 
@@ -271,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/20/关于web-xml文件-web-app-标签报错问题/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/21/解决Web项目缺少Maven依赖问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,18 +290,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/20/解决Git本地仓库上传不到GitHub远程仓库问题/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/21/Chrome浏览器添加Vue-js插件/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          解决Git本地仓库上传不到GitHub远程仓库问题
+          Chrome浏览器添加Vue.js插件
         
       </div>
     </a>
   
   
-    <a href="/2019/11/20/关于Tomcat位数问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于Tomcat位数问题</div>
+    <a href="/2019/11/21/node-sass不支持当前系统环境/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">node-sass不支持当前系统环境</div>
       <i class="icon-circle-right"></i>
     </a>
   

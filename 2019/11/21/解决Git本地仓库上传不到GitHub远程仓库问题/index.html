@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>node-sass不支持当前系统环境 | Dream</title>
+  <title>解决Git本地仓库上传不到GitHub远程仓库问题 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Node Sass does not yet support your current environment1.问题描述： Node Sass does not yet support your current environment: Windows 64-bit 翻译过来就是说：node sass不支持当前系统环境 2.解决方案： 卸载原来不适合当前本机环境的node sass，重新安装适合">
+  <meta name="description" content="1.查看本地仓库和远程仓库的连接方式： 1git remote -v  12origin  https://github.com/Helayxy/study-notes.git (fetch)origin  https://github.com/Helayxy/study-notes.git (push)  结果若是https开头则是https连接方式，这种方式一般不会出现问题，若是git开头，说">
 <meta property="og:type" content="article">
-<meta property="og:title" content="node-sass不支持当前系统环境">
-<meta property="og:url" content="http://yoursite.com/2019/11/20/node-sass不支持当前系统环境/index.html">
+<meta property="og:title" content="解决Git本地仓库上传不到GitHub远程仓库问题">
+<meta property="og:url" content="http://yoursite.com/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="Node Sass does not yet support your current environment1.问题描述： Node Sass does not yet support your current environment: Windows 64-bit 翻译过来就是说：node sass不支持当前系统环境 2.解决方案： 卸载原来不适合当前本机环境的node sass，重新安装适合">
+<meta property="og:description" content="1.查看本地仓库和远程仓库的连接方式： 1git remote -v  12origin  https://github.com/Helayxy/study-notes.git (fetch)origin  https://github.com/Helayxy/study-notes.git (push)  结果若是https开头则是https连接方式，这种方式一般不会出现问题，若是git开头，说">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-20T15:38:07.715Z">
+<meta property="og:updated_time" content="2019-11-21T12:21:28.795Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="node-sass不支持当前系统环境">
-<meta name="twitter:description" content="Node Sass does not yet support your current environment1.问题描述： Node Sass does not yet support your current environment: Windows 64-bit 翻译过来就是说：node sass不支持当前系统环境 2.解决方案： 卸载原来不适合当前本机环境的node sass，重新安装适合">
+<meta name="twitter:title" content="解决Git本地仓库上传不到GitHub远程仓库问题">
+<meta name="twitter:description" content="1.查看本地仓库和远程仓库的连接方式： 1git remote -v  12origin  https://github.com/Helayxy/study-notes.git (fetch)origin  https://github.com/Helayxy/study-notes.git (push)  结果若是https开头则是https连接方式，这种方式一般不会出现问题，若是git开头，说">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -154,44 +154,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-node-sass不支持当前系统环境" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-解决Git本地仓库上传不到GitHub远程仓库问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      node-sass不支持当前系统环境
+      解决Git本地仓库上传不到GitHub远程仓库问题
     </h1>
   
 
         
-        <a href="/2019/11/20/node-sass不支持当前系统环境/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:10:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/" class="archive-article-date">
+  	<time datetime="2019-11-21T12:00:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="Node-Sass-does-not-yet-support-your-current-environment"><a href="#Node-Sass-does-not-yet-support-your-current-environment" class="headerlink" title="Node Sass does not yet support your current environment"></a>Node Sass does not yet support your current environment</h4><p>1.问题描述：</p>
-<p>Node Sass does not yet support your current environment: Windows 64-bit</p>
-<p>翻译过来就是说：node sass不支持当前系统环境</p>
-<p>2.解决方案：</p>
-<p>卸载原来不适合当前本机环境的node sass，重新安装适合本机的node sass</p>
-<p>3.卸载：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm uninstall --save node-sass</span><br></pre></td></tr></table></figure>
+        <p>1.查看本地仓库和远程仓库的连接方式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
 
-<p>4.重新安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save node-sass</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  https://github.com/Helayxy/study-notes.git (fetch)</span><br><span class="line">origin  https://github.com/Helayxy/study-notes.git (push)</span><br></pre></td></tr></table></figure>
 
-<p>注意：使用cnpm的前提是已经配置好了cnpm的镜像</p>
-<p>5.若没有配置cnpm，则使用npm进行卸载和安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">卸载：npm uninstall --save node-sass</span><br></pre></td></tr></table></figure>
+<p>结果若是https开头则是https连接方式，这种方式一般不会出现问题，若是git开头，说明ssh方式</p>
+<p>2.删除连接方式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">安装：npm install --save node-sass</span><br></pre></td></tr></table></figure>
+<p>3.切换为https连接方式：</p>
+<p>查看GitHub上的仓库地址，选择https方式，如下图所示；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Helayxy/learning-materials.git</span><br></pre></td></tr></table></figure>
 
-<p>注意：使用npm安装可能会出现安装较慢的问题，这是因为npm使用的是国外的镜像</p>
+<p>使用https方式添加远程仓库：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/Helayxy/learning-materials.git</span><br></pre></td></tr></table></figure>
+
+<p>4.使用https连接方式一般情况下上传、拉取代码都没有问题</p>
 
       
 
@@ -281,7 +280,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/20/node-sass不支持当前系统环境/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -295,18 +294,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/20/Web项目缺少Maven依赖问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Web项目缺少Maven依赖问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/20/Linux系统下安装JDK/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Linux系统下安装JDK</div>
+    <a href="/2019/11/21/使用Xshell连接VirtualBox中的CentOS7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Xshell连接VirtualBox中的CentOS7</div>
       <i class="icon-circle-right"></i>
     </a>
   

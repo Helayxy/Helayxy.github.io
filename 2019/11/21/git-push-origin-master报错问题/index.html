@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Linux系统下安装JDK | Dream</title>
+  <title>git push origin master报错问题 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CentOS7系统下安装jdk1.81.将linux版本jdk1.8的tar压缩包上传至虚拟机任意位置123[root@localhost /]# lsbin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usrboot  etc  lib64  mnt    proc  run   s">
+  <meta name="description" content="1.问题描述： 执行 1$ git push origin master  命令时，出现以下错误信息： 12345678To https://github.com/Helayxy/leyou.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some refs to &apos;https://git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux系统下安装JDK">
-<meta property="og:url" content="http://yoursite.com/2019/11/20/Linux系统下安装JDK/index.html">
+<meta property="og:title" content="git push origin master报错问题">
+<meta property="og:url" content="http://yoursite.com/2019/11/21/git-push-origin-master报错问题/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="CentOS7系统下安装jdk1.81.将linux版本jdk1.8的tar压缩包上传至虚拟机任意位置123[root@localhost /]# lsbin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usrboot  etc  lib64  mnt    proc  run   s">
+<meta property="og:description" content="1.问题描述： 执行 1$ git push origin master  命令时，出现以下错误信息： 12345678To https://github.com/Helayxy/leyou.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some refs to &apos;https://git">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-20T15:37:38.460Z">
+<meta property="og:updated_time" content="2019-11-21T12:16:26.522Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux系统下安装JDK">
-<meta name="twitter:description" content="CentOS7系统下安装jdk1.81.将linux版本jdk1.8的tar压缩包上传至虚拟机任意位置123[root@localhost /]# lsbin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usrboot  etc  lib64  mnt    proc  run   s">
+<meta name="twitter:title" content="git push origin master报错问题">
+<meta name="twitter:description" content="1.问题描述： 执行 1$ git push origin master  命令时，出现以下错误信息： 12345678To https://github.com/Helayxy/leyou.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some refs to &apos;https://git">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -154,59 +154,42 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Linux系统下安装JDK" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git-push-origin-master报错问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Linux系统下安装JDK
+      git push origin master报错问题
     </h1>
   
 
         
-        <a href="/2019/11/20/Linux系统下安装JDK/" class="archive-article-date">
-  	<time datetime="2019-11-20T15:08:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/21/git-push-origin-master报错问题/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:40:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="CentOS7系统下安装jdk1-8"><a href="#CentOS7系统下安装jdk1-8" class="headerlink" title="CentOS7系统下安装jdk1.8"></a>CentOS7系统下安装jdk1.8</h4><h5 id="1-将linux版本jdk1-8的tar压缩包上传至虚拟机任意位置"><a href="#1-将linux版本jdk1-8的tar压缩包上传至虚拟机任意位置" class="headerlink" title="1.将linux版本jdk1.8的tar压缩包上传至虚拟机任意位置"></a>1.将linux版本jdk1.8的tar压缩包上传至虚拟机任意位置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls</span><br><span class="line">bin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usr</span><br><span class="line">boot  etc  lib64  mnt    proc  run   srv   tmp  var</span><br></pre></td></tr></table></figure>
+        <p>1.问题描述：</p>
+<p>执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git push origin master</span><br></pre></td></tr></table></figure>
 
-<h5 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar  -zxvf  jdk-8u131-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<p>命令时，出现以下错误信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">To https://github.com/Helayxy/leyou.git</span><br><span class="line"> ! [rejected]        master -&gt; master (fetch first)</span><br><span class="line">error: failed to push some refs to 'https://github.com/Helayxy/leyou.git'</span><br><span class="line">hint: Updates were rejected because the remote contains work that you do</span><br><span class="line">hint: not have locally. This is usually caused by another repository pushing</span><br><span class="line">hint: to the same ref. You may want to first integrate the remote changes</span><br><span class="line">hint: (e.g., 'git pull ...') before pushing again.</span><br><span class="line">hint: See the 'Note about fast-forwards' in 'git push --help' for details.</span><br></pre></td></tr></table></figure>
 
-<h5 id="3-查看解压是否成功"><a href="#3-查看解压是否成功" class="headerlink" title="3.查看解压是否成功"></a>3.查看解压是否成功</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls</span><br><span class="line">bin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usr</span><br><span class="line">boot  etc  jdk1.8.0_211  leyou   lib64  mnt    proc  run   srv   tmp  var</span><br></pre></td></tr></table></figure>
+<p>2.原因所在：</p>
+<p>出现这个问题是因为GitHub中的文件与本地仓库中的文件不同造成的，当修改了GitHub远程仓库中的文件后，在本地仓库进行git  push时，便会出现此问题，可以通过如下命令进行代码合并：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
 
-<p><strong>可以看到有jdk1.8.0_211文件夹，表示解压成功！</strong></p>
-<h5 id="4-删除没有用的压缩包"><a href="#4-删除没有用的压缩包" class="headerlink" title="4.删除没有用的压缩包"></a>4.删除没有用的压缩包</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# rm  jdk-8u211-linux-x64.tar.gz</span><br><span class="line">rm：是否删除普通文件 "jdk-8u211-linux-x64.tar.gz"？y</span><br></pre></td></tr></table></figure>
+<p>3.提交：</p>
+<p>最后使用如下命令进行提交：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
-<h5 id="5-创建jdk的安装位置"><a href="#5-创建jdk的安装位置" class="headerlink" title="5.创建jdk的安装位置"></a>5.创建jdk的安装位置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# mkdir /usr/java</span><br></pre></td></tr></table></figure>
 
-<p><strong>说明：我这里安装到usr目录下的java文件夹中</strong></p>
-<h5 id="6-移动解压后的jdk至指定的安装位置"><a href="#6-移动解压后的jdk至指定的安装位置" class="headerlink" title="6.移动解压后的jdk至指定的安装位置"></a>6.移动解压后的jdk至指定的安装位置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost java]# mv /jdk1.8.0_211 /usr/java</span><br></pre></td></tr></table></figure>
-
-<h5 id="7-修改环境变量"><a href="#7-修改环境变量" class="headerlink" title="7.修改环境变量"></a>7.修改环境变量</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# vi /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p><strong>说明：/etc/profile为系统的配置文件，在改文件末尾添加如下配置信息：</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_211</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib:$CLASSPATH</span><br><span class="line">export JAVA_PATH=$&#123;JAVA_HOME&#125;/bin:$&#123;JRE_HOME&#125;/bin</span><br><span class="line">export PATH=$PATH:$&#123;JAVA_PATH&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>使用：wq保存退出</strong></p>
-<h5 id="8-让这个环境变量配置信息里面生效"><a href="#8-让这个环境变量配置信息里面生效" class="headerlink" title="8.让这个环境变量配置信息里面生效"></a>8.让这个环境变量配置信息里面生效</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# source /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p><strong>说明：此命令可以是配置信息立马生效，不适用此命令需要重启虚拟机</strong></p>
-<h5 id="9-验证jdk是否安装成功"><a href="#9-验证jdk是否安装成功" class="headerlink" title="9.验证jdk是否安装成功"></a>9.验证jdk是否安装成功</h5><p>输入javac命令查看：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# javac</span><br><span class="line">用法: javac &lt;options&gt; &lt;source files&gt;</span><br><span class="line">其中, 可能的选项包括:</span><br><span class="line">  -g                         生成所有调试信息</span><br><span class="line">  -g:none                    不生成任何调试信息</span><br><span class="line">  -g:&#123;lines,vars,source&#125;     只生成某些调试信息</span><br><span class="line">  -nowarn                    不生成任何警告</span><br><span class="line">  -verbose                   输出有关编译器正在执行的操作的消息</span><br><span class="line">  -deprecation               输出使用已过时的 API 的源位置</span><br><span class="line">  -classpath &lt;路径&gt;            指定查找用户类文件和注释处理程序的位置</span><br><span class="line">  -cp &lt;路径&gt;                   指定查找用户类文件和注释处理程序的位置</span><br><span class="line">  -sourcepath &lt;路径&gt;           指定查找输入源文件的位置</span><br><span class="line">  -bootclasspath &lt;路径&gt;        覆盖引导类文件的位置</span><br><span class="line">  -extdirs &lt;目录&gt;              覆盖所安装扩展的位置</span><br><span class="line">  -endorseddirs &lt;目录&gt;         覆盖签名的标准路径的位置</span><br><span class="line">  -proc:&#123;none,only&#125;          控制是否执行注释处理和/或编译。</span><br><span class="line">  -processor &lt;class1&gt;[,&lt;class2&gt;,&lt;class3&gt;...] 要运行的注释处理程序的名称; 绕过默认的搜索进程</span><br><span class="line">  -processorpath &lt;路径&gt;        指定查找注释处理程序的位置</span><br><span class="line">  -parameters                生成元数据以用于方法参数的反射</span><br><span class="line">  -d &lt;目录&gt;                    指定放置生成的类文件的位置</span><br><span class="line">  -s &lt;目录&gt;                    指定放置生成的源文件的位置</span><br><span class="line">  -h &lt;目录&gt;                    指定放置生成的本机标头文件的位置</span><br><span class="line">  -implicit:&#123;none,class&#125;     指定是否为隐式引用文件生成类文件</span><br><span class="line">  -encoding &lt;编码&gt;             指定源文件使用的字符编码</span><br><span class="line">  -source &lt;发行版&gt;              提供与指定发行版的源兼容性</span><br><span class="line">  -target &lt;发行版&gt;              生成特定 VM 版本的类文件</span><br><span class="line">  -profile &lt;配置文件&gt;            请确保使用的 API 在指定的配置文件中可用</span><br><span class="line">  -version                   版本信息</span><br><span class="line">  -help                      输出标准选项的提要</span><br><span class="line">  -A关键字[=值]                  传递给注释处理程序的选项</span><br><span class="line">  -X                         输出非标准选项的提要</span><br><span class="line">  -J&lt;标记&gt;                     直接将 &lt;标记&gt; 传递给运行时系统</span><br><span class="line">  -Werror                    出现警告时终止编译</span><br><span class="line">  @&lt;文件名&gt;                     从文件读取选项和文件名</span><br></pre></td></tr></table></figure>
-
-<p>输入java -version查看java版本信息：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# java -version</span><br><span class="line">java version "1.8.0_211"</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_211-b12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.211-b12, mixed mode)</span><br></pre></td></tr></table></figure>
-
-<p>输入echo $PATH查看路径：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# echo $PATH</span><br><span class="line">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/usr/java/jdk1.8.0_211/bin:/usr/java/jdk1.8.0_211/jre/bin</span><br></pre></td></tr></table></figure>
-
-<h5 id="10-以上都正确则表示jdk安装成功！"><a href="#10-以上都正确则表示jdk安装成功！" class="headerlink" title="10.以上都正确则表示jdk安装成功！"></a>10.以上都正确则表示jdk安装成功！</h5>
       
 
       
@@ -295,7 +278,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/20/Linux系统下安装JDK/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/21/git-push-origin-master报错问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -309,18 +292,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/20/node-sass不支持当前系统环境/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/21/IDEA去掉SQL语句背景色/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          node-sass不支持当前系统环境
+          IDEA去掉SQL语句背景色
         
       </div>
     </a>
   
   
-    <a href="/2019/11/20/Java中关于对象引用的一点思考/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java中关于对象引用的一点思考</div>
+    <a href="/2019/11/21/CentOS7下安装配置Redis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CentOS7下安装配置Redis</div>
       <i class="icon-circle-right"></i>
     </a>
   
