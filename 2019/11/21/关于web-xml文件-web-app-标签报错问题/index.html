@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>关于web.xml文件&lt;web app&gt;标签报错问题 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、问题描述： 当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是会显示报错 二、问题原因： 这是因为在上有这样一段代码： 123&amp;lt;!DOCTYPE web-app PUBLIC        &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//E">
+  <meta name="description" content="一、问题描述： 当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这时会显示报错； 二、问题原因： 这是因为在上有这样一段代码： 123&amp;lt;!DOCTYPE web-app PUBLIC        &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//">
 <meta name="keywords" content="Web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于web.xml文件&lt;web app&gt;标签报错问题">
 <meta property="og:url" content="http://yoursite.com/2019/11/21/关于web-xml文件-web-app-标签报错问题/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="一、问题描述： 当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是会显示报错 二、问题原因： 这是因为在上有这样一段代码： 123&amp;lt;!DOCTYPE web-app PUBLIC        &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//E">
+<meta property="og:description" content="一、问题描述： 当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这时会显示报错； 二、问题原因： 这是因为在上有这样一段代码： 123&amp;lt;!DOCTYPE web-app PUBLIC        &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-21T12:42:03.605Z">
+<meta property="og:updated_time" content="2019-12-07T15:12:09.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于web.xml文件&lt;web app&gt;标签报错问题">
-<meta name="twitter:description" content="一、问题描述： 当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是会显示报错 二、问题原因： 这是因为在上有这样一段代码： 123&amp;lt;!DOCTYPE web-app PUBLIC        &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//E">
+<meta name="twitter:description" content="一、问题描述： 当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这时会显示报错； 二、问题原因： 这是因为在上有这样一段代码： 123&amp;lt;!DOCTYPE web-app PUBLIC        &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -91,6 +91,12 @@
 					<a class="mail" target="_blank" href="mailto:1562823234@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
+			<!-- 网易云音乐插件 -->
+            
+                    <div style="position:absolute; bottom:120px left:auto; width:85%">
+                            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="52" src="//music.163.com/outchain/player?type=2&id=1365514326&auto=1&height=32"></iframe>
+                    </div>
+            
 		</nav>
 	</header>		
 </div>
@@ -176,13 +182,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>一、问题描述：</p>
-<p>当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是<web-app>会显示报错</web-app></p>
+<p>当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这时<web-app>会显示报错；</web-app></p>
 <p>二、问题原因：</p>
 <p>这是因为在<web-app>上有这样一段代码：</web-app></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE web-app PUBLIC</span><br><span class="line">        <span class="string">"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"</span></span><br><span class="line">        <span class="string">"http://java.sun.com/dtd/web-app_2_3.dtd"</span> &gt;</span><br></pre></td></tr></table></figure>
 
-<p>这段代码要求我们在web.xml中编写的相关配置信息必须按照一定的规范和顺序来配置</p>
-<p>三、解决方案：</p>
+<p>这段代码要求我们在web.xml中编写的相关配置信息必须按照一定的规范和顺序来配置；</p>
+<a id="more"></a>三、解决方案：
+
 <p>使用如下代码替换<web-app>标签即可：</web-app></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">"http://java.sun.com/xml/ns/javaee"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://java.sun.com/xml/ns/javaee</span></span></span><br><span class="line"><span class="tag"><span class="string">        ttp://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">version</span>=<span class="string">"3.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -437,11 +444,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">插件</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -461,15 +468,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -477,15 +476,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color4">Web</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Web</a>
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
             
             <div class="clearfix"></div>

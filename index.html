@@ -86,6 +86,12 @@
 					<a class="mail" target="_blank" href="mailto:1562823234@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
+			<!-- 网易云音乐插件 -->
+            
+                    <div style="position:absolute; bottom:120px left:auto; width:85%">
+                            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="52" src="//music.163.com/outchain/player?type=2&id=1365514326&auto=1&height=32"></iframe>
+                    </div>
+            
 		</nav>
 	</header>		
 </div>
@@ -174,9 +180,9 @@
       
         <p>xAxis属性代表echarts图表的x轴，设置代码如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">xAxis : [</span><br><span class="line">    &#123;</span><br><span class="line">      type : <span class="string">'category'</span>,  <span class="comment">// type:坐标轴类型，默认为category</span></span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">     其他类型：</span></span><br><span class="line"><span class="comment">     1.'value'：数值轴，适用于连续数据；</span></span><br><span class="line"><span class="comment">     2.'category'：类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据； </span></span><br><span class="line"><span class="comment">     3.'time'：时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的刻度；</span></span><br><span class="line"><span class="comment">     4.'log'：对数轴。适用于对数数据。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    data : [<span class="string">'上海'</span>,<span class="string">'北京'</span>],  <span class="comment">//x轴下面的数据</span></span><br><span class="line">    axisTick: &#123;</span><br><span class="line">        show: <span class="literal">false</span>,  <span class="comment">//是否显示网状线 默认为true</span></span><br><span class="line">        alignWithLabel: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//用于设置x轴下面的字体</span></span><br><span class="line">    axisLabel:&#123;</span><br><span class="line">            show:<span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示x轴下的字体 默认为true</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            interval：</span></span><br><span class="line"><span class="comment">            设置为0，表示强制显示所有标签;</span></span><br><span class="line"><span class="comment">            设置为1，表示隔一个标签显示一个标签；</span></span><br><span class="line"><span class="comment">            设置为2，表示隔两个标签显示一个标签，以此类推。</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">　　　　　　　interval:<span class="number">0</span>, </span><br><span class="line">            <span class="comment">//textStyle表示x轴下的字体的样式</span></span><br><span class="line">　　　　　　　textStyle:&#123;   </span><br><span class="line">               color:<span class="string">'#333'</span>,</span><br><span class="line">               fontSize:<span class="number">13</span></span><br><span class="line">            &#125;</span><br><span class="line">       &#125;,</span><br><span class="line">    axisLine:&#123;</span><br><span class="line">           show:<span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示x轴那一条线，默认为true</span></span><br><span class="line">           lineStyle:&#123; <span class="comment">//lineStyle用来设置x轴那一条线的样式</span></span><br><span class="line">             color:<span class="string">'#6FC6F3'</span>,</span><br><span class="line">             width:<span class="number">2</span>,    <span class="comment">//轴线的粗细，我写的是2，最小为0，值为0的时候线隐藏</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<p>yAxis属性代表echarts图表的y轴，样式设置方式与x轴的方式是一样，就是设置的属性会有所差异：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">yAxis: [&#123;</span><br><span class="line">            <span class="comment">//上面的三个值可以根据自己需求随意设置，不设置时会根据图中的值自动生成相应的值</span></span><br><span class="line">            min: <span class="number">0</span>, <span class="comment">//y轴的最小值</span></span><br><span class="line">            max: <span class="number">100</span>, <span class="comment">//y轴最大值 </span></span><br><span class="line">            interval: <span class="number">20</span>, <span class="comment">//值之间的间隔</span></span><br><span class="line">            type: <span class="string">'value'</span>,  <span class="comment">//type:坐标轴类型，默认为value</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            其他类型：</span></span><br><span class="line"><span class="comment">            1.'value'：数值轴，适用于连续数据；</span></span><br><span class="line"><span class="comment">            2.'category'：类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据； </span></span><br><span class="line"><span class="comment">            3.'time'：时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也 有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的刻度；</span></span><br><span class="line"><span class="comment">            4.'log'：对数轴。适用于对数数据。</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">    </span><br><span class="line">            <span class="comment">//是否显示网状线 默认为true</span></span><br><span class="line">            splitLine: &#123;</span><br><span class="line">                show: <span class="literal">false</span></span><br><span class="line">            &#125;, </span><br><span class="line">            <span class="comment">//用于设置y轴的字体</span></span><br><span class="line">            axisLabel: &#123;</span><br><span class="line">              show: <span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示y轴下的字体，默认为true</span></span><br><span class="line">              textStyle: &#123;   <span class="comment">//textStyle里面写y轴下的字体的样式</span></span><br><span class="line">                color: <span class="string">'#333'</span>,</span><br><span class="line">                fontSize: <span class="number">13</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">//用于设置y轴的那一条线</span></span><br><span class="line">            axisLine: &#123;</span><br><span class="line">              show: <span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示y轴那一条线，默认为true</span></span><br><span class="line">              lineStyle: &#123; <span class="comment">//lineStyle里面写y轴那一条线的样式</span></span><br><span class="line">                color: <span class="string">'#6FC6F3'</span>,</span><br><span class="line">                width: <span class="number">2</span>,    <span class="comment">//轴线的粗细 我写的是2 最小为0，值为0的时候线隐藏</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;]</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/12/06/echarts图表x，y轴的设置/#more">more >></a>
+        
       
 
       
@@ -262,16 +268,9 @@
 <li>之后运行npm install命令时，会自动安装X到node_modules目录中</li>
 <li>之后运行npm install –production或者注明NODE_ENV变量值为production时，会自动安装X到node_modules目录中</li>
 </ul>
-<p><strong>npm install X –save-dev:</strong></p>
-<ul>
-<li>会把X包安装到node_modules目录中</li>
-<li>会在package.json的devDependencies属性下添加X</li>
-<li>之后运行npm install命令时，会自动安装X到node_modules目录中</li>
-<li>之后运行npm install –production或者注明NODE_ENV变量值为production时，不会自动安装X到node_modules目录中</li>
-</ul>
-<p><strong>使用原则:</strong></p>
-<p>运行时需要用到的包使用–save，否则使用–save-dev</p>
-
+        
+          <a class="article-more-a" href="/2019/12/06/npm不同方式安装的区别/#more">more >></a>
+        
       
 
       
@@ -345,11 +344,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>​        The technology of artificial intelligence,also known as AI for short, has recently recieved both criticism and appreciation, as indicated in many news articles. (反对意见）On the one hand,AI is denounced now that many people will accordingly threaten to lose their livelihood in the near future.（支持意见）On the other hand,some insist that the AI technology is able to boost productivity and efficiency as well as enables us to lead a better and more colorful life.（我的意见）From my view of point,it is an undeniable fact that AI has a profound and positive bearing on the way people study and work.(总体社会利弊看法➕自己观点)</p>
-<p>​      （优点一）To begin with,AI plays a pivotal role in making our life more interesting and convenient.For instance,we used to be,to some extent ,harrowed and tormented by some jejune and monotonous work which is best characterized by repeating the same process time after time, day after day.However,with the aids of AI,currently we find the way to hand this kind of work to robots who can do such chores unceasingly for twenty-four hour a day while ensuring more precision than human hands.As a result,it can considerably enhance the quality of commodities and at the same time reduce production costs as efforts of contributing to higher standards of life for people.</p>
-<p>​      （优点二） Also,benefiting from AI,now a single mobile phone suffices to do all the tricks.The philosophy and model of smart homes,like,is in full swing and gaining momentum day by day.Hopefully,it won’t take long for us to be served with a well-prepared meal just with a click on the phone when we are spent and wore out after one-day ’s hard work and study.In addition to that,we needn’t to feel irritable and vexed about the tedious housework. It is owing to AI that we have chance to emancipate our hands.Thus,we are set to gain more leisure time than ever before to enjoy the fairness of life and go out to embrace the sunshine.</p>
-<p>​       （转折提及少量缺点）However,while we give credit to the positive influence of AI of human development,we should never neglect its negative side.（转折）（举例缺点）The most common one is that some people may risk losing their job as a result of being supplanted by more advanced manufacturing machines or even robots. As of the drawbacks resulting from AI,Mao Tse-tung,the founder of the People’s Republic of China,once said,”Where there is revolution,there is sacrifice.”What’s more,nothing is immaculate in the world ,so does the AI technology.（指出有缺点不可怕可以克服）</p>
-<p>​       （总结优点大于缺点） Taking into account all these factors,it’s not difficult to come to the conclusion that the disadvantages brought by AI pale in comparison with the advantages.In terms of the view towards AI,we ought not to throw the baby out with the bath water.Consequently,we need to spare no efforts to draw upon the most advanced technology so as to keep abreast of the times and lead a brighter and better life.</p>
-
+<p>​
+        
+          <a class="article-more-a" href="/2019/11/27/My-Personal-Views-on-AI/#more">more >></a>
+        
       
 
       
@@ -428,18 +426,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  https://github.com/Helayxy/study-notes.git (fetch)</span><br><span class="line">origin  https://github.com/Helayxy/study-notes.git (push)</span><br></pre></td></tr></table></figure>
 
 <p>结果若是https开头则是https连接方式，这种方式一般不会出现问题，若是git开头，说明ssh方式</p>
-<p>2.删除连接方式：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
-
-<p>3.切换为https连接方式：</p>
-<p>查看GitHub上的仓库地址，选择https方式，如下图所示；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/Helayxy/learning-materials.git</span><br></pre></td></tr></table></figure>
-
-<p>使用https方式添加远程仓库：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/Helayxy/learning-materials.git</span><br></pre></td></tr></table></figure>
-
-<p>4.使用https连接方式一般情况下上传、拉取代码都没有问题</p>
-
+        
+          <a class="article-more-a" href="/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/#more">more >></a>
+        
       
 
       
@@ -516,28 +505,9 @@
 <p>1.来到这个<a href="http://isoredirect.centos.org/" target="_blank" rel="noopener">网址</a>选择适合自己电脑操作系统的CentOS7的镜像（一般选择第一个，即for CentOS 7 x86_64 iso images这个版本的）</p>
 <p>2.进入该版本的<a href="http://isoredirect.centos.org/centos/7/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，The following mirrors in your region should have the ISO images available:表示当前所在国家或地区的镜像；Other mirrors further away:表示周边国家或地区的镜像。这里我们一般选择当前所在国家或地区的镜像，因为这样下载速度较快</p>
 <p>3.选择阿里云的镜像，这个<a href="http://mirrors.aliyun.com/centos/7.6.1810/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，下载CentOS-7-x86_64-DVD-1810.iso  这个版本的镜像，centos7的大小约为4个多G，下载可能需要四五分钟</p>
-<p>二、下载VirtualBox：</p>
-<p>1.进入<a href="https://pc.qq.com/" target="_blank" rel="noopener">腾讯软件中心官网</a>，搜索VirtualBox，选择下载</p>
-<p>2.默认安装即可，第二步<strong>注意需要点击VirtualBox Networking，选择将整个功能安装到本机硬盘，</strong>接下来一路“下一步”即可</p>
-<p>3.注意安装过程会提示网络界面的警告，全部选择“是”即可，不然可能出在最后虚拟机不能上网</p>
-<p>三、使用VirtualBox打开CentOS7</p>
-<p>1.打开VirtualBox，选择新建，填写虚拟电脑的名称，版本这里选择Red Hat 64-bit，点击下一步</p>
-<p>2.下面的步骤全部选择默认即可</p>
-<p>3.打开虚拟机，根据向导设置语言，选择中文</p>
-<p>4.中间过程会出现警告框让设置密码，自行设置即可</p>
-<p>5.安装过程中还会出现让你分配内存的警告框，点击进去，点击左上角的“完成”即可</p>
-<p>四、网络设置</p>
-<p>1.在VirtualBox中选择设置，找到网络，在接有网线的前提下，选择桥接网卡，点击“OK”</p>
-<p>2.输入用户名和密码登录成功后，执行cd  /etc/sysconfig/nerwork-scripts进入该目录</p>
-<p>3.ls列出nerwork-scripts这个目录下的所有文件，选择ifcfg-en*开头的文件，每个人的这个文件名不一样</p>
-<p>4.vi  ifcfg-en*这个文件，进入编辑模式，将文件的最后一行的ONBOOT的值由no置位yes，按Esc键退出编辑模式，按下：wq进行保存退出（：q！表示不保存强制退出  ）</p>
-<p>5.退出后执行service  network   restart命令中心启动网络配置</p>
-<p>6.使用ip  addr查看网络情况，注意：CentOS7已经不支持ipconfig命令，所以这个命令在CentOS7中无效</p>
-<p>五、Xshell连接CentOS7</p>
-<p>1.打开Xshell连接工具，选择新建，在主机一栏填写ip  addr命令查看到的网络地址</p>
-<p>2.选择用户身份验证，填写CentOS7中的用户名和密码</p>
-<p>3.没有其他情况应该可以连接成功</p>
-
+        
+          <a class="article-more-a" href="/2019/11/21/使用Xshell连接VirtualBox中的CentOS7/#more">more >></a>
+        
       
 
       
@@ -611,17 +581,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>一、问题描述：</p>
-<p>当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这是<web-app>会显示报错</web-app></p>
+<p>当使用IDEA新建一个Web项目时，会在/WEB-INF目录下自动创建一个web.xml的配置文件，当在该配置文件中添加项目需要的代码后，这时<web-app>会显示报错；</web-app></p>
 <p>二、问题原因：</p>
 <p>这是因为在<web-app>上有这样一段代码：</web-app></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE web-app PUBLIC</span><br><span class="line">        <span class="string">"-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"</span></span><br><span class="line">        <span class="string">"http://java.sun.com/dtd/web-app_2_3.dtd"</span> &gt;</span><br></pre></td></tr></table></figure>
 
-<p>这段代码要求我们在web.xml中编写的相关配置信息必须按照一定的规范和顺序来配置</p>
-<p>三、解决方案：</p>
-<p>使用如下代码替换<web-app>标签即可：</web-app></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span> <span class="attr">xmlns</span>=<span class="string">"http://java.sun.com/xml/ns/javaee"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://java.sun.com/xml/ns/javaee</span></span></span><br><span class="line"><span class="tag"><span class="string">        ttp://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">version</span>=<span class="string">"3.0"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
+<p>这段代码要求我们在web.xml中编写的相关配置信息必须按照一定的规范和顺序来配置；</p>
+        
+          <a class="article-more-a" href="/2019/11/21/关于web-xml文件-web-app-标签报错问题/#more">more >></a>
+        
       
 
       
@@ -700,13 +668,9 @@
 
 <p>报错原因</p>
 <p>Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动Tomcat会报这样的错误</p>
-<p>解决方案</p>
-<p>1.来到这个<a href="http://archive.apache.org/dist/tomcat/tomcat-connectors/native/" target="_blank" rel="noopener">网站</a></p>
-<p>2.下载相应版本的文件</p>
-<p>3.解压：在bin目录下有一个x64文件夹，该文件夹下就是64位的tcnative-1.dll文件</p>
-<p>4.替换：删除原tomcat的bin目录下的32位的tcnative-1.dll文件，将64位的tcnative-1.dll添加进去</p>
-<p>5.重启Tomcat即可，此时将不再报错</p>
-
+        
+          <a class="article-more-a" href="/2019/11/21/关于Tomcat位数问题/#more">more >></a>
+        
       
 
       
@@ -787,12 +751,9 @@
 <p>3.运行过上面的命令后，运行cnpm run build命令；</p>
 <p>说明：npm run build 执行完，会在shells&gt;chrome下的src文件夹里生成几个js文件；</p>
 <p>注意：若不运行npm run build命令，则在加载扩展程序时会报错；</p>
-<p>第三步：</p>
-<p>1.打开shells&gt;chrome&gt;manifest.json，并把json文件的”persistent”:false改成true；</p>
-<p>2.打开chrome浏览器，打开更多工具&gt;扩展程序；</p>
-<p>3.再点击加载已解压的扩展程序，然后把shells&gt;chrome文件夹放入；</p>
-<p>4.完成上述步骤vue.js的插件就算安装成功了；</p>
-
+        
+          <a class="article-more-a" href="/2019/11/21/Chrome浏览器添加Vue-js插件/#more">more >></a>
+        
       
 
       
@@ -871,14 +832,9 @@
 
 <p>二、报错原因：</p>
 <p>没有添加Maven依赖</p>
-<p>三、解决方法：</p>
-<p>1.右击项目，选择properties</p>
-<p>2.选择Deployment Assembly</p>
-<p>3.选择Add -&gt; Java Build Path Entries -&gt; Next</p>
-<p>4.选择Maven Dependencies -&gt; Finish -&gt; Apply -&gt; ok</p>
-<p>5.移除项目，重新添加至Tomcat</p>
-<p>6.重启server即可正常运行项目</p>
-
+        
+          <a class="article-more-a" href="/2019/11/21/解决Web项目缺少Maven依赖问题/#more">more >></a>
+        
       
 
       
@@ -956,20 +912,9 @@
 <p>翻译过来就是说：node sass不支持当前系统环境</p>
 <p>2.解决方案：</p>
 <p>卸载原来不适合当前本机环境的node sass，重新安装适合本机的node sass</p>
-<p>3.卸载：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm uninstall --save node-sass</span><br></pre></td></tr></table></figure>
-
-<p>4.重新安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save node-sass</span><br></pre></td></tr></table></figure>
-
-<p>注意：使用cnpm的前提是已经配置好了cnpm的镜像</p>
-<p>5.若没有配置cnpm，则使用npm进行卸载和安装：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">卸载：npm uninstall --save node-sass</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">安装：npm install --save node-sass</span><br></pre></td></tr></table></figure>
-
-<p>注意：使用npm安装可能会出现安装较慢的问题，这是因为npm使用的是国外的镜像</p>
-
+        
+          <a class="article-more-a" href="/2019/11/21/node-sass不支持当前系统环境/#more">more >></a>
+        
       
 
       
@@ -1119,11 +1064,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">插件</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1143,15 +1088,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1159,15 +1096,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color4">Web</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Web</a>
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
             
             <div class="clearfix"></div>

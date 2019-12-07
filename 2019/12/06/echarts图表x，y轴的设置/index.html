@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Dream">
 <meta property="og:description" content="xAxis属性代表echarts图表的x轴，设置代码如下： 12345678910111213141516171819202122232425262728293031323334353637383940xAxis : [    &amp;#123;      type : &apos;category&apos;,  // type:坐标轴类型，默认为category     /*     其他类型：     1.&apos;valu">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-06T14:18:41.416Z">
+<meta property="og:updated_time" content="2019-12-07T14:58:23.746Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="echarts图表x，y轴的设置">
 <meta name="twitter:description" content="xAxis属性代表echarts图表的x轴，设置代码如下： 12345678910111213141516171819202122232425262728293031323334353637383940xAxis : [    &amp;#123;      type : &apos;category&apos;,  // type:坐标轴类型，默认为category     /*     其他类型：     1.&apos;valu">
@@ -91,6 +91,12 @@
 					<a class="mail" target="_blank" href="mailto:1562823234@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
+			<!-- 网易云音乐插件 -->
+            
+                    <div style="position:absolute; bottom:120px left:auto; width:85%">
+                            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="52" src="//music.163.com/outchain/player?type=2&id=1365514326&auto=1&height=32"></iframe>
+                    </div>
+            
 		</nav>
 	</header>		
 </div>
@@ -178,7 +184,8 @@
         <p>xAxis属性代表echarts图表的x轴，设置代码如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">xAxis : [</span><br><span class="line">    &#123;</span><br><span class="line">      type : <span class="string">'category'</span>,  <span class="comment">// type:坐标轴类型，默认为category</span></span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">     其他类型：</span></span><br><span class="line"><span class="comment">     1.'value'：数值轴，适用于连续数据；</span></span><br><span class="line"><span class="comment">     2.'category'：类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据； </span></span><br><span class="line"><span class="comment">     3.'time'：时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的刻度；</span></span><br><span class="line"><span class="comment">     4.'log'：对数轴。适用于对数数据。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    data : [<span class="string">'上海'</span>,<span class="string">'北京'</span>],  <span class="comment">//x轴下面的数据</span></span><br><span class="line">    axisTick: &#123;</span><br><span class="line">        show: <span class="literal">false</span>,  <span class="comment">//是否显示网状线 默认为true</span></span><br><span class="line">        alignWithLabel: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//用于设置x轴下面的字体</span></span><br><span class="line">    axisLabel:&#123;</span><br><span class="line">            show:<span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示x轴下的字体 默认为true</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            interval：</span></span><br><span class="line"><span class="comment">            设置为0，表示强制显示所有标签;</span></span><br><span class="line"><span class="comment">            设置为1，表示隔一个标签显示一个标签；</span></span><br><span class="line"><span class="comment">            设置为2，表示隔两个标签显示一个标签，以此类推。</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">　　　　　　　interval:<span class="number">0</span>, </span><br><span class="line">            <span class="comment">//textStyle表示x轴下的字体的样式</span></span><br><span class="line">　　　　　　　textStyle:&#123;   </span><br><span class="line">               color:<span class="string">'#333'</span>,</span><br><span class="line">               fontSize:<span class="number">13</span></span><br><span class="line">            &#125;</span><br><span class="line">       &#125;,</span><br><span class="line">    axisLine:&#123;</span><br><span class="line">           show:<span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示x轴那一条线，默认为true</span></span><br><span class="line">           lineStyle:&#123; <span class="comment">//lineStyle用来设置x轴那一条线的样式</span></span><br><span class="line">             color:<span class="string">'#6FC6F3'</span>,</span><br><span class="line">             width:<span class="number">2</span>,    <span class="comment">//轴线的粗细，我写的是2，最小为0，值为0的时候线隐藏</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 
-<p>yAxis属性代表echarts图表的y轴，样式设置方式与x轴的方式是一样，就是设置的属性会有所差异：</p>
+<a id="more"></a>yAxis属性代表echarts图表的y轴，样式设置方式与x轴的方式是一样，就是设置的属性会有所差异：
+
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">yAxis: [&#123;</span><br><span class="line">            <span class="comment">//上面的三个值可以根据自己需求随意设置，不设置时会根据图中的值自动生成相应的值</span></span><br><span class="line">            min: <span class="number">0</span>, <span class="comment">//y轴的最小值</span></span><br><span class="line">            max: <span class="number">100</span>, <span class="comment">//y轴最大值 </span></span><br><span class="line">            interval: <span class="number">20</span>, <span class="comment">//值之间的间隔</span></span><br><span class="line">            type: <span class="string">'value'</span>,  <span class="comment">//type:坐标轴类型，默认为value</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            其他类型：</span></span><br><span class="line"><span class="comment">            1.'value'：数值轴，适用于连续数据；</span></span><br><span class="line"><span class="comment">            2.'category'：类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据； </span></span><br><span class="line"><span class="comment">            3.'time'：时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也 有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的刻度；</span></span><br><span class="line"><span class="comment">            4.'log'：对数轴。适用于对数数据。</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">    </span><br><span class="line">            <span class="comment">//是否显示网状线 默认为true</span></span><br><span class="line">            splitLine: &#123;</span><br><span class="line">                show: <span class="literal">false</span></span><br><span class="line">            &#125;, </span><br><span class="line">            <span class="comment">//用于设置y轴的字体</span></span><br><span class="line">            axisLabel: &#123;</span><br><span class="line">              show: <span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示y轴下的字体，默认为true</span></span><br><span class="line">              textStyle: &#123;   <span class="comment">//textStyle里面写y轴下的字体的样式</span></span><br><span class="line">                color: <span class="string">'#333'</span>,</span><br><span class="line">                fontSize: <span class="number">13</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">//用于设置y轴的那一条线</span></span><br><span class="line">            axisLine: &#123;</span><br><span class="line">              show: <span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示y轴那一条线，默认为true</span></span><br><span class="line">              lineStyle: &#123; <span class="comment">//lineStyle里面写y轴那一条线的样式</span></span><br><span class="line">                color: <span class="string">'#6FC6F3'</span>,</span><br><span class="line">                width: <span class="number">2</span>,    <span class="comment">//轴线的粗细 我写的是2 最小为0，值为0的时候线隐藏</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;]</span><br></pre></td></tr></table></figure>
       
 
@@ -421,11 +428,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">插件</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -445,15 +452,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -461,15 +460,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color4">Web</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Web</a>
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
             
             <div class="clearfix"></div>
