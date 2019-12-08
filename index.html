@@ -5,12 +5,12 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="https://helayxy.github.io">
   <title>Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Dream">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="https://helayxy.github.io/index.html">
 <meta property="og:site_name" content="Dream">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
@@ -213,10 +213,15 @@
 
 <p>注意：一定要放在<code>&lt;nav&gt;</code>和<code>&lt;/nav&gt;</code>之内，还有网易云音乐很多歌曲是不支持生成外链播放器的</p>
         
-          <a class="article-more-a" href="/2019/12/08/Hexo博客yilia主题添加背景音乐/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -240,6 +245,14 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端/hexo//" class="article-tag-list-link color5">hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端/hexo/yilia//" class="article-tag-list-link color1">yilia</a>
         		</li>
       		
 		</ul>
@@ -331,10 +344,15 @@
         <p>xAxis属性代表echarts图表的x轴，设置代码如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">xAxis : [</span><br><span class="line">    &#123;</span><br><span class="line">      type : <span class="string">'category'</span>,  <span class="comment">// type:坐标轴类型，默认为category</span></span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">     其他类型：</span></span><br><span class="line"><span class="comment">     1.'value'：数值轴，适用于连续数据；</span></span><br><span class="line"><span class="comment">     2.'category'：类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据； </span></span><br><span class="line"><span class="comment">     3.'time'：时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的刻度；</span></span><br><span class="line"><span class="comment">     4.'log'：对数轴。适用于对数数据。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    data : [<span class="string">'上海'</span>,<span class="string">'北京'</span>],  <span class="comment">//x轴下面的数据</span></span><br><span class="line">    axisTick: &#123;</span><br><span class="line">        show: <span class="literal">false</span>,  <span class="comment">//是否显示网状线 默认为true</span></span><br><span class="line">        alignWithLabel: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//用于设置x轴下面的字体</span></span><br><span class="line">    axisLabel:&#123;</span><br><span class="line">            show:<span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示x轴下的字体 默认为true</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            interval：</span></span><br><span class="line"><span class="comment">            设置为0，表示强制显示所有标签;</span></span><br><span class="line"><span class="comment">            设置为1，表示隔一个标签显示一个标签；</span></span><br><span class="line"><span class="comment">            设置为2，表示隔两个标签显示一个标签，以此类推。</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">　　　　　　　interval:<span class="number">0</span>, </span><br><span class="line">            <span class="comment">//textStyle表示x轴下的字体的样式</span></span><br><span class="line">　　　　　　　textStyle:&#123;   </span><br><span class="line">               color:<span class="string">'#333'</span>,</span><br><span class="line">               fontSize:<span class="number">13</span></span><br><span class="line">            &#125;</span><br><span class="line">       &#125;,</span><br><span class="line">    axisLine:&#123;</span><br><span class="line">           show:<span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示x轴那一条线，默认为true</span></span><br><span class="line">           lineStyle:&#123; <span class="comment">//lineStyle用来设置x轴那一条线的样式</span></span><br><span class="line">             color:<span class="string">'#6FC6F3'</span>,</span><br><span class="line">             width:<span class="number">2</span>,    <span class="comment">//轴线的粗细，我写的是2，最小为0，值为0的时候线隐藏</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/12/06/echarts图表x，y轴的设置/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -449,10 +467,15 @@
 <li>之后运行npm install –production或者注明NODE_ENV变量值为production时，会自动安装X到node_modules目录中</li>
 </ul>
         
-          <a class="article-more-a" href="/2019/12/06/npm不同方式安装的区别/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -556,10 +579,15 @@
         <p>​        The technology of artificial intelligence,also known as AI for short, has recently recieved both criticism and appreciation, as indicated in many news articles. (反对意见）On the one hand,AI is denounced now that many people will accordingly threaten to lose their livelihood in the near future.（支持意见）On the other hand,some insist that the AI technology is able to boost productivity and efficiency as well as enables us to lead a better and more colorful life.（我的意见）From my view of point,it is an undeniable fact that AI has a profound and positive bearing on the way people study and work.(总体社会利弊看法➕自己观点)</p>
 <p>​
         
-          <a class="article-more-a" href="/2019/11/27/My-Personal-Views-on-AI/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -667,10 +695,15 @@
 
 <p>结果若是https开头则是https连接方式，这种方式一般不会出现问题，若是git开头，说明ssh方式</p>
         
-          <a class="article-more-a" href="/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -776,10 +809,15 @@
 <p>2.进入该版本的<a href="http://isoredirect.centos.org/centos/7/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，The following mirrors in your region should have the ISO images available:表示当前所在国家或地区的镜像；Other mirrors further away:表示周边国家或地区的镜像。这里我们一般选择当前所在国家或地区的镜像，因为这样下载速度较快</p>
 <p>3.选择阿里云的镜像，这个<a href="http://mirrors.aliyun.com/centos/7.6.1810/isos/x86_64/" target="_blank" rel="noopener">链接地址</a>，下载CentOS-7-x86_64-DVD-1810.iso  这个版本的镜像，centos7的大小约为4个多G，下载可能需要四五分钟</p>
         
-          <a class="article-more-a" href="/2019/11/21/使用Xshell连接VirtualBox中的CentOS7/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -888,10 +926,15 @@
 
 <p>这段代码要求我们在web.xml中编写的相关配置信息必须按照一定的规范和顺序来配置；</p>
         
-          <a class="article-more-a" href="/2019/11/21/关于web-xml文件-web-app-标签报错问题/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -999,10 +1042,15 @@
 <p>报错原因</p>
 <p>Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动Tomcat会报这样的错误</p>
         
-          <a class="article-more-a" href="/2019/11/21/关于Tomcat位数问题/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -1112,10 +1160,15 @@
 <p>说明：npm run build 执行完，会在shells&gt;chrome下的src文件夹里生成几个js文件；</p>
 <p>注意：若不运行npm run build命令，则在加载扩展程序时会报错；</p>
         
-          <a class="article-more-a" href="/2019/11/21/Chrome浏览器添加Vue-js插件/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -1223,10 +1276,15 @@
 <p>二、报错原因：</p>
 <p>没有添加Maven依赖</p>
         
-          <a class="article-more-a" href="/2019/11/21/解决Web项目缺少Maven依赖问题/#more">more >></a>
-        
       
 
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
       
     </div>
     <div class="article-info article-info-index">
@@ -1331,6 +1389,8 @@
     </div>
   </div>
 </footer>
+<!--页面点击小红心-->
+<script type="text/javascript" src="/love.js"></script>
     </div>
     <script>
 	var yiliaConfig = {
