@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Dream">
 <meta property="og:description" content="今天在读《Java编程思想》看到了下面一段代码： 1234567891011121314151617181920/** * @author Helay * @date 2019/11/15 21:58 */public class Tank &amp;#123;    private int leave;    public static void main(String[] args) &amp;#123;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-08T15:07:18.238Z">
+<meta property="og:updated_time" content="2019-12-17T15:12:13.032Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中关于对象引用的一点思考">
 <meta name="twitter:description" content="今天在读《Java编程思想》看到了下面一段代码： 1234567891011121314151617181920/** * @author Helay * @date 2019/11/15 21:58 */public class Tank &amp;#123;    private int leave;    public static void main(String[] args) &amp;#123;">
@@ -219,7 +219,7 @@
 <p>输出结果是什么呢？我想有些同学可能会给出这样的答案：</p>
 <p>1:tank1=7,tank2=49<br>2:tank1=49,tank2=49<br>3:tank1=49,tank2=24</p>
 <p>但正确的答案是这样的</p>
-<p>1:tank1=7,tank2=49<br>2:tank1=49,tank2=49<br>3:tank1=49,tank2=24</p>
+<p>1:tank1=7,tank2=49<br>2:tank1=49,tank2=49<br>3:tank1=24,tank2=24</p>
 <p>这就引起我们的一点思考了，为什么第3行的输出是这样的结果呢？</p>
 <p>由于赋值操作的是对象的引用，并且tank1 = tank2;表示tank1 和tank2为同一个对象，所以第3行的输出结果是一样的</p>
 <p>如果我们想让这两个对象那个实例相互独立，应该怎么办呢？请看下面的代码：</p>
@@ -563,15 +563,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ElementUI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">echarts、前端</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -579,11 +571,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">ElementUI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -595,11 +587,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">echarts、前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color4">Web</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -607,11 +607,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Web</a>
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
             
             <div class="clearfix"></div>
