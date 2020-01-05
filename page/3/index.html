@@ -158,6 +158,173 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-CentOS7下安装RabbitMQ" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+         
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/21/CentOS7下安装RabbitMQ/">CentOS7下安装RabbitMQ</a>
+    </h1>
+  
+
+         
+         <a href="/2019/11/21/CentOS7下安装RabbitMQ/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:33:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
+</a>
+		 
+		 <!-- 添加字数统计-->
+         
+            <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">437字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+            
+         <!-- 添加完成 -->
+    
+         <!--添加文章阅读量-->
+         
+		 <!-- 添加完成 -->
+		 
+         
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>由于RabbitMQ是用Erlang编写的，所以需要先安装Erlang语言的运行环境</p>
+<p>一、安装Erlang</p>
+<p>1.在线安装（需要Linux虚拟机能连接外网）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum install esl-erlang_17.3-1~centos~6_amd64.rpm</span><br><span class="line"></span><br><span class="line">yum install esl-erlang-compat-R14B-1.el6.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>2.离线安装</p>
+<p>（1）环境准备（需要以下四个安装包）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">esl-erlang_17.3-1~centos~6_amd64.rpm</span><br><span class="line"></span><br><span class="line">esl-erlang-17.3-1.x86_64.rpm</span><br><span class="line"></span><br><span class="line">esl-erlang-compat-R14B-1.el6.noarch.rpm</span><br><span class="line"></span><br><span class="line">rabbitmq-server-3.4.1-1.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>（2）开始安装</p>
+<p>依次执行以下命令开始安装：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh esl-erlang-17.3-1.x86_64.rpm --force --nodeps</span><br><span class="line"></span><br><span class="line">rpm -ivh esl-erlang_17.3-1~centos~6_amd64.rpm --force --nodeps</span><br><span class="line"></span><br><span class="line">rpm -ivh esl-erlang-compat-R14B-1.el6.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<p>i表示安装，v表示显示安装过程，h表示显示进度；</p>
+<p>–force：表示强制安装；</p>
+<p>–nodeps：表示忽略依赖冲突；</p>
+<p>二、安装安装RabbitMQ</p>
+<p>1.使用下面所示命令进行安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh rabbitmq-server-3.4.1-1.noarch.rpm --force --nodeps</span><br></pre></td></tr></table></figure>
+
+<p>2.设置配置文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/share/doc/rabbitmq-server-3.4.1/rabbitmq.config.example /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+
+<p>3.修改配置文件，开启用户远程访问</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rabbitmq/rabbitmq.config</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">%% Uncomment the following line if you want to allow access to the</span><br><span class="line">   %% guest user from anywhere on the network.</span><br><span class="line">   &#123;loopback_users, []&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将 {loopback_users, []}前面的%%和末尾的，去掉，保存退出</p>
+<p>4.启动、停止RabbitMQ</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">service rabbitmq-server start	#启动</span><br><span class="line"></span><br><span class="line">service rabbitmq-server stop	#关闭</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+
+<p>5.开启Web界面管理工具</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management	#开启web界面管理工具</span><br><span class="line"></span><br><span class="line">service rabbitmq-server restart	#重启</span><br></pre></td></tr></table></figure>
+
+<p>6.设置开机启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig rabbitmq-server on</span><br></pre></td></tr></table></figure>
+
+<p>7.防火墙开放15672端口</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -I INPUT -p tcp --dport 15672 -j ACCEPT</span><br><span class="line"></span><br><span class="line">/etc/rc.d/init.d/iptables save</span><br></pre></td></tr></table></figure>
+
+<p>8.或者关闭防火墙</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p>注意：第7步和第8步选择一个即可，关闭防火墙就不需要开放端口了</p>
+
+      
+
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/21/CentOS7下安装RabbitMQ/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
     <article id="post-Advanced-Rest-Client的安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -304,7 +471,7 @@
     <div id="footer-info">
 	
     	<div class="footer-left">
-    		&copy; 2019 Helay
+    		&copy; 2020 Helay
 			
 			<!--网站运行时长-->
 			<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
@@ -417,19 +584,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ElementUI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -437,7 +596,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ElementUI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -461,15 +628,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
