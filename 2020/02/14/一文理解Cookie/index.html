@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://github.com/Helayxy/pictures/blob/master/1.png">
 <meta property="og:image" content="https://github.com/Helayxy/pictures/blob/master/2.png">
-<meta property="og:updated_time" content="2020-02-14T13:01:48.680Z">
+<meta property="og:updated_time" content="2020-02-15T04:30:42.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一文理解Cookie">
 <meta name="twitter:description" content="1.背景写项目的过程中，遇到了向客户端写入Cookie的相关知识。Cookie这个知识点一直理解得都不是太清楚，趁着这一次又遇到了这一知识点，想着写下这篇博客记录一下。在学习这个知识点前，我们应该明白自己的学习目标，要带着疑问去学习，所以关于Cookie我们要了解：  什么是cookie，cookie的作用； cookie的工作机制，即cookie是运作流程； cookie的基本属性（4个）以及我">
@@ -235,7 +235,7 @@
 <li>服务器返回响应数据。</li>
 </ul>
 <p>这4个步骤如图所示：</p>
-<p><img src="https://github.com/Helayxy/pictures/blob/master/1.png" alt></p>
+<p><img src="https://github.com/Helayxy/pictures/blob/master/1.png" alt="image"></p>
 <h5 id="4-cookie属性项"><a href="#4-cookie属性项" class="headerlink" title="4. cookie属性项"></a>4. cookie属性项</h5><table>
 <thead>
 <tr>
@@ -283,7 +283,7 @@
 <p>HttpServletResponse提供的Cookie操作只有一个addCookie(Cookie cookie)，所以想要修改Cookie只能使用一个同名的Cookie来覆盖原先的Cookie。如果要删除某个Cookie，则只需要新建一个同名的Cookie，并将maxAge设置为0，并覆盖原来的Cookie即可。</p>
 <p>新建的Cookie，除了value、maxAge之外的属性，比如name、path、domain都必须与原来的一致才能达到修改或者删除的效果。否则，浏览器将视为两个不同的Cookie不予覆盖。</p>
 <p>需要注意的是，从客户端读取Cookie时，包括maxAge在内的其他属性都是不可读的，也不会被提交。浏览器提交Cookie时只会提交name和value属性，maxAge属性只被浏览器用来判断Cookie是否过期，而不能用服务端来判断。</p>
-<p><img src="https://github.com/Helayxy/pictures/blob/master/2.png" alt></p>
+<p><img src="https://github.com/Helayxy/pictures/blob/master/2.png" alt="image"></p>
 <p>我们无法在服务端通过cookie.getMaxAge()来判断该Cookie是否过期，maxAge只是一个只读属性，值永远为-1。当Cookie过期时，浏览器在与后台交互时会自动筛选过期Cookie，过期了的Cookie就不会被携带了。</p>
 <p><strong>Cookie的域名：</strong></p>
 <p>Cookie是不可以跨域名的，隐私安全机制禁止网站非法获取其他网站的Cookie；</p>
@@ -614,6 +614,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">ElementUI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
@@ -630,15 +634,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ElementUI</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -650,6 +650,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Cookie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
@@ -658,15 +662,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Cookie</a>
+                <a href="javascript:void(0)" class="js-tag color4">Web</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Web</a>
               </li>
              
               <li class="article-tag-list-item">
