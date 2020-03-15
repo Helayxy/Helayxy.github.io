@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://helayxy.github.io">
-  <title>关于Tomcat位数问题 | Dream</title>
+  <title>字节流和字符流的区别及应用场景 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题描述 今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误： 1[C:\Deveploment tools\apache-tomcat-8.0.52\bin\tcnative-1.dll:Can&apos;t load 32-bit. dll on a AMD 64-bit platform]  报错原因 Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配">
-<meta name="keywords" content="Tomcat">
+  <meta name="description" content="1、概念  字节流和字符流都有输入和输出的方式； 字节输入流和输出流的基类：InputStream和OutputStream 字符输入流和输出流的基类：Reader和Writer 上述基本均属于抽象类，不能直接实例化； 字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（txt格式的数据）。">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于Tomcat位数问题">
-<meta property="og:url" content="https://helayxy.github.io/2019/11/21/关于Tomcat位数问题/index.html">
+<meta property="og:title" content="字节流和字符流的区别及应用场景">
+<meta property="og:url" content="https://helayxy.github.io/2020/03/15/字节流和字符流的区别及应用场景/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="问题描述 今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误： 1[C:\Deveploment tools\apache-tomcat-8.0.52\bin\tcnative-1.dll:Can&apos;t load 32-bit. dll on a AMD 64-bit platform]  报错原因 Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配">
+<meta property="og:description" content="1、概念  字节流和字符流都有输入和输出的方式； 字节输入流和输出流的基类：InputStream和OutputStream 字符输入流和输出流的基类：Reader和Writer 上述基本均属于抽象类，不能直接实例化； 字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（txt格式的数据）。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-08T15:10:47.235Z">
+<meta property="og:updated_time" content="2020-03-15T04:44:00.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于Tomcat位数问题">
-<meta name="twitter:description" content="问题描述 今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误： 1[C:\Deveploment tools\apache-tomcat-8.0.52\bin\tcnative-1.dll:Can&apos;t load 32-bit. dll on a AMD 64-bit platform]  报错原因 Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配">
+<meta name="twitter:title" content="字节流和字符流的区别及应用场景">
+<meta name="twitter:description" content="1、概念  字节流和字符流都有输入和输出的方式； 字节输入流和输出流的基类：InputStream和OutputStream 字符输入流和输出流的基类：Reader和Writer 上述基本均属于抽象类，不能直接实例化； 字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（txt格式的数据）。">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-关于Tomcat位数问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-字节流和字符流的区别及应用场景" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
          
   
     <h1 class="article-title" itemprop="name">
-      关于Tomcat位数问题
+      字节流和字符流的区别及应用场景
     </h1>
   
 
          
-         <a href="/2019/11/21/关于Tomcat位数问题/" class="archive-article-date">
-  	<time datetime="2019-11-21T11:54:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
+         <a href="/2020/03/15/字节流和字符流的区别及应用场景/" class="archive-article-date">
+  	<time datetime="2020-03-15T03:27:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
 </a>
 		 
 		 <!-- 添加字数统计-->
@@ -184,7 +184,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">204字</span>
+        <span class="post-count">467字</span>
       </span>
     </span>
 
@@ -213,19 +213,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>问题描述</p>
-<p>今天在IDEA中新建一个Web项目，启动Tomcat报了如下的错误：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[C:\Deveploment tools\apache-tomcat-<span class="number">8.0</span>.52\bin\tcnative-<span class="number">1</span>.dll:Can<span class="string">'t load 32-bit. dll on a AMD 64-bit platform]</span></span><br></pre></td></tr></table></figure>
+        <p><strong>1、概念</strong></p>
+<ul>
+<li>字节流和字符流都有输入和输出的方式；</li>
+<li>字节输入流和输出流的基类：InputStream和OutputStream</li>
+<li>字符输入流和输出流的基类：Reader和Writer</li>
+<li>上述基本均属于抽象类，不能直接实例化；</li>
+<li>字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（txt格式的数据）。</li>
+</ul>
+<p><strong><a id="more"></a>2、继承体系</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">IO流</span><br><span class="line"></span><br><span class="line">​	—字符流</span><br><span class="line"></span><br><span class="line">​		—Reader</span><br><span class="line"></span><br><span class="line">​			—BufferedReader</span><br><span class="line"></span><br><span class="line">​			—InputStreamReader</span><br><span class="line"></span><br><span class="line">​				—**FileReader**</span><br><span class="line"></span><br><span class="line">​			—StringReader</span><br><span class="line"></span><br><span class="line">​			—PipedReader</span><br><span class="line"></span><br><span class="line">​			—CharArrayReader</span><br><span class="line"></span><br><span class="line">​			—FileReader</span><br><span class="line"></span><br><span class="line">​		—Writer</span><br><span class="line"></span><br><span class="line">​			—BufferedWriter</span><br><span class="line"></span><br><span class="line">​			—OutputStreamWriter</span><br><span class="line"></span><br><span class="line">​				—**FileWriter**</span><br><span class="line"></span><br><span class="line">​			—PrintWriter</span><br><span class="line"></span><br><span class="line">​			—StringWriter</span><br><span class="line"></span><br><span class="line">​			—PipedWriter</span><br><span class="line"></span><br><span class="line">​			—CharArrayWriter</span><br><span class="line"></span><br><span class="line">​			—FilterWriter</span><br><span class="line"></span><br><span class="line">​	—字节流</span><br><span class="line"></span><br><span class="line">​		—InputStream</span><br><span class="line"></span><br><span class="line">​			—FileInputStream</span><br><span class="line"></span><br><span class="line">​			—FilterInputStream</span><br><span class="line"></span><br><span class="line">​				—**BufferedInputStream**</span><br><span class="line"></span><br><span class="line">​				—DataInputStream</span><br><span class="line"></span><br><span class="line">​				—PushbackInputStream</span><br><span class="line"></span><br><span class="line">​			—ObjectInputStream</span><br><span class="line"></span><br><span class="line">​			—PipedInputStream</span><br><span class="line"></span><br><span class="line">​			—SequenceInputStream</span><br><span class="line"></span><br><span class="line">​			—StringBufferInputStream</span><br><span class="line"></span><br><span class="line">​			—ByteArrayInputStream</span><br><span class="line"></span><br><span class="line">​		—OutputStream</span><br><span class="line"></span><br><span class="line">​			—FileOutputStream</span><br><span class="line"></span><br><span class="line">​			—FilterOutputStream</span><br><span class="line"></span><br><span class="line">​				—**BufferedOutputStream**</span><br><span class="line"></span><br><span class="line">​				—DataOutputStream</span><br><span class="line"></span><br><span class="line">​				—PrintStream</span><br><span class="line"></span><br><span class="line">​			—ObjectOutputStream</span><br><span class="line"></span><br><span class="line">​			—PipedOutputStream</span><br><span class="line"></span><br><span class="line">​			—ByteArrayOutputStream</span><br></pre></td></tr></table></figure>
 
-<p>报错原因</p>
-<p>Tomcat的bin目录下的tcnative-1.dll位数与电脑操作系统位数不匹配，这里的tcnative-1.dll位数是32位的，电脑操作系统位数的位数是64位的，所以启动Tomcat会报这样的错误</p>
-<a id="more"></a>解决方案
-
-<p>1.来到这个<a href="http://archive.apache.org/dist/tomcat/tomcat-connectors/native/" target="_blank" rel="noopener">网站</a></p>
-<p>2.下载相应版本的文件</p>
-<p>3.解压：在bin目录下有一个x64文件夹，该文件夹下就是64位的tcnative-1.dll文件</p>
-<p>4.替换：删除原tomcat的bin目录下的32位的tcnative-1.dll文件，将64位的tcnative-1.dll添加进去</p>
-<p>5.重启Tomcat即可，此时将不再报错</p>
+<p><strong>3、区别</strong></p>
+<p>字节流输出：程序——字节流——文件</p>
+<p>字符流输出：程序——字符流——缓存——文件</p>
+<p>说明：输出就是向外写数据，输入就是读取外部数据。</p>
+<p>上述过程显示，字节流没有涉及到缓冲区，但字符流涉及到了缓冲区，所以在使用字符流进行写数据时，需要调用flush()或close()方法进行刷新才能将数据写入文件中。</p>
+<p>flush()和close()的区别：调用flush()刷新后可以继续写数据，调用close()相当于刷新后关闭流，不能继续写数据。</p>
+<p><strong>4、使用场景</strong></p>
+<p>因为字节（Byte）是计算机信息存储的最小单位，所以字节流可以操作所有类型的文件，每次操作1个字节；</p>
+<p>字符流只能用操作纯文本数据（.txt格式），每次操作一个字符（两个字节）；</p>
+<p>字符流涉及到编码、解码工作，像图片这样的媒体文件都是由字节组成的，如果使用字符流操作的话，有可能出现编码、解码不一致的情况，这时就不能正常读取图片文件了。但是字节流不涉及编码、解码的工作。</p>
 
       
 
@@ -239,7 +247,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          https://helayxy.github.io/2019/11/21/关于Tomcat位数问题/
+          https://helayxy.github.io/2020/03/15/字节流和字符流的区别及应用场景/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -294,7 +302,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Tomcat</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -306,7 +314,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -361,7 +369,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://helayxy.github.io/2019/11/21/关于Tomcat位数问题/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://helayxy.github.io/2020/03/15/字节流和字符流的区别及应用场景/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -375,18 +383,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/21/关于web-xml文件-web-app-标签报错问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          关于web.xml文件&lt;web app&gt;标签报错问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/21/Chrome浏览器添加Vue-js插件/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Chrome浏览器添加Vue.js插件</div>
+    <a href="/2020/02/14/一文理解Cookie/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">一文理解Cookie</div>
       <i class="icon-circle-right"></i>
     </a>
   
