@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://helayxy.github.io">
   <title>字节流和字符流的区别及应用场景 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、概念  字节流和字符流都有输入和输出的方式； 字节输入流和输出流的基类：InputStream和OutputStream 字符输入流和输出流的基类：Reader和Writer 上述基本均属于抽象类，不能直接实例化； 字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（txt格式的数据）。">
+  <meta name="description" content="1、概念  字节流和字符流都有输入和输出的方式； 字节输入流和输出流的基类：InputStream和OutputStream 字符输入流和输出流的基类：Reader和Writer 上述基本均属于抽象类，不能直接实例化； 字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（.txt格式的数据）。">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字节流和字符流的区别及应用场景">
 <meta property="og:url" content="https://helayxy.github.io/2020/03/15/字节流和字符流的区别及应用场景/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="1、概念  字节流和字符流都有输入和输出的方式； 字节输入流和输出流的基类：InputStream和OutputStream 字符输入流和输出流的基类：Reader和Writer 上述基本均属于抽象类，不能直接实例化； 字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（txt格式的数据）。">
+<meta property="og:description" content="1、概念  字节流和字符流都有输入和输出的方式； 字节输入流和输出流的基类：InputStream和OutputStream 字符输入流和输出流的基类：Reader和Writer 上述基本均属于抽象类，不能直接实例化； 字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（.txt格式的数据）。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-15T04:44:00.651Z">
+<meta property="og:updated_time" content="2020-03-15T04:50:10.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字节流和字符流的区别及应用场景">
-<meta name="twitter:description" content="1、概念  字节流和字符流都有输入和输出的方式； 字节输入流和输出流的基类：InputStream和OutputStream 字符输入流和输出流的基类：Reader和Writer 上述基本均属于抽象类，不能直接实例化； 字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（txt格式的数据）。">
+<meta name="twitter:description" content="1、概念  字节流和字符流都有输入和输出的方式； 字节输入流和输出流的基类：InputStream和OutputStream 字符输入流和输出流的基类：Reader和Writer 上述基本均属于抽象类，不能直接实例化； 字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（.txt格式的数据）。">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -219,7 +219,7 @@
 <li>字节输入流和输出流的基类：InputStream和OutputStream</li>
 <li>字符输入流和输出流的基类：Reader和Writer</li>
 <li>上述基本均属于抽象类，不能直接实例化；</li>
-<li>字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（txt格式的数据）。</li>
+<li>字节流可以处理所有类型的数据（图片、视频、文本等），字符流只能处理纯文本数据（.txt格式的数据）。</li>
 </ul>
 <p><strong><a id="more"></a>2、继承体系</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">IO流</span><br><span class="line"></span><br><span class="line">​	—字符流</span><br><span class="line"></span><br><span class="line">​		—Reader</span><br><span class="line"></span><br><span class="line">​			—BufferedReader</span><br><span class="line"></span><br><span class="line">​			—InputStreamReader</span><br><span class="line"></span><br><span class="line">​				—**FileReader**</span><br><span class="line"></span><br><span class="line">​			—StringReader</span><br><span class="line"></span><br><span class="line">​			—PipedReader</span><br><span class="line"></span><br><span class="line">​			—CharArrayReader</span><br><span class="line"></span><br><span class="line">​			—FileReader</span><br><span class="line"></span><br><span class="line">​		—Writer</span><br><span class="line"></span><br><span class="line">​			—BufferedWriter</span><br><span class="line"></span><br><span class="line">​			—OutputStreamWriter</span><br><span class="line"></span><br><span class="line">​				—**FileWriter**</span><br><span class="line"></span><br><span class="line">​			—PrintWriter</span><br><span class="line"></span><br><span class="line">​			—StringWriter</span><br><span class="line"></span><br><span class="line">​			—PipedWriter</span><br><span class="line"></span><br><span class="line">​			—CharArrayWriter</span><br><span class="line"></span><br><span class="line">​			—FilterWriter</span><br><span class="line"></span><br><span class="line">​	—字节流</span><br><span class="line"></span><br><span class="line">​		—InputStream</span><br><span class="line"></span><br><span class="line">​			—FileInputStream</span><br><span class="line"></span><br><span class="line">​			—FilterInputStream</span><br><span class="line"></span><br><span class="line">​				—**BufferedInputStream**</span><br><span class="line"></span><br><span class="line">​				—DataInputStream</span><br><span class="line"></span><br><span class="line">​				—PushbackInputStream</span><br><span class="line"></span><br><span class="line">​			—ObjectInputStream</span><br><span class="line"></span><br><span class="line">​			—PipedInputStream</span><br><span class="line"></span><br><span class="line">​			—SequenceInputStream</span><br><span class="line"></span><br><span class="line">​			—StringBufferInputStream</span><br><span class="line"></span><br><span class="line">​			—ByteArrayInputStream</span><br><span class="line"></span><br><span class="line">​		—OutputStream</span><br><span class="line"></span><br><span class="line">​			—FileOutputStream</span><br><span class="line"></span><br><span class="line">​			—FilterOutputStream</span><br><span class="line"></span><br><span class="line">​				—**BufferedOutputStream**</span><br><span class="line"></span><br><span class="line">​				—DataOutputStream</span><br><span class="line"></span><br><span class="line">​				—PrintStream</span><br><span class="line"></span><br><span class="line">​			—ObjectOutputStream</span><br><span class="line"></span><br><span class="line">​			—PipedOutputStream</span><br><span class="line"></span><br><span class="line">​			—ByteArrayOutputStream</span><br></pre></td></tr></table></figure>
@@ -544,6 +544,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
@@ -552,11 +556,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">CentOS</a>
+                <a href="javascript:void(0)" class="js-tag color5">ElementUI</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">ElementUI</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -568,11 +572,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">echarts、前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -580,15 +580,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">echarts、前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
               <li class="article-tag-list-item">
