@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="https://helayxy.github.io">
   <title>一文理解Cookie | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.背景写项目的过程中，遇到了向客户端写入Cookie的相关知识。Cookie这个知识点一直理解得都不是太清楚，趁着这一次又遇到了这一知识点，想着写下这篇博客记录一下。在学习这个知识点前，我们应该明白自己的学习目标，要带着疑问去学习，所以关于Cookie我们要了解：  什么是cookie，cookie的作用； cookie的工作机制，即cookie是运作流程； cookie的基本属性（4个）以及我">
+  <meta name="description" content="1.背景 写项目的过程中，遇到了向客户端写入Cookie的相关知识。Cookie这个知识点一直理解得都不是太清楚，趁着这一次又遇到了这一知识点，想着写下这篇博客记录一下。在学习这个知识点前，我们应该明白自己的学习目标，要带着疑问去学习，所以关于Cookie我们要了解：  什么是cookie，cookie的作用； cookie的工作机制，即cookie是运作流程； cookie的基本属性（4个）以及">
 <meta name="keywords" content="Cookie">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一文理解Cookie">
 <meta property="og:url" content="https://helayxy.github.io/2020/02/14/一文理解Cookie/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="1.背景写项目的过程中，遇到了向客户端写入Cookie的相关知识。Cookie这个知识点一直理解得都不是太清楚，趁着这一次又遇到了这一知识点，想着写下这篇博客记录一下。在学习这个知识点前，我们应该明白自己的学习目标，要带着疑问去学习，所以关于Cookie我们要了解：  什么是cookie，cookie的作用； cookie的工作机制，即cookie是运作流程； cookie的基本属性（4个）以及我">
+<meta property="og:description" content="1.背景 写项目的过程中，遇到了向客户端写入Cookie的相关知识。Cookie这个知识点一直理解得都不是太清楚，趁着这一次又遇到了这一知识点，想着写下这篇博客记录一下。在学习这个知识点前，我们应该明白自己的学习目标，要带着疑问去学习，所以关于Cookie我们要了解：  什么是cookie，cookie的作用； cookie的工作机制，即cookie是运作流程； cookie的基本属性（4个）以及">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://github.com/Helayxy/pictures/blob/master/1.png">
 <meta property="og:image" content="https://github.com/Helayxy/pictures/blob/master/2.png">
-<meta property="og:updated_time" content="2020-02-15T04:30:42.027Z">
+<meta property="og:updated_time" content="2020-03-20T13:09:51.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一文理解Cookie">
-<meta name="twitter:description" content="1.背景写项目的过程中，遇到了向客户端写入Cookie的相关知识。Cookie这个知识点一直理解得都不是太清楚，趁着这一次又遇到了这一知识点，想着写下这篇博客记录一下。在学习这个知识点前，我们应该明白自己的学习目标，要带着疑问去学习，所以关于Cookie我们要了解：  什么是cookie，cookie的作用； cookie的工作机制，即cookie是运作流程； cookie的基本属性（4个）以及我">
+<meta name="twitter:description" content="1.背景 写项目的过程中，遇到了向客户端写入Cookie的相关知识。Cookie这个知识点一直理解得都不是太清楚，趁着这一次又遇到了这一知识点，想着写下这篇博客记录一下。在学习这个知识点前，我们应该明白自己的学习目标，要带着疑问去学习，所以关于Cookie我们要了解：  什么是cookie，cookie的作用； cookie的工作机制，即cookie是运作流程； cookie的基本属性（4个）以及">
 <meta name="twitter:image" content="https://github.com/Helayxy/pictures/blob/master/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
@@ -216,18 +216,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1-背景"><a href="#1-背景" class="headerlink" title="1.背景"></a>1.背景</h5><p>写项目的过程中，遇到了向客户端写入Cookie的相关知识。Cookie这个知识点一直理解得都不是太清楚，趁着这一次又遇到了这一知识点，想着写下这篇博客记录一下。在学习这个知识点前，我们应该明白自己的学习目标，要带着疑问去学习，所以关于Cookie我们要了解：</p>
+        <p><strong>1.背景</strong></p>
+<p>写项目的过程中，遇到了向客户端写入Cookie的相关知识。Cookie这个知识点一直理解得都不是太清楚，趁着这一次又遇到了这一知识点，想着写下这篇博客记录一下。在学习这个知识点前，我们应该明白自己的学习目标，要带着疑问去学习，所以关于Cookie我们要了解：</p>
 <ul>
 <li>什么是cookie，cookie的作用；</li>
 <li>cookie的工作机制，即cookie是运作流程；</li>
 <li>cookie的基本属性（4个）以及我们如何使用cookie。</li>
 </ul>
-<h5 id="2-什么是Cookie"><a href="#2-什么是Cookie" class="headerlink" title="2. 什么是Cookie"></a>2. 什么是Cookie</h5><p>学习Cookie之前，我们需要对HTTP协议有基本的了解。我们知道，HTTP协议本身是无状态的。那么什么是无状态的呢？即服务器无法判断用户身份。</p>
+<p><strong>2.什么是Cookie</strong></p>
+<p>学习Cookie之前，我们需要对HTTP协议有基本的了解。我们知道，HTTP协议本身是无状态的。那么什么是无状态的呢？即服务器无法判断用户身份。</p>
 <a id="more"></a>要想服务器能够判断用户身份，这时就要使用到Cookie，Cookie实际上是一小段的文本信息（key-value格式）。
 
 <p>客户端（浏览器）向服务器发起请求，如果服务器需要记录该用户状态，就使用response对象向客户端颁发一个Cookie。客户端会把Cookie保存起来。当客户端再请求该网站时，客户端会把请求的网址和该Cookie一同提交给服务器。服务器检查该Cookie，以此来辨认用户状态。</p>
 <p>举个例子，我们去银行办理储蓄业务，第一次给你办了张银行卡，卡里存放了身份证、密码、手机等个人信息。当你下次再来这个银行时，银行机器能识别你卡里的信息，即能够辨认你的身份，从而能够直接办理业务。</p>
-<h5 id="3-Cookie机制"><a href="#3-Cookie机制" class="headerlink" title="3. Cookie机制"></a>3. Cookie机制</h5><p>当用户第一次访问并登陆一个网站的时候，Cookie的设置及发送会经历以下4个步骤：</p>
+<p><strong>3.Cookie机制</strong></p>
+<p>当用户第一次访问并登陆一个网站的时候，Cookie的设置及发送会经历以下4个步骤：</p>
 <ul>
 <li>客户端发送一个请求到服务器；</li>
 <li>服务器发送一个HttpResponse响应到客户端，其中包含Set-Cookie的头部；</li>
@@ -236,7 +239,8 @@
 </ul>
 <p>这4个步骤如图所示：</p>
 <p><img src="https://github.com/Helayxy/pictures/blob/master/1.png" alt="image"></p>
-<h5 id="4-cookie属性项"><a href="#4-cookie属性项" class="headerlink" title="4. cookie属性项"></a>4. cookie属性项</h5><table>
+<p><strong>4.cookie属性项</strong></p>
+<table>
 <thead>
 <tr>
 <th>属性项</th>
@@ -623,15 +627,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">集合</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -639,7 +635,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">集合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -655,11 +663,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+                <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">npm、前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
               <li class="article-tag-list-item">
