@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://helayxy.github.io">
-  <title>Tag: 推送报错 | Dream</title>
+  <title>关于IO流操作时的对象选择问题 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Dream">
-<meta property="og:url" content="https://helayxy.github.io/tags/推送报错/index.html">
+  <meta name="description" content="问题背景： 当我们在进行IO流操作的时候，遇到最大的问题就是由于IO流对象有很多，导致我们不知道该选用哪一个具体的对象。这时我们就需要找到这些对象的特点，进而选择适合的对象进行相关操作。">
+<meta name="keywords" content="IO流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于IO流操作时的对象选择问题">
+<meta property="og:url" content="https://helayxy.github.io/2020/03/23/关于IO流操作时的对象选择问题/index.html">
 <meta property="og:site_name" content="Dream">
+<meta property="og:description" content="问题背景： 当我们在进行IO流操作的时候，遇到最大的问题就是由于IO流对象有很多，导致我们不知道该选用哪一个具体的对象。这时我们就需要找到这些对象的特点，进而选择适合的对象进行相关操作。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-03-23T02:50:29.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dream">
+<meta name="twitter:title" content="关于IO流操作时的对象选择问题">
+<meta name="twitter:description" content="问题背景： 当我们在进行IO流操作的时候，遇到最大的问题就是由于IO流对象有很多，导致我们不知道该选用哪一个具体的对象。这时我们就需要找到这些对象的特点，进而选择适合的对象进行相关操作。">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -156,71 +161,309 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-关于IO流操作时的对象选择问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/" class="archive-article-date">
-  	<time datetime="2019-11-21T12:00:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+         
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/21/解决Git本地仓库上传不到GitHub远程仓库问题/">解决Git本地仓库上传不到GitHub远程仓库问题</a>
+    <h1 class="article-title" itemprop="name">
+      关于IO流操作时的对象选择问题
     </h1>
   
 
-        <div class="article-info info-on-right">
+         
+         <a href="/2020/03/23/关于IO流操作时的对象选择问题/" class="archive-article-date">
+  	<time datetime="2020-03-23T02:41:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-23</time>
+</a>
+		 
+		 <!-- 添加字数统计-->
+         
+            <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">774字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+            
+         <!-- 添加完成 -->
+    
+         <!--添加文章阅读量-->
+         
+             <span class="archive-article-date">
+                 阅读量 <span id="busuanzi_value_page_pv"></span>
+             </span>
+		 
+		 <!-- 添加完成 -->
+		 
+         
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>问题背景：</strong></p>
+<p>当我们在进行IO流操作的时候，遇到最大的问题就是由于IO流对象有很多，导致我们不知道该选用哪一个具体的对象。这时我们就需要找到这些对象的特点，进而选择适合的对象进行相关操作。</p>
+<p><strong><a id="more"></a>三个明确：</strong></p>
+<p>我们可以通过三个明确来确定我们需要的对象。</p>
+<ul>
+<li><p>明确源和目的：</p>
+<p>源（读取流）：InputStream  Reader；</p>
+<p>目的（写入流）：OutputStream  Writer；</p>
+</li>
+<li><p>明确操作的数据是否为纯文本（.txt格式）：</p>
+<p>是：字符流（Reader或Writer结尾）；</p>
+<p>否：字节流（Stream结尾）；</p>
+</li>
+<li><p>明确体系后选择所需对象：</p>
+<p>源设备：内存，硬盘，键盘；<br>目的设备：内存，硬盘，控制台。</p>
+</li>
+</ul>
+<p><strong>1、需求：将一个文本文件中数据存储到另一个文件中，复制文本文件。</strong></p>
+<p>源：选择读取流，InputStream或Reader；</p>
+<p>是纯文本：选择字符流，操作文件，使用FileReader；</p>
+<p>需要提高效率：加入缓冲区，最终选择BufferedReader。</p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FileReader fr = <span class="keyword">new</span> FileReader(<span class="string">"a.txt"</span>);</span><br><span class="line">BufferedReader bufr = <span class="keyword">new</span> BufferedReader(fr);</span><br></pre></td></tr></table></figure>
+
+<p>目的：选择写入流，OutputStream或Writer；</p>
+<p>是纯文本：选择字符流，操作文件，使用FileWriter；</p>
+<p>需要提高效率：加入缓冲区，最终选择BufferedWriter。</p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FileWriter fw = <span class="keyword">new</span> FileWriter(<span class="string">"b.txt"</span>);</span><br><span class="line">BufferedWriter bufw = <span class="keyword">new</span> BufferedWriter(fw);</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、需求：将键盘录入的数据保存到一个文件中。</strong></p>
+<p>源：InputStream或Reader；</p>
+<p>是纯文本：Reader；</p>
+<p>源设备：键盘录入对应的对象是System.in，但由于Reader是字符流，System.in为InputStream类型，是字节流。所以需要将字节流转换成字符流操作纯文本数据，即将System.in转换成Reader，选择Reader体系中转换流,InputStreamReader；</p>
+<p>需要提高效率：加入缓冲区，BufferedReader。</p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InputStreamReader isr = <span class="keyword">new</span> InputStreamReader(System.in);</span><br><span class="line">BufferedReader bufr = <span class="keyword">new</span> BufferedReader(isr);</span><br></pre></td></tr></table></figure>
+
+<p>目的：OutputStream或Writer；</p>
+<p>是纯文本：Writer；</p>
+<p>目的设备：硬盘中的一个文件，操作文件选择FileWriter；</p>
+<p>需要提高效率：加入缓冲区，BufferedWriter 。</p>
+<p>代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FileWriter fw = <span class="keyword">new</span> FileWriter(<span class="string">"c.txt"</span>);</span><br><span class="line">BufferedWriter bufw = <span class="keyword">new</span> BufferedWriter(fw);</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、需求：将键盘录入的数据按照指定的编码表（utf-8）存储到文件中。</strong></p>
+<p>源：InputStream或Reader；</p>
+<p>是纯文本：Reader；</p>
+<p>源设备：键盘录入对应的对象是System.in，但由于Reader是字符流，System.in为InputStream类型，是字节流。所以需要将字节流转换成字符流操作纯文本数据，即将System.in转换成Reader，选择Reader体系中转换流,InputStreamReader；</p>
+<p>需要提高效率：加入缓冲区，BufferedReader。</p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader bufr = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br></pre></td></tr></table></figure>
+
+<p>目的：OutputStream或Writer；</p>
+<p>是存文本：Writer；</p>
+<p>目的设备：硬盘中的一个文件，操作文件选择FileWriter；由于FileWriter使用的默认编码表GBK，但是存储时，需</p>
+<p>要加入指定编码表utf-8，而编码表只有转换流可以指定，所以要使用的转换流对象OutputStreamWriter；</p>
+<p>需要提高效率：加入缓冲区，BufferedReader。</p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OutputStreamWriter osw = <span class="keyword">new</span> OutputStreamWriter(<span class="keyword">new</span> FileOutputStream(<span class="string">"d.txt"</span>),<span class="string">"UTF-8"</span>);</span><br><span class="line">BufferedWriter bufw = <span class="keyword">new</span> BufferedWriter(osw);</span><br></pre></td></tr></table></figure>
+
+<p>注意：通常涉及到字符编码转换时，需要用到转换流。</p>
+<p><strong>4、键盘录入最常用写法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader bufr = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(System.in));</span><br></pre></td></tr></table></figure>
+
+
+      
+
+     <!-- 版权声明配置 -->
+     
+     
+        <div class="declare">
+          <strong>本文作者：</strong>
           
+            Helay
+          
+          <br>
+          <strong>本文链接：</strong>
+          https://helayxy.github.io/2020/03/23/关于IO流操作时的对象选择问题/
+          <br>
+          <strong>版权声明：</strong>
+          本作品采用
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+          进行许可。转载请注明出处！
+          
+            <br>
+            <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+          
+        </div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">推送报错</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">IO流</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Git//" class="article-tag-list-link color4">Git</a>
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://helayxy.github.io/2020/03/23/关于IO流操作时的对象选择问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/03/20/Java反射介绍/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java反射介绍</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+
 
 
 
@@ -275,9 +518,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
