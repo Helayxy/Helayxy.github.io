@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://helayxy.github.io">
-  <title>git push origin master报错问题 | Dream</title>
+  <title>byte类型转换问题 | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.问题描述： 执行 1$ git push origin master  命令时，出现以下错误信息： 12345678To https://github.com/Helayxy/leyou.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some refs to &apos;https://git">
-<meta name="keywords" content="远程推送">
+  <meta name="description" content="先看代码： 123456789package demo;public class Test &amp;#123;    public static void main(String[] args) &amp;#123;        byte a = 1;        byte b = 2;        byte c = a + b;//此行代码编译失败        byte d = 1 + 2;//此行代">
+<meta name="keywords" content="byte类型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git push origin master报错问题">
-<meta property="og:url" content="https://helayxy.github.io/2019/11/21/git-push-origin-master报错问题/index.html">
+<meta property="og:title" content="byte类型转换问题">
+<meta property="og:url" content="https://helayxy.github.io/2020/03/24/byte类型转换问题/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="1.问题描述： 执行 1$ git push origin master  命令时，出现以下错误信息： 12345678To https://github.com/Helayxy/leyou.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some refs to &apos;https://git">
+<meta property="og:description" content="先看代码： 123456789package demo;public class Test &amp;#123;    public static void main(String[] args) &amp;#123;        byte a = 1;        byte b = 2;        byte c = a + b;//此行代码编译失败        byte d = 1 + 2;//此行代">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-21T01:26:20.690Z">
+<meta property="og:updated_time" content="2020-03-24T02:24:45.236Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git push origin master报错问题">
-<meta name="twitter:description" content="1.问题描述： 执行 1$ git push origin master  命令时，出现以下错误信息： 12345678To https://github.com/Helayxy/leyou.git ! [rejected]        master -&amp;gt; master (fetch first)error: failed to push some refs to &apos;https://git">
+<meta name="twitter:title" content="byte类型转换问题">
+<meta name="twitter:description" content="先看代码： 123456789package demo;public class Test &amp;#123;    public static void main(String[] args) &amp;#123;        byte a = 1;        byte b = 2;        byte c = a + b;//此行代码编译失败        byte d = 1 + 2;//此行代">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git-push-origin-master报错问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-byte类型转换问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
          
   
     <h1 class="article-title" itemprop="name">
-      git push origin master报错问题
+      byte类型转换问题
     </h1>
   
 
          
-         <a href="/2019/11/21/git-push-origin-master报错问题/" class="archive-article-date">
-  	<time datetime="2019-11-21T11:40:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
+         <a href="/2020/03/24/byte类型转换问题/" class="archive-article-date">
+  	<time datetime="2020-03-24T02:18:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-24</time>
 </a>
 		 
 		 <!-- 添加字数统计-->
@@ -184,7 +184,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">207字</span>
+        <span class="post-count">322字</span>
       </span>
     </span>
 
@@ -213,21 +213,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1.问题描述：</p>
-<p>执行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> git push origin master</span><br></pre></td></tr></table></figure>
+        <p><strong>先看代码：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> demo;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">byte</span> a = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">byte</span> b = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">byte</span> c = a + b;<span class="comment">//此行代码编译失败</span></span><br><span class="line">        <span class="keyword">byte</span> d = <span class="number">1</span> + <span class="number">2</span>;<span class="comment">//此行代码编译通过</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>命令时，出现以下错误信息：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">To https://github.com/Helayxy/leyou.git</span><br><span class="line"> ! [rejected]        master -&gt; master (fetch first)</span><br><span class="line">error: failed to push some refs to 'https://github.com/Helayxy/leyou.git'</span><br><span class="line">hint: Updates were rejected because the remote contains work that you do</span><br><span class="line">hint: not have locally. This is usually caused by another repository pushing</span><br><span class="line">hint: to the same ref. You may want to first integrate the remote changes</span><br><span class="line">hint: (e.g., 'git pull ...') before pushing again.</span><br><span class="line">hint: See the 'Note about fast-forwards' in 'git push --help' for details.</span><br></pre></td></tr></table></figure>
-
-<p>2.原因所在：</p>
-<p>出现这个问题是因为GitHub中的文件与本地仓库中的文件不同造成的，当修改了GitHub远程仓库中的文件后，在本地仓库进行git  push时，便会出现此问题，可以通过如下命令进行代码合并：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
-
-<p>3.提交：</p>
-<p>最后使用如下命令进行提交：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
+<p><strong><a id="more"></a>问题分析：</strong></p>
+<p>1、为什么byte a = 1;可以编译通过？</p>
+<p>答：因为byte占1个字节，8个二进制位，取值范围为-128 ~ +127，1在其范围内，所以可以被赋值。一旦这个数值超过了127，那么编译就会报错。</p>
+<p>2、为什么byte c = a + b;编译失败？</p>
+<p>答：这是Java的机制导致的，Java在对byte这种类型进行“运算”时，会将其转换为int类型，两个int类型相加，赋值给byte类型肯定编译失败，低精度向高精度转换会进行自动类型提升。</p>
+<p>3、为什么byte = 3 + 4;又可以编译通过？</p>
+<p>答：由于3+4是常量的计算，会优先执行，执行结果再赋值给byte，此时判断数值是否满足该类型范围，满足就直接赋值了，否则编译失败。</p>
+<p><strong>总结：</strong></p>
+<p>两个变量相加，先对类型进行提升，然后运算，再将运算结果赋值；</p>
+<p>两个常量相加，先计算常量数值，然后判断是否满足类型范围，再赋值。</p>
 
       
 
@@ -241,7 +239,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          https://helayxy.github.io/2019/11/21/git-push-origin-master报错问题/
+          https://helayxy.github.io/2020/03/24/byte类型转换问题/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -296,7 +294,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">远程推送</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">byte类型</a>
         		</li>
       		
 		</ul>
@@ -308,7 +306,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Git//" class="article-tag-list-link color4">Git</a>
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -363,7 +361,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://helayxy.github.io/2019/11/21/git-push-origin-master报错问题/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://helayxy.github.io/2020/03/24/byte类型转换问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -377,18 +375,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/21/IDEA去掉SQL语句背景色/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          IDEA去掉SQL语句背景色
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/21/CentOS7下安装配置Redis/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CentOS7下安装配置Redis</div>
+    <a href="/2020/03/23/关于IO流操作时的对象选择问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于IO流操作时的对象选择问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
