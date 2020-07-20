@@ -158,6 +158,146 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java中关于对象引用的一点思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+         
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/21/Java中关于对象引用的一点思考/">Java中关于对象引用的一点思考</a>
+    </h1>
+  
+
+         
+         <a href="/2019/11/21/Java中关于对象引用的一点思考/" class="archive-article-date">
+  	<time datetime="2019-11-21T11:42:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
+</a>
+		 
+		 <!-- 添加字数统计-->
+         
+            <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">483字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+            
+         <!-- 添加完成 -->
+    
+         <!--添加文章阅读量-->
+         
+		 <!-- 添加完成 -->
+		 
+         
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天在读《Java编程思想》看到了下面一段代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Helay</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/15 21:58</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tank</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> leave;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Tank tank1 = <span class="keyword">new</span> Tank();</span><br><span class="line">        Tank tank2 = <span class="keyword">new</span> Tank();</span><br><span class="line">        tank1.leave = <span class="number">7</span>;</span><br><span class="line">        tank2.leave = <span class="number">49</span>;</span><br><span class="line">        System.out.println(<span class="string">"1:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank1 = tank2;</span><br><span class="line">        System.out.println(<span class="string">"2:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank2.leave = <span class="number">24</span>;</span><br><span class="line">        System.out.println(<span class="string">"3:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果是什么呢？我想有些同学可能会给出这样的答案：</p>
+<p>1:tank1=7,tank2=49<br>2:tank1=49,tank2=49<br>3:tank1=49,tank2=24</p>
+<p>但正确的答案是这样的</p>
+<p>1:tank1=7,tank2=49<br>2:tank1=49,tank2=49<br>3:tank1=24,tank2=24</p>
+<p>这就引起我们的一点思考了，为什么第3行的输出是这样的结果呢？</p>
+<p>由于赋值操作的是对象的引用，并且tank1 = tank2;表示tank1 和tank2为同一个对象，所以第3行的输出结果是一样的</p>
+<p>如果我们想让这两个对象那个实例相互独立，应该怎么办呢？请看下面的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Helay</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2019/11/15 21:58</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tank</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> leave;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Tank tank1 = <span class="keyword">new</span> Tank();</span><br><span class="line">        Tank tank2 = <span class="keyword">new</span> Tank();</span><br><span class="line">        tank1.leave = <span class="number">7</span>;</span><br><span class="line">        tank2.leave = <span class="number">49</span>;</span><br><span class="line">        System.out.println(<span class="string">"1:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank1.leave = tank2.leave;</span><br><span class="line">        System.out.println(<span class="string">"2:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line">        tank2.leave = <span class="number">24</span>;</span><br><span class="line">        System.out.println(<span class="string">"3:tank1="</span> + tank1.leave + <span class="string">",tank2="</span> + tank2.leave);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这时候输出的结果就发生了变化：</p>
+<p>1:tank1=7,tank2=49<br>2:tank1=49,tank2=49<br>3:tank1=49,tank2=24</p>
+<p>对，就是这样的结果！tank1.leave = tank2.leave;这行代码操作的对象的属性，由于代码是由上而下地执行，所以即使tank2.leave = 24;这行代码修改了leave的值，但是修改的tank2对象的属性值，所以并不会应影响tank1.leave的值，你看明白了吗？</p>
+<p>最后还要说一句，一定要记得只有new出来的才叫对象那个啊！</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"adsf"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这样的s不是对象，一定要记清楚啊！</p>
+
+      
+
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">对象引用</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/21/Java中关于对象引用的一点思考/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
     <article id="post-IDEA去掉SQL语句背景色" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1206,6 +1346,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">RabbitMQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">接口测试</a>
               </li>
              
@@ -1218,10 +1362,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">RabbitMQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Vue.js</a>
               </li>
              
@@ -1230,15 +1370,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">背景音乐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">ElementUI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">对象引用</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1246,7 +1378,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">背景音乐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">反射</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">对象引用</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1254,11 +1394,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">JDK</a>
+                <a href="javascript:void(0)" class="js-tag color2">byte类型</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">byte类型</a>
+                <a href="javascript:void(0)" class="js-tag color4">JDK</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1266,31 +1406,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">echarts</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">远程推送</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">push命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">npm命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Cookie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1298,7 +1414,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">push命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">echarts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">npm命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Xshell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Cookie</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1314,11 +1454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">单例模式</a>
+                <a href="javascript:void(0)" class="js-tag color5">队列、栈</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">队列、栈</a>
+                <a href="javascript:void(0)" class="js-tag color5">单例模式</a>
               </li>
              
               <li class="article-tag-list-item">
