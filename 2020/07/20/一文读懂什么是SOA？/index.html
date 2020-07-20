@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://helayxy.github.io">
-  <title>基于LinkedList实现队列和栈数据结构 | Dream</title>
+  <title>一文读懂什么是SOA？ | Dream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="需求：基于LinkedList实现队列数据结构 队列数据结构特点：先进先出">
-<meta name="keywords" content="队列、栈">
+  <meta name="description" content="SOA，即面向服务的架构，是一种架构风格。从字面意思理解，容易让人一头雾水，那么，我们从实际场景分析，来理解到底什么是SOA。 SOA简单理解：就是把系统按照实际业务需求，拆分成可以单独部署的功能模块，也可以称为是单独的工程，模块或工程之间互相调用以完成不同模块的实际需要。">
+<meta name="keywords" content="SOA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于LinkedList实现队列和栈数据结构">
-<meta property="og:url" content="https://helayxy.github.io/2020/01/06/基于LinkedList实现队列和栈数据结构/index.html">
+<meta property="og:title" content="一文读懂什么是SOA？">
+<meta property="og:url" content="https://helayxy.github.io/2020/07/20/一文读懂什么是SOA？/index.html">
 <meta property="og:site_name" content="Dream">
-<meta property="og:description" content="需求：基于LinkedList实现队列数据结构 队列数据结构特点：先进先出">
+<meta property="og:description" content="SOA，即面向服务的架构，是一种架构风格。从字面意思理解，容易让人一头雾水，那么，我们从实际场景分析，来理解到底什么是SOA。 SOA简单理解：就是把系统按照实际业务需求，拆分成可以单独部署的功能模块，也可以称为是单独的工程，模块或工程之间互相调用以完成不同模块的实际需要。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-21T01:29:38.953Z">
+<meta property="og:updated_time" content="2020-07-20T03:25:36.631Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于LinkedList实现队列和栈数据结构">
-<meta name="twitter:description" content="需求：基于LinkedList实现队列数据结构 队列数据结构特点：先进先出">
+<meta name="twitter:title" content="一文读懂什么是SOA？">
+<meta name="twitter:description" content="SOA，即面向服务的架构，是一种架构风格。从字面意思理解，容易让人一头雾水，那么，我们从实际场景分析，来理解到底什么是SOA。 SOA简单理解：就是把系统按照实际业务需求，拆分成可以单独部署的功能模块，也可以称为是单独的工程，模块或工程之间互相调用以完成不同模块的实际需要。">
   
     <link rel="alternative" href="/atom.xml" title="Dream" type="application/atom+xml">
   
@@ -161,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-基于LinkedList实现队列和栈数据结构" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-一文读懂什么是SOA？" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
          
   
     <h1 class="article-title" itemprop="name">
-      基于LinkedList实现队列和栈数据结构
+      一文读懂什么是SOA？
     </h1>
   
 
          
-         <a href="/2020/01/06/基于LinkedList实现队列和栈数据结构/" class="archive-article-date">
-  	<time datetime="2020-01-06T14:05:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-06</time>
+         <a href="/2020/07/20/一文读懂什么是SOA？/" class="archive-article-date">
+  	<time datetime="2020-07-20T03:23:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-20</time>
 </a>
 		 
 		 <!-- 添加字数统计-->
@@ -184,7 +184,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">227字</span>
+        <span class="post-count">1.1k字</span>
       </span>
     </span>
 
@@ -193,7 +193,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -213,20 +213,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>需求：基于LinkedList实现队列数据结构</p>
-<p>队列数据结构特点：先进先出</p>
-<a id="more"></a>代码实现：
+        <p><code>SOA</code>，即面向服务的架构，是一种架构风格。从字面意思理解，容易让人一头雾水，那么，我们从实际场景分析，来理解到底什么是<code>SOA</code>。</p>
+<p><code>SOA</code>简单理解：就是把系统按照实际业务需求，拆分成可以单独部署的功能模块，也可以称为是单独的工程，模块或工程之间互相调用以完成不同模块的实际需要。</p>
+<a id="more"></a>场景说明：现有一个数据库，一个`JavaWeb`网站客户端，一个`Android`客户端，一个`IOS`客户端。
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.linkedlistdemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Queue</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> LinkedList linkedList;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Queue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        linkedList = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">myAdd</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        linkedList.addFirst(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">myGet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkedList.removeLast();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNull</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkedList.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>需求：基于LinkedList实现栈数据结构</p>
-<p>栈数据结构特点：先进先出</p>
-<p>代码实现：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.linkedlistdemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Stack</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> LinkedList linkedList;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Stack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        linkedList = <span class="keyword">new</span> LinkedList();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">myAdd</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        linkedList.addFirst(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">myGet</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkedList.removeFirst();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNull</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkedList.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>测试代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.linkedlistdemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Queue queue = <span class="keyword">new</span> Queue();</span><br><span class="line">        queue.myAdd(<span class="string">"java01"</span>);</span><br><span class="line">        queue.myAdd(<span class="string">"java02"</span>);</span><br><span class="line">        queue.myAdd(<span class="string">"java03"</span>);</span><br><span class="line">        queue.myAdd(<span class="string">"java04"</span>);</span><br><span class="line">        <span class="keyword">while</span> (!queue.isNull()) &#123;</span><br><span class="line">            System.out.println(queue.myGet());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"---------"</span>);</span><br><span class="line"></span><br><span class="line">        Stack stack = <span class="keyword">new</span> Stack();</span><br><span class="line">        stack.myAdd(<span class="string">"php01"</span>);</span><br><span class="line">        stack.myAdd(<span class="string">"php02"</span>);</span><br><span class="line">        stack.myAdd(<span class="string">"php03"</span>);</span><br><span class="line">        stack.myAdd(<span class="string">"php04"</span>);</span><br><span class="line">        <span class="keyword">while</span> (!stack.isNull()) &#123;</span><br><span class="line">            System.out.println(stack.myGet());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<p>现在我要从这个数据库中获取注册用户列表，如果不用<code>SOA</code>的设计思想，实现步骤是这样的：</p>
+<ul>
+<li><code>JavaWeb</code>里面写一个查询方法从数据库里面查数据然后在网页显示；</li>
+<li><code>Android</code>客户端里面写一个查询方法查询后在<code>App</code>上显示；</li>
+<li><code>IOS</code>同样如此。</li>
+</ul>
+<p>上述实现思想存在着很多缺点：</p>
+<ul>
+<li>查询方法重复出现多次；</li>
+<li>三个地方都有相同的业务代码；</li>
+<li>一处修改，其他也要修改等问题。</li>
+</ul>
+<p>于是出现了<code>SOA</code>的设计思想，比如用<code>Java</code>（或者是其他语言）单独创建一个工程部署在一台服务器上，并且写一个方法执行上述查询操作，然后使其他人可以通过某种途径（可以是<code>http</code>链接，或者是基于<code>socket</code>的<code>RPC</code>调用）访问这个方法得到<code>json</code>或者<code>xml</code>类型的返回数据。也就是说把这个操作封装到一个工程中去，然后暴露访问的方式，形成“服务”。这里就是注册用户服务，而关于注册用户的所有相关增删改查操作这个服务都会提供方法。</p>
+<p>这样一来，<code>JavaWeb</code>这边可以访问这个服务然后得到数据使用，<code>Android</code>和<code>IOS</code>这里也可以通过这个服务得到数据。最重要的是，要修改关于注册用户的业务只要修改这个服务就好了，可以实现很好的解耦。同理，其他业务比如商品等其他业务都可以单独形成服务部署在服务器上。</p>
+<p>还有就是如果哪天突然有一堆人要注册，假设这堆人仅仅只是注册而不做其他事情，其他业务比如商品、广告服务等都不用，唯独注册这个功能压力很大，而原有的一台部署了注册服务的服务器已经承受不了这么高的并发，这时候就可以集群部署这个注册服务，多提供几台服务器提供注册服务，而其他服务维持原样。</p>
+<p>以上所描述的还不能完全称为<code>SOA</code>，因为这里少了服务治理这一环节。服务治理，就是当服务越来越多，调用方也越来越多的时候，它们之间的关系就变得非常混乱，需要对这些关系进行管理。</p>
+<p>举例，还是上面的例子，假如我有一个用户服务，一开始有调用方1和调用方2来使用这个服务，后来越来越多，将近上百个调用方，这个时候作为服务方，它只知道提供服务，却不知道具体为谁提供了服务。而对于开发者来说，知道这N多调用方和N多服务方之间的关系是非常重要的。</p>
+<p>所以这个时候就需要能进行服务治理的框架，比如<code>Dubbo+ZooKeeper、SpringCloud</code>，有了服务治理功能，我们就能清晰地看到服务被谁调用，谁调用了哪些服务，哪些服务是热点服务，需要配置集群，而对这个服务集群的负载均衡也是服务治理可以完成的重要功能之一。这个时候就是更加完善一点的SOA了。当然，还可以更进一步，加上服务监控跟踪等之类的。</p>
+<p>实际上<code>SOA</code>只是一种架构模式，而<code>SOAP、REST、RPC</code>就是根据这种架构模式衍生出来的规范：</p>
+<p><code>SOAP</code>就是<code>http+xml</code>的形式；</p>
+<p><code>REST</code>就是<code>http+json</code>的形式；</p>
+<p><code>RPC</code>就是基于<code>socket</code>的形式。</p>
+<p><code>Dubbo</code>就是典型的<code>RPC</code>框架，而<code>SpringCloud</code>就是遵守<code>REST</code>规范的微服务框架。</p>
 
       
 
@@ -240,7 +253,7 @@
           
           <br>
           <strong>本文链接：</strong>
-          https://helayxy.github.io/2020/01/06/基于LinkedList实现队列和栈数据结构/
+          https://helayxy.github.io/2020/07/20/一文读懂什么是SOA？/
           <br>
           <strong>版权声明：</strong>
           本作品采用
@@ -295,7 +308,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">队列、栈</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SOA</a>
         		</li>
       		
 		</ul>
@@ -307,7 +320,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        			<a href="/categories/架构设计//" class="article-tag-list-link color5">架构设计</a>
         		</li>
       		
 		</ul>
@@ -362,7 +375,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://helayxy.github.io/2020/01/06/基于LinkedList实现队列和栈数据结构/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://helayxy.github.io/2020/07/20/一文读懂什么是SOA？/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -376,18 +389,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/29/git-push命令用法详解/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git push命令用法详解
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/05/自定义异常/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">自定义异常</div>
+    <a href="/2020/07/20/50道经典SQL分析（一）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">50道经典SQL分析（一）</div>
       <i class="icon-circle-right"></i>
     </a>
   

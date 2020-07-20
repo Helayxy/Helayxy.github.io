@@ -158,6 +158,129 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-echarts图表x，y轴的设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+         
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/06/echarts图表x，y轴的设置/">echarts图表x，y轴的设置</a>
+    </h1>
+  
+
+         
+         <a href="/2019/12/06/echarts图表x，y轴的设置/" class="archive-article-date">
+  	<time datetime="2019-12-06T14:13:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
+</a>
+		 
+		 <!-- 添加字数统计-->
+         
+            <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">759字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+            
+         <!-- 添加完成 -->
+    
+         <!--添加文章阅读量-->
+         
+		 <!-- 添加完成 -->
+		 
+         
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>xAxis属性代表echarts图表的x轴，设置代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">xAxis : [</span><br><span class="line">    &#123;</span><br><span class="line">      type : <span class="string">'category'</span>,  <span class="comment">// type:坐标轴类型，默认为category</span></span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">     其他类型：</span></span><br><span class="line"><span class="comment">     1.'value'：数值轴，适用于连续数据；</span></span><br><span class="line"><span class="comment">     2.'category'：类目轴，适用于离散的类目数据，为该类型时必须通过 data 设置类目数据； </span></span><br><span class="line"><span class="comment">     3.'time'：时间轴，适用于连续的时序数据，与数值轴相比时间轴带有时间的格式化，在刻度计算上也有所不同，例如会根据跨度的范围来决定使用月，星期，日还是小时范围的刻度；</span></span><br><span class="line"><span class="comment">     4.'log'：对数轴。适用于对数数据。</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    data : [<span class="string">'上海'</span>,<span class="string">'北京'</span>],  <span class="comment">//x轴下面的数据</span></span><br><span class="line">    axisTick: &#123;</span><br><span class="line">        show: <span class="literal">false</span>,  <span class="comment">//是否显示网状线 默认为true</span></span><br><span class="line">        alignWithLabel: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//用于设置x轴下面的字体</span></span><br><span class="line">    axisLabel:&#123;</span><br><span class="line">            show:<span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示x轴下的字体 默认为true</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            interval：</span></span><br><span class="line"><span class="comment">            设置为0，表示强制显示所有标签;</span></span><br><span class="line"><span class="comment">            设置为1，表示隔一个标签显示一个标签；</span></span><br><span class="line"><span class="comment">            设置为2，表示隔两个标签显示一个标签，以此类推。</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">　　　　　　　interval:<span class="number">0</span>, </span><br><span class="line">            <span class="comment">//textStyle表示x轴下的字体的样式</span></span><br><span class="line">　　　　　　　textStyle:&#123;   </span><br><span class="line">               color:<span class="string">'#333'</span>,</span><br><span class="line">               fontSize:<span class="number">13</span></span><br><span class="line">            &#125;</span><br><span class="line">       &#125;,</span><br><span class="line">    axisLine:&#123;</span><br><span class="line">           show:<span class="literal">true</span>,  <span class="comment">//这里的show用于设置是否显示x轴那一条线，默认为true</span></span><br><span class="line">           lineStyle:&#123; <span class="comment">//lineStyle用来设置x轴那一条线的样式</span></span><br><span class="line">             color:<span class="string">'#6FC6F3'</span>,</span><br><span class="line">             width:<span class="number">2</span>,    <span class="comment">//轴线的粗细，我写的是2，最小为0，值为0的时候线隐藏</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+        
+      
+
+     <!-- 版权声明配置 -->
+     
+     
+       <div class="declare" hidden="hidden"></div>
+     
+	 <!-- 版权声明配置结束 -->
+	 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">echarts</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/06/echarts图表x，y轴的设置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
     <article id="post-npm不同方式安装的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1304,169 +1427,6 @@
 
 
   
-    <article id="post-Linux系统下安装JDK" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/21/Linux系统下安装JDK/">Linux系统下安装JDK</a>
-    </h1>
-  
-
-         
-         <a href="/2019/11/21/Linux系统下安装JDK/" class="archive-article-date">
-  	<time datetime="2019-11-21T11:44:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-21</time>
-</a>
-		 
-		 <!-- 添加字数统计-->
-         
-            <div style="margin-top:10px;">
-    <span class="post-time">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-keyboard-o"></i>
-        <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1k字</span>
-      </span>
-    </span>
-
-    <span class="post-time">
-      &nbsp; | &nbsp;
-      <span class="post-meta-item-icon">
-        <i class="fa fa-hourglass-half"></i>
-        <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">4分</span>
-      </span>
-    </span>
-</div>
-            
-         <!-- 添加完成 -->
-    
-         <!--添加文章阅读量-->
-         
-		 <!-- 添加完成 -->
-		 
-         
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.将linux版本jdk1.8的tar压缩包上传至虚拟机任意位置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls</span><br><span class="line">bin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usr</span><br><span class="line">boot  etc  lib64  mnt    proc  run   srv   tmp  var</span><br></pre></td></tr></table></figure>
-
-<p>2.解压</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar  -zxvf  jdk-8u131-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>3.查看解压是否成功</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# ls</span><br><span class="line">bin   dev  home   jdk-8u211-linux-x64.tar.gz  lib    media  opt   root  sbin  sys  usr</span><br><span class="line">boot  etc  jdk1.8.0_211  leyou   lib64  mnt    proc  run   srv   tmp  var</span><br></pre></td></tr></table></figure>
-
-<p>可以看到有jdk1.8.0_211文件夹，表示解压成功！</p>
-<p>4.删除没有用的压缩包</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# rm  jdk-8u211-linux-x64.tar.gz</span><br><span class="line">rm：是否删除普通文件 "jdk-8u211-linux-x64.tar.gz"？y</span><br></pre></td></tr></table></figure>
-
-<p>5.创建jdk的安装位置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# mkdir /usr/java</span><br></pre></td></tr></table></figure>
-
-<p>说明：我这里安装到usr目录下的java文件夹中</p>
-<p>6.移动解压后的jdk至指定的安装位置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost java]# mv /jdk1.8.0_211 /usr/java</span><br></pre></td></tr></table></figure>
-
-<p>7.修改环境变量</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# vi /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>说明：/etc/profile为系统的配置文件，在改文件末尾添加如下配置信息：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_211</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib:$CLASSPATH</span><br><span class="line">export JAVA_PATH=$&#123;JAVA_HOME&#125;/bin:$&#123;JRE_HOME&#125;/bin</span><br><span class="line">export PATH=$PATH:$&#123;JAVA_PATH&#125;</span><br></pre></td></tr></table></figure>
-
-<p>使用：wq保存退出</p>
-<p>8.让这个环境变量配置信息立即生效</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# source /etc/profile</span><br></pre></td></tr></table></figure>
-
-<p>说明：此命令可以使配置信息立马生效，不使用此命令需要重启虚拟机</p>
-<p>9.验证jdk是否安装成功</p>
-<p>输入javac命令查看：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# javac</span><br><span class="line">用法: javac &lt;options&gt; &lt;source files&gt;</span><br><span class="line">其中, 可能的选项包括:</span><br><span class="line">  -g                         生成所有调试信息</span><br><span class="line">  -g:none                    不生成任何调试信息</span><br><span class="line">  -g:&#123;lines,vars,source&#125;     只生成某些调试信息</span><br><span class="line">  -nowarn                    不生成任何警告</span><br><span class="line">  -verbose                   输出有关编译器正在执行的操作的消息</span><br><span class="line">  -deprecation               输出使用已过时的 API 的源位置</span><br><span class="line">  -classpath &lt;路径&gt;            指定查找用户类文件和注释处理程序的位置</span><br><span class="line">  -cp &lt;路径&gt;                   指定查找用户类文件和注释处理程序的位置</span><br><span class="line">  -sourcepath &lt;路径&gt;           指定查找输入源文件的位置</span><br><span class="line">  -bootclasspath &lt;路径&gt;        覆盖引导类文件的位置</span><br><span class="line">  -extdirs &lt;目录&gt;              覆盖所安装扩展的位置</span><br><span class="line">  -endorseddirs &lt;目录&gt;         覆盖签名的标准路径的位置</span><br><span class="line">  -proc:&#123;none,only&#125;          控制是否执行注释处理和/或编译。</span><br><span class="line">  -processor &lt;class1&gt;[,&lt;class2&gt;,&lt;class3&gt;...] 要运行的注释处理程序的名称; 绕过默认的搜索进程</span><br><span class="line">  -processorpath &lt;路径&gt;        指定查找注释处理程序的位置</span><br><span class="line">  -parameters                生成元数据以用于方法参数的反射</span><br><span class="line">  -d &lt;目录&gt;                    指定放置生成的类文件的位置</span><br><span class="line">  -s &lt;目录&gt;                    指定放置生成的源文件的位置</span><br><span class="line">  -h &lt;目录&gt;                    指定放置生成的本机标头文件的位置</span><br><span class="line">  -implicit:&#123;none,class&#125;     指定是否为隐式引用文件生成类文件</span><br><span class="line">  -encoding &lt;编码&gt;             指定源文件使用的字符编码</span><br><span class="line">  -source &lt;发行版&gt;              提供与指定发行版的源兼容性</span><br><span class="line">  -target &lt;发行版&gt;              生成特定 VM 版本的类文件</span><br><span class="line">  -profile &lt;配置文件&gt;            请确保使用的 API 在指定的配置文件中可用</span><br><span class="line">  -version                   版本信息</span><br><span class="line">  -help                      输出标准选项的提要</span><br><span class="line">  -A关键字[=值]                  传递给注释处理程序的选项</span><br><span class="line">  -X                         输出非标准选项的提要</span><br><span class="line">  -J&lt;标记&gt;                     直接将 &lt;标记&gt; 传递给运行时系统</span><br><span class="line">  -Werror                    出现警告时终止编译</span><br><span class="line">  @&lt;文件名&gt;                     从文件读取选项和文件名</span><br></pre></td></tr></table></figure>
-
-<p>输入java -version查看java版本信息：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# java -version</span><br><span class="line">java version "1.8.0_211"</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_211-b12)</span><br><span class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.211-b12, mixed mode)</span><br></pre></td></tr></table></figure>
-
-<p>输入echo $PATH查看路径：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost jdk1.8.0_211]# echo $PATH</span><br><span class="line">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/usr/java/jdk1.8.0_211/bin:/usr/java/jdk1.8.0_211/jre/bin</span><br></pre></td></tr></table></figure>
-
-<p>10.以上都正确则表示jdk安装成功！</p>
-
-      
-
-     <!-- 版权声明配置 -->
-     
-     
-       <div class="declare" hidden="hidden"></div>
-     
-	 <!-- 版权声明配置结束 -->
-	 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JDK</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Linux//" class="article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/21/Linux系统下安装JDK/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -1596,10 +1556,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">RabbitMQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">接口测试</a>
               </li>
              
@@ -1612,11 +1568,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Vue.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL语句背景色</a>
+                <a href="javascript:void(0)" class="js-tag color4">RabbitMQ</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1624,7 +1576,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java日期</a>
+                <a href="javascript:void(0)" class="js-tag color2">Vue.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL语句背景色</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1632,7 +1592,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+                <a href="javascript:void(0)" class="js-tag color2">Java日期</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">AI</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1644,19 +1608,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">byte类型</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">JDK</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">AI</a>
+                <a href="javascript:void(0)" class="js-tag color2">byte类型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">远程推送</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">echarts</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">npm命令</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1668,23 +1644,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">echarts</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">npm命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Xshell</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color4">SOA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">IO流</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1696,15 +1664,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">IO流</a>
+                <a href="javascript:void(0)" class="js-tag color5">队列、栈</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Web</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">队列、栈</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1716,11 +1680,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">推送报错</a>
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color5">推送报错</a>
               </li>
              
               <li class="article-tag-list-item">
